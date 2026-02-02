@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: D:/Document/BlueTower-GraduationVersion/ClientGV/Packages/manifest.json
+    m_FilePath: D:/GitHubProject/DarkGame/BlueTower-GraduationVersion2/ClientGV/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639044353301431608
-    m_Hash: 1372563100
+      ticks: 639056413100913485
+    m_Hash: 3814912419
   m_LockFileStatus:
-    m_FilePath: D:/Document/BlueTower-GraduationVersion/ClientGV/Packages/packages-lock.json
+    m_FilePath: D:/GitHubProject/DarkGame/BlueTower-GraduationVersion2/ClientGV/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639044353301544919
-    m_Hash: 609887116
+      ticks: 639056413100949704
+    m_Hash: 568742657
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: D:/Document/BlueTower-GraduationVersion/ClientGV/Packages
+m_ProjectPath: D:/GitHubProject/DarkGame/BlueTower-GraduationVersion2/ClientGV/Packages
 m_EditorVersion: 2022.3.31f1c1 (143dae428054)
 m_ResolvedPackages:
 - packageId: com.unity.2d.animation@9.1.3
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 9.1.3
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.animation@9.1.3
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.animation@9.1.3
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -188,9 +188,13 @@ m_ResolvedPackages:
     - 13.0.0
     - 13.0.1
     - 13.0.2
+    - 13.0.3
+    - 13.0.4
     - 14.0.0
     - 14.0.1
     - 14.0.2
+    - 15.0.0
+    - 15.0.1
     compatible:
     - 9.1.1
     - 9.1.2
@@ -275,7 +279,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.1.10
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.aseprite@1.1.10
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.aseprite@1.1.10
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -320,6 +324,7 @@ m_ResolvedPackages:
     - 3.0.0
     - 3.0.1
     - 4.0.0
+    - 5.0.0
     compatible:
     - 1.1.4
     - 1.1.5
@@ -396,7 +401,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.1.3
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.tilemap.extras@3.1.3
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.tilemap.extras@3.1.3
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -475,6 +480,7 @@ m_ResolvedPackages:
     - 7.0.0-exp.1
     - 7.0.0
     - 8.0.0-exp.1
+    - 8.0.0
     compatible:
     - 3.1.2
     - 3.1.3
@@ -535,12 +541,264 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
+- packageId: com.unity.addressables@1.21.21
+  testable: 0
+  isDirectDependency: 1
+  version: 1.21.21
+  source: 1
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.addressables@1.21.21
+  assetPath: Packages/com.unity.addressables
+  name: com.unity.addressables
+  displayName: Addressables
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'The Addressable Asset System allows the developer to ask for an asset
+    via its address. Once an asset (e.g. a prefab) is marked "addressable", it generates
+    an address which can be called from anywhere. Wherever the asset resides (local
+    or remote), the system will locate it and its dependencies, then return it.
+
+
+    Use
+    ''Window->Asset Management->Addressables'' to begin working with the system.
+
+
+    Addressables
+    use asynchronous loading to support loading from any location with any collection
+    of dependencies. Whether you have been using direct references, traditional asset
+    bundles, or Resource folders, addressables provide a simpler way to make your
+    game more dynamic. Addressables simultaneously opens up the world of asset bundles
+    while managing all the complexity.
+
+
+    For usage samples, see github.com/Unity-Technologies/Addressables-Sample'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.0.8-preview
+    - 0.0.12-preview
+    - 0.0.15-preview
+    - 0.0.16-preview
+    - 0.0.18-preview
+    - 0.0.22-preview
+    - 0.0.26-preview
+    - 0.0.27-preview
+    - 0.1.2-preview
+    - 0.2.1-preview
+    - 0.2.2-preview
+    - 0.3.5-preview
+    - 0.4.6-preview
+    - 0.4.8-preview
+    - 0.5.2-preview
+    - 0.5.3-preview
+    - 0.6.6-preview
+    - 0.6.7-preview
+    - 0.6.8-preview
+    - 0.7.4-preview
+    - 0.7.5-preview
+    - 0.8.4-preview
+    - 0.8.6-preview
+    - 1.1.3-preview
+    - 1.1.4-preview
+    - 1.1.5
+    - 1.1.7
+    - 1.1.9
+    - 1.1.10
+    - 1.2.2
+    - 1.2.3
+    - 1.2.4
+    - 1.3.3
+    - 1.3.8
+    - 1.4.0
+    - 1.5.0
+    - 1.5.1
+    - 1.6.0
+    - 1.6.2
+    - 1.7.4
+    - 1.7.5
+    - 1.8.3
+    - 1.8.4
+    - 1.8.5
+    - 1.9.2
+    - 1.10.0
+    - 1.11.2
+    - 1.12.0
+    - 1.13.1
+    - 1.14.2
+    - 1.15.1
+    - 1.16.1
+    - 1.16.6
+    - 1.16.7
+    - 1.16.8
+    - 1.16.10
+    - 1.16.12
+    - 1.16.13
+    - 1.16.15
+    - 1.16.16
+    - 1.16.19
+    - 1.17.0-preview
+    - 1.17.2-preview
+    - 1.17.4-preview
+    - 1.17.5-preview
+    - 1.17.6-preview
+    - 1.17.13
+    - 1.17.15
+    - 1.17.17
+    - 1.18.2
+    - 1.18.4
+    - 1.18.9
+    - 1.18.11
+    - 1.18.13
+    - 1.18.15
+    - 1.18.16
+    - 1.18.19
+    - 1.19.4
+    - 1.19.6
+    - 1.19.9
+    - 1.19.11
+    - 1.19.13
+    - 1.19.14
+    - 1.19.15
+    - 1.19.17
+    - 1.19.18
+    - 1.19.19
+    - 1.20.0
+    - 1.20.3
+    - 1.20.5
+    - 1.21.1
+    - 1.21.2
+    - 1.21.3
+    - 1.21.8
+    - 1.21.9
+    - 1.21.10
+    - 1.21.12
+    - 1.21.14
+    - 1.21.15
+    - 1.21.17
+    - 1.21.18
+    - 1.21.19
+    - 1.21.20
+    - 1.21.21
+    - 1.22.2
+    - 1.22.3
+    - 1.23.1
+    - 1.24.0
+    - 1.25.0
+    - 1.25.1
+    - 1.27.0
+    - 1.28.0
+    - 1.28.1
+    - 1.28.2
+    - 2.0.3
+    - 2.0.4
+    - 2.0.6
+    - 2.0.8
+    - 2.1.0
+    - 2.2.2
+    - 2.3.0
+    - 2.3.1
+    - 2.3.7
+    - 2.3.16
+    - 2.4.1
+    - 2.4.2
+    - 2.4.3
+    - 2.4.4
+    - 2.4.5
+    - 2.4.6
+    - 2.5.0
+    - 2.6.0
+    - 2.7.0
+    - 2.7.2
+    - 2.7.3
+    - 2.7.4
+    - 2.7.6
+    - 2.8.0
+    - 2.8.1
+    compatible:
+    - 1.21.19
+    - 1.21.20
+    - 1.21.21
+    - 1.22.2
+    - 1.22.3
+    - 1.23.1
+    - 1.24.0
+    - 1.25.0
+    - 1.25.1
+    - 1.27.0
+    - 1.28.0
+    - 1.28.1
+    - 1.28.2
+    recommended: 1.21.21
+    deprecated: []
+  dependencies:
+  - name: com.unity.scriptablebuildpipeline
+    version: 1.21.23
+  - name: com.unity.modules.assetbundle
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestassetbundle
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.scriptablebuildpipeline
+    version: 1.21.23
+  - name: com.unity.modules.assetbundle
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestassetbundle
+    version: 1.0.0
+  keywords:
+  - asset
+  - resources
+  - bundle
+  - bundles
+  - assetbundles
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.cn
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638513848750000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/Addressables.git
+    revision: 74ca1aaeb603da7437db95664f9bb92252223dab
+    path: 
+  unityLifecycle:
+    version: 1.21.19
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.burst@1.8.27
   testable: 0
   isDirectDependency: 1
   version: 1.8.27
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.burst@1.8.27
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.burst@1.8.27
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -698,6 +956,7 @@ m_ResolvedPackages:
     - 1.8.25
     - 1.8.26
     - 1.8.27
+    - 1.8.28
     compatible:
     - 1.8.15
     - 1.8.16
@@ -712,7 +971,8 @@ m_ResolvedPackages:
     - 1.8.25
     - 1.8.26
     - 1.8.27
-    recommended: 1.8.27
+    - 1.8.28
+    recommended: 1.8.28
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -757,7 +1017,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.11.2
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.collab-proxy@2.11.2
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.collab-proxy@2.11.2
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -860,6 +1120,7 @@ m_ResolvedPackages:
     - 2.10.1
     - 2.10.2
     - 2.11.2
+    - 2.11.3
     compatible:
     - 2.3.1
     - 2.4.3
@@ -877,6 +1138,7 @@ m_ResolvedPackages:
     - 2.10.1
     - 2.10.2
     - 2.11.2
+    - 2.11.3
     recommended: 2.3.1
     deprecated: []
   dependencies: []
@@ -929,7 +1191,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.5.7
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.collections@2.5.7
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.collections@2.5.7
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -1127,7 +1389,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.feature.2d@2.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.feature.2d@2.0.0
   assetPath: Packages/com.unity.feature.2d
   name: com.unity.feature.2d
   displayName: 2D
@@ -1250,7 +1512,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.38
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.ide.rider@3.0.38
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.ide.rider@3.0.38
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -1315,6 +1577,7 @@ m_ResolvedPackages:
     - 3.0.36
     - 3.0.37
     - 3.0.38
+    - 3.0.39
     compatible:
     - 3.0.28
     - 3.0.31
@@ -1323,7 +1586,8 @@ m_ResolvedPackages:
     - 3.0.36
     - 3.0.37
     - 3.0.38
-    recommended: 3.0.38
+    - 3.0.39
+    recommended: 3.0.39
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -1364,7 +1628,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.22
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -1460,7 +1724,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.11.6
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.nuget.mono-cecil@1.11.6
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.nuget.mono-cecil@1.11.6
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -1533,7 +1797,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 14.0.11
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.render-pipelines.universal@14.0.11
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.render-pipelines.universal@14.0.11
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal RP
@@ -1676,7 +1940,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 4.9.4
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.searcher@4.9.4
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.searcher@4.9.4
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -1753,7 +2017,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.9
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.textmeshpro@3.0.9
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.textmeshpro@3.0.9
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -1959,7 +2223,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.7.7
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.timeline@1.7.7
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.timeline@1.7.7
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -2137,7 +2401,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.ugui@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -2210,7 +2474,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.4
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.visualscripting@1.9.4
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.visualscripting@1.9.4
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -2319,7 +2583,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.ai@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -2375,7 +2639,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -2430,7 +2694,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.animation@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -2486,7 +2750,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -2542,7 +2806,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.audio@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -2598,7 +2862,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.cloth@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -2658,7 +2922,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.director@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2722,7 +2986,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2779,7 +3043,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.imgui@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2835,7 +3099,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2891,7 +3155,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2947,7 +3211,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.physics@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -3003,7 +3267,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -3059,7 +3323,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -3119,7 +3383,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.terrain@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -3175,7 +3439,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -3239,7 +3503,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -3298,7 +3562,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.ui@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -3354,7 +3618,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.uielements@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -3422,7 +3686,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.umbra@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3478,7 +3742,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3542,7 +3806,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3598,7 +3862,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3662,7 +3926,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3726,7 +3990,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3790,7 +4054,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -3870,7 +4134,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3930,7 +4194,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.video@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3998,7 +4262,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.vr@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -4068,7 +4332,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.wind@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -4124,7 +4388,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.xr@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -4192,7 +4456,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -4252,7 +4516,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 14.0.11
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.render-pipelines.core@14.0.11
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.render-pipelines.core@14.0.11
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Core RP Library
@@ -4431,7 +4695,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 14.0.11
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.shadergraph@14.0.11
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.shadergraph@14.0.11
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -4607,7 +4871,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 14.0.10
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal RP Config
@@ -4678,7 +4942,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.0.3
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.3
   assetPath: Packages/com.unity.2d.pixel-perfect
   name: com.unity.2d.pixel-perfect
   displayName: 2D Pixel Perfect
@@ -4766,7 +5030,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 8.0.5
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.psdimporter@8.0.5
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.psdimporter@8.0.5
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -4878,6 +5142,7 @@ m_ResolvedPackages:
     - 12.0.1
     - 13.0.0
     - 13.0.1
+    - 14.0.0
     compatible:
     - 8.0.5
     - 8.1.0
@@ -4959,7 +5224,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.sprite@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.sprite@1.0.0
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -5018,7 +5283,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 9.0.3
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.spriteshape@9.0.3
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.spriteshape@9.0.3
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -5135,6 +5400,7 @@ m_ResolvedPackages:
     - 12.0.2
     - 13.0.0
     - 14.0.0
+    - 15.0.0
     compatible:
     - 9.0.3
     - 9.0.4
@@ -5210,7 +5476,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.tilemap@1.0.0
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.tilemap@1.0.0
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -5284,7 +5550,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.mathematics@1.3.2
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.mathematics@1.3.2
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -5363,7 +5629,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.4.6
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.test-framework@1.4.6
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.test-framework@1.4.6
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -5505,7 +5771,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.0.3
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.test-framework.performance@3.0.3
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.test-framework.performance@3.0.3
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
@@ -5645,12 +5911,193 @@ m_ResolvedPackages:
   isDeprecated: 0
   deprecationMessage: 
   fingerprint: 
+- packageId: com.unity.scriptablebuildpipeline@1.21.23
+  testable: 0
+  isDirectDependency: 0
+  version: 1.21.23
+  source: 1
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.scriptablebuildpipeline@1.21.23
+  assetPath: Packages/com.unity.scriptablebuildpipeline
+  name: com.unity.scriptablebuildpipeline
+  displayName: Scriptable Build Pipeline
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The Scriptable Build Pipeline moves the asset bundle build pipeline
+    to C#.  Use the pre-defined build flows, or create your own using the divided
+    up APIs.  This system improves build time, fixes incremental build, and provides
+    greater flexibility.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 0.0.5-preview
+    - 0.0.6-preview
+    - 0.0.8-preview
+    - 0.0.9-preview
+    - 0.0.10-preview
+    - 0.0.14-preview
+    - 0.0.15-preview
+    - 0.1.0-preview
+    - 0.2.0-preview
+    - 1.0.1-preview
+    - 1.1.0-preview
+    - 1.1.1-preview
+    - 1.2.1-preview
+    - 1.3.5-preview
+    - 1.4.1-preview
+    - 1.5.0-preview
+    - 1.5.1
+    - 1.5.2
+    - 1.5.4
+    - 1.5.6
+    - 1.5.10
+    - 1.6.3-preview
+    - 1.6.4-preview
+    - 1.6.5-preview
+    - 1.7.2
+    - 1.7.3
+    - 1.8.2
+    - 1.8.4
+    - 1.8.6
+    - 1.9.0
+    - 1.10.0
+    - 1.11.1
+    - 1.11.2
+    - 1.12.0
+    - 1.13.1
+    - 1.14.0
+    - 1.14.1
+    - 1.15.1
+    - 1.15.2
+    - 1.16.1
+    - 1.17.0
+    - 1.18.0
+    - 1.19.0
+    - 1.19.1
+    - 1.19.2
+    - 1.19.3
+    - 1.19.4
+    - 1.19.5
+    - 1.19.6
+    - 1.20.1
+    - 1.20.2
+    - 1.21.0
+    - 1.21.1
+    - 1.21.2
+    - 1.21.3
+    - 1.21.5
+    - 1.21.7
+    - 1.21.8
+    - 1.21.9
+    - 1.21.20
+    - 1.21.21
+    - 1.21.22
+    - 1.21.23
+    - 1.21.24
+    - 1.21.25
+    - 1.22.1
+    - 1.22.2
+    - 1.22.4
+    - 1.22.5
+    - 1.23.0
+    - 1.23.1
+    - 1.23.2
+    - 1.23.3
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.2.4
+    - 2.2.11
+    - 2.3.0
+    - 2.3.1
+    - 2.3.2
+    - 2.3.3
+    - 2.3.4
+    - 2.3.5
+    - 2.3.6
+    - 2.3.7
+    - 2.3.8
+    - 2.4.0
+    - 2.4.1
+    - 2.4.2
+    - 2.4.3
+    - 2.5.0
+    - 2.5.1
+    - 2.5.2
+    compatible:
+    - 1.21.21
+    - 1.21.22
+    - 1.21.23
+    - 1.21.24
+    - 1.21.25
+    - 1.22.1
+    - 1.22.2
+    - 1.22.4
+    - 1.22.5
+    - 1.23.0
+    - 1.23.1
+    - 1.23.2
+    - 1.23.3
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.2.4
+    recommended: 1.21.25
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - build
+  - bundle
+  - bundles
+  - assetbundles
+  - cache
+  - server
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.cn
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638513848730000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.scriptablebuildpipeline@1.21/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/Addressables.git
+    revision: 74ca1aaeb603da7437db95664f9bb92252223dab
+    path: 
+  unityLifecycle:
+    version: 1.21.21
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  fingerprint: 
 - packageId: com.unity.2d.common@8.0.4
   testable: 0
   isDirectDependency: 0
   version: 8.0.4
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.2d.common@8.0.4
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.2d.common@8.0.4
   assetPath: Packages/com.unity.2d.common
   name: com.unity.2d.common
   displayName: 2D Common
@@ -5736,8 +6183,10 @@ m_ResolvedPackages:
     - 11.0.1
     - 12.0.0
     - 12.0.1
+    - 12.0.2
     - 13.0.0
     - 13.0.1
+    - 14.0.0
     compatible:
     - 8.0.2
     - 8.0.3
@@ -5808,7 +6257,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.3
   source: 1
-  resolvedPath: D:\Document\BlueTower-GraduationVersion\ClientGV\Library\PackageCache\com.unity.ext.nunit@2.0.3
+  resolvedPath: D:\GitHubProject\DarkGame\BlueTower-GraduationVersion2\ClientGV\Library\PackageCache\com.unity.ext.nunit@2.0.3
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
