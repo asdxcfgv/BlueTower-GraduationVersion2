@@ -79,5 +79,28 @@ public class RoomTemplateSO : ScriptableObject
     {
         return doorwayList;
     }
-    
+    #region Validation
+
+#if UNITY_EDITOR
+
+    // Validate SO fields
+    private void OnValidate()
+    {
+        // Set unique GUID if empty or the prefab changes
+        if (guid == "" || previousPrefab != prefab)
+        {
+            guid = GUID.Generate().ToString();
+            previousPrefab = prefab;
+            EditorUtility.SetDirty(this);
+        }
+
+        Global.ValidateCheckEnumerableValues(this, nameof(doorwayList), doorwayList);
+
+        // Check spawn positions populated
+        Global.ValidateCheckEnumerableValues(this, nameof(spawnPositionArray), spawnPositionArray);
+    }
+
+#endif
+
+    #endregion Validation
 }

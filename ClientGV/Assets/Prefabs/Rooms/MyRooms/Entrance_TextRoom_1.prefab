@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5621245411097770903}
   - component: {fileID: 3767833191241744966}
-  - component: {fileID: 5047510632937636224}
+  - component: {fileID: -1644567960442964751}
   m_Layer: 12
-  m_Name: SmallRoom_TextRoom_1
+  m_Name: Entrance_TextRoom_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 16}
   m_EdgeRadius: 0
---- !u!114 &5047510632937636224
+--- !u!114 &-1644567960442964751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

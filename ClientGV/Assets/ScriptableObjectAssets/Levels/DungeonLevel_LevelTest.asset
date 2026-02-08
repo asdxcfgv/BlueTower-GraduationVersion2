@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4efa324032c4542be60cebf2aaada8, type: 3}
+  m_Name: DungeonLevel_LevelTest
+  m_EditorClassIdentifier: 
+  levelName: Level Test
+  roomTemplateList:
+  - {fileID: 11400000, guid: ca732c9bd0b179844ac685de57e823de, type: 2}
+  - {fileID: 11400000, guid: 5fc74229d83c75c40a605c02a353ff6e, type: 2}
+  - {fileID: 11400000, guid: 123d2e189be80454295db974a3386896, type: 2}
+  - {fileID: 11400000, guid: 3b86a4d765d77eb45b008b97261f6111, type: 2}
+  roomNodeGraphList:
+  - {fileID: 11400000, guid: 459e56b745bfb6f4889db170dc209b5f, type: 2}
