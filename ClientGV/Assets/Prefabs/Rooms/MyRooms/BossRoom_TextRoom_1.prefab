@@ -7227,7 +7227,7 @@ GameObject:
   - component: {fileID: 591766342240334044}
   m_Layer: 0
   m_Name: Tilemap1_Ground
-  m_TagString: groudTilemap
+  m_TagString: groundTilemap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

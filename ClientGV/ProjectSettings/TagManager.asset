@@ -7,13 +7,13 @@ TagManager:
   - grid
   - collisionTilemap
   - minimapTilemap
-  - groudTilemap
   - decoration1Tilemap
   - decoration2Tilemap
   - frontTilemap
   - roomTilemap
   - miniMapPlayer
   - playerWeapon
+  - groundTilemap
   layers:
   - Default
   - TransparentFX
