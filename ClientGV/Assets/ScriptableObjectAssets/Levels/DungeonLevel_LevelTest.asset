@@ -14,10 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level Test
   roomTemplateList:
-  - {fileID: 11400000, guid: ca732c9bd0b179844ac685de57e823de, type: 2}
-  - {fileID: 11400000, guid: 5fc74229d83c75c40a605c02a353ff6e, type: 2}
-  - {fileID: 11400000, guid: 123d2e189be80454295db974a3386896, type: 2}
-  - {fileID: 11400000, guid: 3b86a4d765d77eb45b008b97261f6111, type: 2}
+  - {fileID: 11400000, guid: eab99ff4c2e907d44b92f0318a77ece7, type: 2}
+  - {fileID: 11400000, guid: ff635ec0e46f9f84dabea46aae707527, type: 2}
+  - {fileID: 11400000, guid: f6376066aa7f647449ca550f910719ff, type: 2}
+  - {fileID: 11400000, guid: ad40d5e43859c9942b1f60dd6c4d7582, type: 2}
+  - {fileID: 11400000, guid: a02eece8eda59674eb9936043ec5931f, type: 2}
+  - {fileID: 11400000, guid: 09b45af9f3b505e4d818d34928cf92e1, type: 2}
+  - {fileID: 11400000, guid: 0af172dc8dbcf614c843a1fa532a49c6, type: 2}
+  - {fileID: 11400000, guid: da64ffde65ce6f24b8951b82b2a351c5, type: 2}
   - {fileID: 11400000, guid: 60319c7d9082af24ba5df2493632dabe, type: 2}
   roomNodeGraphList:
   - {fileID: 11400000, guid: 459e56b745bfb6f4889db170dc209b5f, type: 2}
+  - {fileID: 11400000, guid: a04a0bb9cdbafa14d9aa291e712ef6a7, type: 2}

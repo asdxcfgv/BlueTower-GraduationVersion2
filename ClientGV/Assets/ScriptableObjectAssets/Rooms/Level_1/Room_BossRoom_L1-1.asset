@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2750b9d3c0b123c458dc37eba499233d, type: 3}
+  m_Name: Room_BossRoom_L1-1
+  m_EditorClassIdentifier: 
+  guid: c534cb6a8362f944287f226c79b2187c
+  prefab: {fileID: 1715949929663130391, guid: 11521aa7e9e831b4d82b90164bde8342, type: 3}
+  previousPrefab: {fileID: 1715949929663130391, guid: 11521aa7e9e831b4d82b90164bde8342, type: 3}
+  roomNodeType: {fileID: 11400000, guid: 7d73ad62ae32e8c4094dc68d3b372d14, type: 2}
+  lowerBounds: {x: 22, y: 19}
+  upperBounds: {x: -33, y: -28}
+  doorwayList:
+  - position: {x: -6, y: 19}
+    orientation: 0
+    doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
+    doorwayStartCopyPosition: {x: -9, y: 19}
+    doorwayCopyTileWidth: 5
+    doorwayCopyTileHeight: 10
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: -6, y: -28}
+    orientation: 2
+    doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
+    doorwayStartCopyPosition: {x: -9, y: -19}
+    doorwayCopyTileWidth: 5
+    doorwayCopyTileHeight: 10
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: -33, y: -7}
+    orientation: 3
+    doorPrefab: {fileID: 7601368127187155245, guid: 053601f4eec3f3749b3d36329f40ed40, type: 3}
+    doorwayStartCopyPosition: {x: -33, y: -2}
+    doorwayCopyTileWidth: 12
+    doorwayCopyTileHeight: 7
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 22, y: -7}
+    orientation: 1
+    doorPrefab: {fileID: 7601368127187155245, guid: 053601f4eec3f3749b3d36329f40ed40, type: 3}
+    doorwayStartCopyPosition: {x: 10, y: -2}
+    doorwayCopyTileWidth: 13
+    doorwayCopyTileHeight: 7
+    isConnected: 0
+    isUnavailable: 0
+  spawnPositionArray:
+  - {x: -6, y: -6}
