@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402543838211965109}
-  - component: {fileID: 4858265587183078453}
   - component: {fileID: 8548192203361985916}
   m_Layer: 13
   m_Name: DoorCollider
@@ -34,58 +33,6 @@ Transform:
   - {fileID: 7068362052086487661}
   m_Father: {fileID: 1779215367434176856}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4858265587183078453
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7158693829688192745}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1934134769
-  m_SortingLayer: 4
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 6235154995679643765, guid: 94ceb7f4942570649bd0a897ef2a4ed9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.5, y: 2.75}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!61 &8548192203361985916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.7}
+  m_Offset: {x: 0, y: 4.2928796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.875, y: 0}
@@ -129,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 5.5}
+  m_Size: {x: 2, y: 2.9134433}
   m_EdgeRadius: 0
 --- !u!1 &7601368127187155245
 GameObject:
@@ -208,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: -1934134769
   m_SortingLayer: 4
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7053689574826554501, guid: 8bf4537c840876747a02facf5781dfb0, type: 3}
+  m_Sprite: {fileID: -977310406728205912, guid: 080b676e544a10b47b9affd5447fe5c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -229,7 +176,7 @@ Animator:
   m_GameObject: {fileID: 7601368127187155245}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fa5f18c0d3a11044690a694e0381e175, type: 2}
+  m_Controller: {fileID: 9100000, guid: d0e8198220f893a49a7d1ba906607718, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -272,18 +219,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.5058177}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.875, y: 0}
-    oldSize: {x: 1.5, y: 2.75}
+    pivot: {x: 0.5555555, y: 0}
+    oldSize: {x: 0.5625, y: 5}
     newSize: {x: 1.5, y: 2.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 5.5}
+  m_Size: {x: 2.5, y: 2.9770017}
   m_EdgeRadius: 0
 --- !u!114 &748017454025447777
 MonoBehaviour:
@@ -364,7 +311,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.5}
+  m_Offset: {x: 0, y: 4.257835}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -375,7 +322,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11, y: 5.5}
+  m_Size: {x: 11, y: 3.0056677}
   m_EdgeRadius: 0
 --- !u!114 &8529318334277211372
 MonoBehaviour:
