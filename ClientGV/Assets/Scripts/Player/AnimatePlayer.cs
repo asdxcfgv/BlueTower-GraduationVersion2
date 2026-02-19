@@ -76,8 +76,6 @@ public class AnimatePlayer : MonoBehaviour
     private void InitializeAimAnimationParameters()
     {
         player.animator.SetBool(Global.aimUp, false);
-        player.animator.SetBool(Global.aimUpRight, false);
-        player.animator.SetBool(Global.aimUpLeft, false);
         player.animator.SetBool(Global.aimRight, false);
         player.animator.SetBool(Global.aimLeft, false);
         player.animator.SetBool(Global.aimDown, false);
@@ -85,10 +83,7 @@ public class AnimatePlayer : MonoBehaviour
 
     private void InitializeRollAnimationParameters()
     {
-        player.animator.SetBool(Global.rollDown, false);
-        player.animator.SetBool(Global.rollRight, false);
-        player.animator.SetBool(Global.rollLeft, false);
-        player.animator.SetBool(Global.rollUp, false);
+        
     }
 
 
@@ -121,14 +116,6 @@ public class AnimatePlayer : MonoBehaviour
         {
             case AimDirection.Up:
                 player.animator.SetBool(Global.aimUp, true);
-                break;
-
-            case AimDirection.UpRight:
-                player.animator.SetBool(Global.aimUpRight, true);
-                break;
-
-            case AimDirection.UpLeft:
-                player.animator.SetBool(Global.aimUpLeft, true);
                 break;
 
             case AimDirection.Right:

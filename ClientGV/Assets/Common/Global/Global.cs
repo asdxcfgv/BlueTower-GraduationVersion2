@@ -34,10 +34,6 @@ public  class Global : Architecture<Global>
     
     public static int aimDown = Animator.StringToHash("aimDown");
     
-    public static int aimUpRight = Animator.StringToHash("aimUpRight");
-    
-    public static int aimUpLeft = Animator.StringToHash("aimUpLeft");
-    
     public static int aimRight = Animator.StringToHash("aimRight");
     
     public static int aimLeft = Animator.StringToHash("aimLeft");
@@ -45,14 +41,6 @@ public  class Global : Architecture<Global>
     public static int isIdle = Animator.StringToHash("isIdle");
     
     public static int isMoving = Animator.StringToHash("isMoving");
-    
-    public static int rollUp = Animator.StringToHash("rollUp");
-    
-    public static int rollRight = Animator.StringToHash("rollRight");
-    
-    public static int rollLeft = Animator.StringToHash("rollLeft");
-    
-    public static int rollDown = Animator.StringToHash("rollDown");
     
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
@@ -221,23 +209,14 @@ public  class Global : Architecture<Global>
         AimDirection aimDirection;
 
         // Set player direction
-        //Up Right
-        if (angleDegrees >= 22f && angleDegrees <= 67f)
-        {
-            aimDirection = AimDirection.UpRight;
-        }
+
         // Up
-        else if (angleDegrees > 67f && angleDegrees <= 112f)
+        if (angleDegrees > 45f && angleDegrees <= 135f)
         {
             aimDirection = AimDirection.Up;
         }
-        // Up Left
-        else if (angleDegrees > 112f && angleDegrees <= 158f)
-        {
-            aimDirection = AimDirection.UpLeft;
-        }
         // Left
-        else if ((angleDegrees <= 180f && angleDegrees > 158f) || (angleDegrees > -180 && angleDegrees <= -135f))
+        else if ((angleDegrees <= 180f && angleDegrees > 135f) || (angleDegrees > -180 && angleDegrees <= -135f))
         {
             aimDirection = AimDirection.Left;
         }
@@ -247,7 +226,7 @@ public  class Global : Architecture<Global>
             aimDirection = AimDirection.Down;
         }
         // Right
-        else if ((angleDegrees > -45f && angleDegrees <= 0f) || (angleDegrees > 0 && angleDegrees < 22f))
+        else if ((angleDegrees > -45f && angleDegrees <= 0f) || (angleDegrees > 0 && angleDegrees <= 45f))
         {
             aimDirection = AimDirection.Right;
         }
