@@ -32,6 +32,19 @@ public class PlayerDetailsSO : ScriptableObject
     [Tooltip("Player starting health amount")]
     #endregion
     public int playerHealthAmount;
+    
+    #region Header WEAPON
+    [Space(10)]
+    [Header("WEAPON")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Player  initial starting weapon")]
+    #endregion
+    public WeaponDetailsSO startingWeapon;
+    #region Tooltip
+    [Tooltip("Populate with the list of starting weapons")]
+    #endregion
+    public List<WeaponDetailsSO> startingWeaponList;
 
     #region Header OTHER
     [Space(10)]

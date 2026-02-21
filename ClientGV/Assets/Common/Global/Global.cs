@@ -9,6 +9,14 @@ public  class Global : Architecture<Global>
 {
     public static Camera mainCamera;
     
+    #region FIRING CONTROL
+    public const float useAimAngleDistance = 3.5f; // if the target distance is less than this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon). 
+    #endregion
+
+    #region UI PARAMETERS
+    public const float uiAmmoIconSpacing = 4f;
+    #endregion
+    
     #region UNITS
     public const float pixelsPerUnit = 16f;
     public const float tileSizePixels = 16f;
@@ -44,6 +52,8 @@ public  class Global : Architecture<Global>
     
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
+    
+    public static float baseSpeedForPlayerAnimations = 8f;
 
     #endregion
     
@@ -114,6 +124,16 @@ public  class Global : Architecture<Global>
             Debug.LogError($"读取Excel文件失败: {excelName}\n错误信息: {e.Message}");
             return null;
         }
+    }
+    
+    /// <summary>
+    /// Get the direction vector from an angle in degrees
+    /// </summary>
+    /// <returns></returns>
+    public static Vector3 GetDirectionVectorFromAngle(float angle)
+    {
+        Vector3 directionVector = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle), 0f);
+        return directionVector;
     }
     
     /// <summary>

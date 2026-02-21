@@ -11,16 +11,9 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] private MovementDetailsSO movementDetails;
 
-    #region Tooltip
-
-    [Tooltip("The player WeaponShootPosition gameobject in the hieracrchy")]
-
-    #endregion Tooltip
-
-    [SerializeField] private Transform weaponShootPosition;
-
     private Player player;
     private float moveSpeed;
+    private int currentWeaponIndex = 1;
     private Coroutine playerRollCoroutine;
     private WaitForFixedUpdate waitForFixedUpdate;
     private bool isPlayerRolling = false;
@@ -38,7 +31,40 @@ public class PlayerControl : MonoBehaviour
     {
         // Create waitforfixed update for use in coroutine
         waitForFixedUpdate = new WaitForFixedUpdate();
+        
+        // Set Starting Weapon
+        SetStartingWeapon();
+        
+        // Set player animation speed
+        SetPlayerAnimationSpeed();
 
+    }
+    
+    /// <summary>
+    /// Set the player starting weapon
+    /// </summary>
+    private void SetStartingWeapon()
+    {
+        int index = 1;
+
+        foreach (Weapon weapon in player.weaponList)
+        {
+            if (weapon.weaponDetails == player.playerDetails.startingWeapon)
+            {
+                SetWeaponByIndex(index);
+                break;
+            }
+            index++;
+        }
+    }
+    
+    /// <summary>
+    /// Set player animator speed to match movement speed
+    /// </summary>
+    private void SetPlayerAnimationSpeed()
+    {
+        // Set animator speed to match movement speed
+        player.animator.speed = moveSpeed / Global.baseSpeedForPlayerAnimations;
     }
 
     private void Update()
@@ -122,7 +148,7 @@ public class PlayerControl : MonoBehaviour
         Vector3 mouseWorldPosition = Global.GetMouseWorldPosition();
 
         // Calculate direction vector of mouse cursor from weapon shoot position
-        weaponDirection = (mouseWorldPosition - weaponShootPosition.position);
+        weaponDirection = (mouseWorldPosition - player.activeWeapon.GetShootPosition());
 
         // Calculate direction vector of mouse cursor from player transform position
         Vector3 playerDirection = (mouseWorldPosition - transform.position);
@@ -138,6 +164,15 @@ public class PlayerControl : MonoBehaviour
 
         // Trigger weapon aim event
         player.aimWeaponEvent.OnWeaponAim.Trigger(new AimWeaponEventArgs(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection));
+    }
+    
+    private void SetWeaponByIndex(int weaponIndex)
+    {
+        if (weaponIndex - 1 < player.weaponList.Count)
+        {
+            currentWeaponIndex = weaponIndex;
+            player.setActiveWeaponEvent.OnSetActiveWeapon.Trigger(new SetActiveWeaponEventArgs(player.weaponList[weaponIndex - 1]));
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
