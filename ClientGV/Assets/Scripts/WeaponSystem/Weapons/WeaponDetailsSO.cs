@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "WeaponDetails_", menuName = "Scriptable Objects/Weapons/Weapon Details")]
@@ -15,6 +16,8 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("The sprite for the weapon - the sprite should have the 'generate physics shape' option selected ")]
     #endregion Tooltip
     public Sprite weaponSprite;
+
+    public AnimatorController animatorController;
 
     #region Header WEAPON CONFIGURATION
     [Space(10)]

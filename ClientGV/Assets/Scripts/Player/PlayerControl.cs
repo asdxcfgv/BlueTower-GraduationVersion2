@@ -1,9 +1,10 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using static GlobalEnums;
 public class PlayerControl : MonoBehaviour
 {
-    #region Tooltip
+     #region Tooltip
 
     [Tooltip("MovementDetailsSO scriptable object containing movement details such as speed")]
 
@@ -12,12 +13,11 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private MovementDetailsSO movementDetails;
 
     private Player player;
-    private float moveSpeed;
+    private bool leftMouseDownPreviousFrame = false;
     private int currentWeaponIndex = 1;
+    private float moveSpeed;
     private Coroutine playerRollCoroutine;
     private WaitForFixedUpdate waitForFixedUpdate;
-    private bool isPlayerRolling = false;
-    private float playerRollCooldownTimer = 0f;
 
     private void Awake()
     {
@@ -31,15 +31,15 @@ public class PlayerControl : MonoBehaviour
     {
         // Create waitforfixed update for use in coroutine
         waitForFixedUpdate = new WaitForFixedUpdate();
-        
+
         // Set Starting Weapon
         SetStartingWeapon();
-        
+
         // Set player animation speed
         SetPlayerAnimationSpeed();
 
     }
-    
+
     /// <summary>
     /// Set the player starting weapon
     /// </summary>
@@ -57,7 +57,7 @@ public class PlayerControl : MonoBehaviour
             index++;
         }
     }
-    
+
     /// <summary>
     /// Set player animator speed to match movement speed
     /// </summary>
@@ -69,17 +69,13 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-        // if player is rolling then return
-        if (isPlayerRolling) return;
 
         // Process the player movement input
         MovementInput();
 
         // Process the player weapon input
         WeaponInput();
-
-        // Player roll cooldown timer
-        PlayerRollCooldownTimer();
+        
     }
 
     /// <summary>
@@ -109,7 +105,6 @@ public class PlayerControl : MonoBehaviour
                 // trigger movement event
                 player.movementByVelocityEvent.OnMovementByVelocity.Trigger(new MovementByVelocityArgs(direction, moveSpeed));
             }
-            // else player roll if not cooling down
 
         }
         // else trigger idle event
@@ -120,14 +115,7 @@ public class PlayerControl : MonoBehaviour
     }
     
     
-
-    private void PlayerRollCooldownTimer()
-    {
-        if (playerRollCooldownTimer >= 0f)
-        {
-            playerRollCooldownTimer -= Time.deltaTime;
-        }
-    }
+    
 
     /// <summary>
     /// Weapon Input
@@ -140,6 +128,15 @@ public class PlayerControl : MonoBehaviour
 
         // Aim weapon input
         AimWeaponInput(out weaponDirection, out weaponAngleDegrees, out playerAngleDegrees, out playerAimDirection);
+
+        // Fire weapon input
+        FireWeaponInput(weaponDirection, weaponAngleDegrees, playerAngleDegrees, playerAimDirection);
+
+        // Switch weapon input
+        SwitchWeaponInput();
+
+        // Reload weapon input
+        ReloadWeaponInput();
     }
 
     private void AimWeaponInput(out Vector3 weaponDirection, out float weaponAngleDegrees, out float playerAngleDegrees, out AimDirection playerAimDirection)
@@ -165,7 +162,92 @@ public class PlayerControl : MonoBehaviour
         // Trigger weapon aim event
         player.aimWeaponEvent.OnWeaponAim.Trigger(new AimWeaponEventArgs(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection));
     }
-    
+
+    private void FireWeaponInput(Vector3 weaponDirection, float weaponAngleDegrees, float playerAngleDegrees, AimDirection playerAimDirection)
+    {
+        // Fire when left mouse button is clicked
+        if (Input.GetMouseButton(0))
+        {
+            // Trigger fire weapon event
+            player.fireWeaponEvent.OnFireWeapon.Trigger(new FireWeaponEventArgs(true, leftMouseDownPreviousFrame, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection));
+            leftMouseDownPreviousFrame = true;
+        }
+        else
+        {
+            leftMouseDownPreviousFrame = false;
+        }
+    }
+
+    private void SwitchWeaponInput()
+    {
+        // Switch weapon if mouse scroll wheel selecetd
+        if (Input.mouseScrollDelta.y < 0f)
+        {
+            PreviousWeapon();
+        }
+
+        if (Input.mouseScrollDelta.y > 0f)
+        {
+            NextWeapon();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetWeaponByIndex(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetWeaponByIndex(2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetWeaponByIndex(3);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SetWeaponByIndex(4);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SetWeaponByIndex(5);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SetWeaponByIndex(6);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            SetWeaponByIndex(7);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            SetWeaponByIndex(8);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            SetWeaponByIndex(9);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SetWeaponByIndex(10);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Minus))
+        {
+            SetCurrentWeaponToFirstInTheList();
+        }
+
+    }
+
     private void SetWeaponByIndex(int weaponIndex)
     {
         if (weaponIndex - 1 < player.weaponList.Count)
@@ -175,26 +257,97 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    private void NextWeapon()
+    {
+        currentWeaponIndex++;
+
+        if (currentWeaponIndex > player.weaponList.Count)
+        {
+            currentWeaponIndex = 1;
+        }
+
+        SetWeaponByIndex(currentWeaponIndex);
+
+    }
+
+    private void PreviousWeapon()
+    {
+        currentWeaponIndex--;
+
+        if (currentWeaponIndex < 1)
+        {
+            currentWeaponIndex = player.weaponList.Count;
+        }
+
+        SetWeaponByIndex(currentWeaponIndex);
+    }
+
+
+    private void ReloadWeaponInput()
+    {
+        Weapon currentWeapon = player.activeWeapon.GetCurrentWeapon();
+
+        // if current weapon is reloading return
+        if (currentWeapon.isWeaponReloading) return;
+
+        // remaining ammo is less than clip capacity then return and not infinite ammo then return
+        if (currentWeapon.weaponRemainingAmmo < currentWeapon.weaponDetails.weaponClipAmmoCapacity && !currentWeapon.weaponDetails.hasInfiniteAmmo) return;
+
+        // if ammo in clip equals clip capacity then return
+        if (currentWeapon.weaponClipRemainingAmmo == currentWeapon.weaponDetails.weaponClipAmmoCapacity) return;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Call the reload weapon event
+            player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), 0));
+        }
+
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // if collided with something stop player roll coroutine
-        StopPlayerRollRoutine();
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         // if in collision with something stop player roll coroutine
-        StopPlayerRollRoutine();
+        
     }
+    
 
-    private void StopPlayerRollRoutine()
+    /// <summary>
+    /// Set the current weapon to be first in the player weapon list
+    /// </summary>
+    private void SetCurrentWeaponToFirstInTheList()
     {
-        if (playerRollCoroutine != null)
-        {
-            StopCoroutine(playerRollCoroutine);
+        // Create new temporary list
+        List<Weapon> tempWeaponList = new List<Weapon>();
 
-            isPlayerRolling = false;
+        // Add the current weapon to first in the temp list
+        Weapon currentWeapon = player.weaponList[currentWeaponIndex - 1];
+        currentWeapon.weaponListPosition = 1;
+        tempWeaponList.Add(currentWeapon);
+
+        // Loop through existing weapon list and add - skipping current weapon
+        int index = 2;
+
+        foreach (Weapon weapon in player.weaponList)
+        {
+            if (weapon == currentWeapon) continue;
+
+            tempWeaponList.Add(weapon);
+            weapon.weaponListPosition = index;
+            index++;
         }
+
+        // Assign new list
+        player.weaponList = tempWeaponList;
+
+        currentWeaponIndex = 1;
+
+        // Set current weapon
+        SetWeaponByIndex(currentWeaponIndex);
     }
     
 }

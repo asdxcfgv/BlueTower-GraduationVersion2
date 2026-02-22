@@ -22,6 +22,8 @@ public class ActiveWeapon : MonoBehaviour
     #endregion
     [SerializeField] private Transform weaponEffectPositionTransform;
 
+    [SerializeField] private Animator weaponAnimator;
+
     private SetActiveWeaponEvent setWeaponEvent;
     private Weapon currentWeapon;
 
@@ -50,9 +52,12 @@ public class ActiveWeapon : MonoBehaviour
     private void SetWeapon(Weapon weapon)
     {
         currentWeapon = weapon;
-
+        
         // Set current weapon sprite
         weaponSpriteRenderer.sprite = currentWeapon.weaponDetails.weaponSprite;
+
+        weaponAnimator.runtimeAnimatorController = currentWeapon.weaponDetails.animatorController;
+        
 
         // If the weapon has a polygon collider and a sprite then set it to the weapon sprite physics shape
         if (weaponPolygonCollider2D != null && weaponSpriteRenderer.sprite != null)
@@ -94,6 +99,9 @@ public class ActiveWeapon : MonoBehaviour
     {
         currentWeapon = null;
     }
-    
 
+    public Animator GetAnimator()
+    {
+        return weaponAnimator;
+    }
 }

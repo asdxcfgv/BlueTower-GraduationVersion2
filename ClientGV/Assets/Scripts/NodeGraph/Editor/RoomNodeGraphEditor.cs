@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class RoomNodeGraphEditor : EditorWindow
 {

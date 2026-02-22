@@ -258,6 +258,25 @@ public  class Global : Architecture<Global>
         return aimDirection;
 
     }
+
+    public static float GetAnimationClipLength(Animator animator, string clipName)
+    {
+        // 获取所有动画片段
+        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
+
+        // 遍历所有动画片段
+        foreach (AnimationClip clip in clips)
+        {
+            // 如果找到了需要的动画片段
+            if (clip.name.Equals("动画名称"))
+            {
+                // 获取并返回动画时长
+                return clip.length;
+            }
+        }
+
+        return 0f;
+    }
     
     /// <summary>
     /// Get the nearest spawn position to the player

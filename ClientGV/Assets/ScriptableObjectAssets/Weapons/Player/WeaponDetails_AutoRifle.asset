@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: AutoRifle
   weaponSprite: {fileID: -1359239251, guid: b668af0580d00024892785e53cf8def1, type: 3}
+  animatorController: {fileID: 9100000, guid: feec17a663c69be4a98371d248e5dca8, type: 2}
   weaponShootPosition: {x: 1.23, y: 0.05, z: 0}
-  weaponCurrentAmmo: {fileID: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 9d2769b6c8eca324f9208d99e91fd00f, type: 2}
   hasInfiniteAmmo: 1
-  hasInfiniteClipCapacity: 1
-  weaponClipAmmoCapacity: 30
-  weaponAmmoCapacity: 150
-  weaponFireRate: 0.01
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 15
+  weaponAmmoCapacity: 30
+  weaponFireRate: 0.2
   weaponPrechargeTime: 0
-  weaponReloadTime: 1.2
+  weaponReloadTime: 1.5
