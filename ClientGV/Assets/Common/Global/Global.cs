@@ -268,7 +268,7 @@ public  class Global : Architecture<Global>
         foreach (AnimationClip clip in clips)
         {
             // 如果找到了需要的动画片段
-            if (clip.name.Equals("动画名称"))
+            if (clip.name.Equals(clipName))
             {
                 // 获取并返回动画时长
                 return clip.length;
