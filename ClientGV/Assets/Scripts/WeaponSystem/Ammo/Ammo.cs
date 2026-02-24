@@ -1,3 +1,4 @@
+using QFramework;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -163,7 +164,19 @@ public class Ammo : MonoBehaviour, IFireable
     /// </summary>
     private void DisableAmmo()
     {
-        gameObject.SetActive(false);
+        Animator animator = GetComponent<Animator>();
+
+        ammoSpeed = 0f;
+        
+        animator.Play("Bullet_Disappear");
+
+        ActionKit.Delay(Global.GetAnimationClipLength(animator, "Bullet_Disappear"), () =>
+        {
+            animator.Rebind();
+            
+            gameObject.SetActive(false);
+            
+        }).Start(this);
     }
 
     public void SetAmmoMaterial(Material material)

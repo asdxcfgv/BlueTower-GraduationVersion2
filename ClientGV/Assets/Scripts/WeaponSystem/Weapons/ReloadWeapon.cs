@@ -63,9 +63,9 @@ public class ReloadWeapon : MonoBehaviour
             StopCoroutine(reloadWeaponCoroutine);
         }
         
-        activeWeapon.GetAnimator().speed = Global.GetAnimationClipLength(activeWeapon.GetAnimator(),"Gun_LoadIn&LoadOut")/reloadWeaponEventArgs.weapon.weaponDetails.weaponReloadTime;
+        activeWeapon.GetAnimator().speed = Global.GetAnimationClipLength(activeWeapon.GetAnimator(),"Gun_Reload")/reloadWeaponEventArgs.weapon.weaponDetails.weaponReloadTime;
         
-        activeWeapon.GetAnimator().Play("Gun_LoadIn&LoadOut");
+        activeWeapon.GetAnimator().Play("Gun_Reload");
         
         
         reloadWeaponCoroutine = StartCoroutine(ReloadWeaponRoutine(reloadWeaponEventArgs.weapon, reloadWeaponEventArgs.topUpAmmoPercent));
