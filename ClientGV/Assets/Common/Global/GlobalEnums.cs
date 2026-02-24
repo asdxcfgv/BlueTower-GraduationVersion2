@@ -23,6 +23,7 @@ public class GlobalEnums
     
     public enum GameState
     {
+        initializeGame,
         gameStarted,
         playingLevel,
         engagingEnemies,

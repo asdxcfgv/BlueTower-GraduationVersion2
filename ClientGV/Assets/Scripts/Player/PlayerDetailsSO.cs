@@ -54,11 +54,6 @@ public class PlayerDetailsSO : ScriptableObject
     [Tooltip("Player icon sprite to be used in the minimap")]
     #endregion
     public Sprite playerMiniMapIcon;
-
-    #region Tooltip
-    [Tooltip("Player hand sprite")]
-    #endregion
-    public Sprite playerHandSprite;
     
 
 }

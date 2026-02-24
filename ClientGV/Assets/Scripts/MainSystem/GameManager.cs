@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using QFramework;
+using QFramework.Example;
 using UnityEngine;
 using static GlobalEnums;
 
@@ -70,6 +71,18 @@ public class GameManager : MonoBehaviour
 
     private void InitFSM()
     {
+        m_gameStateFSM.State(GameState.initializeGame).OnEnter(() =>
+        {
+            UIKit.OpenPanel<MinimapPanel>(UILevel.PopUI,null,"UIPrefabs/MinimapPanel");
+            
+            m_gameStateFSM.ChangeState(GameState.gameStarted);
+        }).OnExit(() =>
+        {
+
+        }).OnUpdate(() =>
+        {
+            
+        });
         m_gameStateFSM.State(GameState.gameStarted).OnEnter(() =>
         {
 
@@ -94,7 +107,7 @@ public class GameManager : MonoBehaviour
         {
 
         });
-        m_gameStateFSM.StartState(GameState.gameStarted);
+        m_gameStateFSM.StartState(GameState.initializeGame);
     }
 
 
@@ -138,8 +151,14 @@ public class GameManager : MonoBehaviour
     {
         return player;
     }
-
-
+    
+    /// <summary>
+    /// Get the player minimap icon
+    /// </summary>
+    public Sprite GetPlayerMiniMapIcon()
+    {
+        return playerDetails.playerMiniMapIcon;
+    }
 
     /// <summary>
     /// Get the current room the player is in
