@@ -59,10 +59,15 @@ public  class Global : Architecture<Global>
     
     public static int isMoving = Animator.StringToHash("isMoving");
     
+    public static int isAttacking = Animator.StringToHash("isAttacking");
+    
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
     
     public static float baseSpeedForPlayerAnimations = 8f;
+    
+    // Animator parameters - Enemy
+    public static float baseSpeedForEnemyAnimations = 3f;
 
     #endregion
     

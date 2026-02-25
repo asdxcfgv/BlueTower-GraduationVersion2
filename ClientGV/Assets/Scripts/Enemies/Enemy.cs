@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(AimWeaponEvent))]
@@ -13,8 +15,13 @@ using UnityEngine;
 [RequireComponent(typeof(ReloadWeaponEvent))]
 [RequireComponent(typeof(ReloadWeapon))]
 [RequireComponent(typeof(WeaponReloadedEvent))]
+[RequireComponent(typeof(EnemyMovementAI))]
+[RequireComponent(typeof(MovementToPositionEvent))]
+[RequireComponent(typeof(MovementToPosition))]
 [RequireComponent(typeof(IdleEvent))]
 [RequireComponent(typeof(Idle))]
+[RequireComponent(typeof(AnimateEnemy))]
+[RequireComponent(typeof(SortingGroup))]
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -63,5 +70,25 @@ public class Enemy : MonoBehaviour
         polygonCollider2D = GetComponent<PolygonCollider2D>();
         spriteRendererArray = GetComponentsInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
+    }
+    
+    /// <summary>
+    /// Initialise the enemy
+    /// </summary>
+    public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, DungeonLevelSO dungeonLevel)
+    {
+        this.enemyDetails = enemyDetails;
+
+        SetEnemyAnimationSpeed();
+        
+    }
+    
+    /// <summary>
+    /// Set enemy animator speed to match movement speed
+    /// </summary>
+    private void SetEnemyAnimationSpeed()
+    {
+        // Set animator speed to match movement speed
+        animator.speed = enemyMovementAI.moveSpeed / Global.baseSpeedForEnemyAnimations;
     }
 }

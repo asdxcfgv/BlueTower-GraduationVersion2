@@ -179,4 +179,22 @@ public class GameManager : MonoBehaviour
         //// Debug
         //Debug.Log(room.prefab.name.ToString());
     }
+    
+    /// <summary>
+    /// Get the current dungeon level
+    /// </summary>
+    public DungeonLevelSO GetCurrentDungeonLevel()
+    {
+        return dungeonLevelList[currentDungeonLevelListIndex];
+    }
+
+    public GameState GetCurrentGameState()
+    {
+        return m_gameStateFSM.CurrentStateId;
+    }
+
+    public void ChangeState(GameState newState)
+    {
+        m_gameStateFSM.ChangeState(newState);
+    }
 }
