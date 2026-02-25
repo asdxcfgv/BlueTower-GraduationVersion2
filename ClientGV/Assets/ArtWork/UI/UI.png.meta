@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5bbd0c4626ec9b459d10844ccb8b530
+guid: 5d5374d6d38c47440a56e5e38b6ddbdc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyDrone_Destroy_0
+      name: UI_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
+        y: 12
+        width: 106
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3945116426f39e49b3a8b6c1ecfb39b
-      internalID: 1133341990
+      spriteID: 8225f7e251e2eac47a52a581790eb9ca
+      internalID: 155894865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyDrone_Destroy_1
+      name: UI_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 1
+        y: 3
+        width: 4
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de1b15eca8e4fe4d82e7d349019f4ca
-      internalID: 740102449
+      spriteID: 482aa9ceb704e9742af95befdd4620d1
+      internalID: 1504144752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyDrone_Destroy_2
+      name: UI_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 7
+        y: 3
+        width: 4
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bdc69c05c1759d40a2a7ee4f16bf99c
-      internalID: -32493886
+      spriteID: cc598897ae4028f42ba366fb7d3ecb40
+      internalID: -237721141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyDrone_Destroy_3
+      name: UI_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 14
+        y: 3
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed623f74c5c6d043b6f23ea5f014338
-      internalID: -154950607
+      spriteID: f20186bbb8fc77c40a2ebc31c8ccc1f2
+      internalID: -1888374460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyDrone_Destroy_4
+      name: UI_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 23
+        y: 3
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,92 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5beb9e6f4bd6f314caf0fe669833e304
-      internalID: 598185344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyDrone_Destroy_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 714609fa68f53f8438554cfe63fed21e
-      internalID: 929400308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyDrone_Destroy_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90e6c510ab4523142842d02953a1720b
-      internalID: -1596410696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyDrone_Destroy_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ddffd267781da34991373d78c0331f2
-      internalID: -1338774727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EnemyDrone_Destroy_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9798ec9131654e24bb11c79037052c55
-      internalID: 674399026
+      spriteID: ad1872e1d9132e04f89c7f307eb0cc4a
+      internalID: 821750843
       vertices: []
       indices: 
       edges: []
@@ -296,15 +212,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EnemyDrone_Destroy_0: 1133341990
-      EnemyDrone_Destroy_1: 740102449
-      EnemyDrone_Destroy_2: -32493886
-      EnemyDrone_Destroy_3: -154950607
-      EnemyDrone_Destroy_4: 598185344
-      EnemyDrone_Destroy_5: 929400308
-      EnemyDrone_Destroy_6: -1596410696
-      EnemyDrone_Destroy_7: -1338774727
-      EnemyDrone_Destroy_8: 674399026
+      UI_0: 155894865
+      UI_1: 1504144752
+      UI_2: -237721141
+      UI_3: -1888374460
+      UI_4: 821750843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
