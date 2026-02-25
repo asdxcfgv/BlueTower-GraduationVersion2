@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 399109507659263958}
   - component: {fileID: 7265644518036996293}
   - component: {fileID: 323790920369558673}
+  - component: {fileID: 6532170329075677956}
   m_Layer: 15
   m_Name: Enemy
   m_TagString: Untagged
@@ -334,7 +335,7 @@ Animator:
   m_GameObject: {fileID: 2162314730051727331}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b72a754fcf31bed43969188bb26b919f, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -409,7 +410,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -424,12 +425,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.36333612, y: 0.3761688}
-      - {x: -0.26388374, y: 0.3184924}
-      - {x: -0.32143593, y: -0.31315252}
-      - {x: -0.17991191, y: -0.55416924}
-      - {x: 0.31218928, y: -0.57677686}
-      - {x: 0.4624156, y: -0.4329872}
+    - - {x: 0, y: 0.8125}
+      - {x: -0.4375, y: 0.625}
+      - {x: -0.6875, y: -0.125}
+      - {x: -0.6875, y: -0.5625}
+      - {x: -0.5625, y: -0.6875}
+      - {x: 0.4375, y: -0.6875}
+      - {x: 0.5625, y: -0.625}
+      - {x: 0.5625, y: 0.375}
+      - {x: 0.5, y: 0.8125}
   m_UseDelaunayMesh: 0
 --- !u!114 &7265644518036996293
 MonoBehaviour:
@@ -444,7 +448,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDetails: {fileID: 0}
+  aimWeaponEvent: {fileID: 0}
+  fireWeaponEvent: {fileID: 0}
+  movementToPositionEvent: {fileID: 0}
+  idleEvent: {fileID: 0}
   spriteRendererArray: []
+  animator: {fileID: 0}
 --- !u!210 &323790920369558673
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -457,6 +466,21 @@ SortingGroup:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &6532170329075677956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162314730051727331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d26ea6bc4d9ff441804fc0f2bde33bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementDetails: {fileID: 0}
+  moveSpeed: 0
+  updateFrameNumber: 1
 --- !u!1 &2205887552322657161
 GameObject:
   m_ObjectHideFlags: 0

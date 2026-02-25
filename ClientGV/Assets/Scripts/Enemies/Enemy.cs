@@ -24,14 +24,44 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [HideInInspector] public EnemyDetailsSO enemyDetails;
+    
+    private Health health;
+    
+    [HideInInspector] public AimWeaponEvent aimWeaponEvent;
+    
+    [HideInInspector] public FireWeaponEvent fireWeaponEvent;
+    
+    private FireWeapon fireWeapon;
+    
+    private SetActiveWeaponEvent setActiveWeaponEvent;
+    
+    private EnemyMovementAI enemyMovementAI;
+    
+    [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
+    
+    [HideInInspector] public IdleEvent idleEvent;
+    
     private CircleCollider2D circleCollider2D;
+    
     private PolygonCollider2D polygonCollider2D;
+    
     [HideInInspector] public SpriteRenderer[] spriteRendererArray;
+    
+    [HideInInspector] public Animator animator;
 
     void Awake()
     {
+        health = GetComponent<Health>();
+        aimWeaponEvent = GetComponent<AimWeaponEvent>();
+        fireWeaponEvent = GetComponent<FireWeaponEvent>();
+        fireWeapon = GetComponent<FireWeapon>();
+        setActiveWeaponEvent = GetComponent<SetActiveWeaponEvent>();
+        enemyMovementAI = GetComponent<EnemyMovementAI>();
+        movementToPositionEvent = GetComponent<MovementToPositionEvent>();
+        idleEvent = GetComponent<IdleEvent>();
         circleCollider2D = GetComponent<CircleCollider2D>();
         polygonCollider2D = GetComponent<PolygonCollider2D>();
         spriteRendererArray = GetComponentsInChildren<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 }

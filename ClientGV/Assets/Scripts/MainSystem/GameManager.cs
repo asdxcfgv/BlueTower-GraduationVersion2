@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         m_gameStateFSM.Update();
         // For testing
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             m_gameStateFSM.ChangeState(GameState.gameStarted);
         }

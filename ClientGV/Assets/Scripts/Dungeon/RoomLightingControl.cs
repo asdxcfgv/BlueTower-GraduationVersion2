@@ -51,6 +51,7 @@ public class RoomLightingControl : MonoBehaviour
     /// </summary>
     private void FadeInRoomLighting()
     {
+        Debug.Log("yes");
         // Fade in the lighting for the room tilemaps
         StartCoroutine(FadeInRoomLightingRoutine(instantiatedRoom));
     }

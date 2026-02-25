@@ -65,6 +65,7 @@ public class ReloadWeapon : MonoBehaviour
         
         activeWeapon.GetAnimator().speed = Global.GetAnimationClipLength(activeWeapon.GetAnimator(),"Gun_Reload")/reloadWeaponEventArgs.weapon.weaponDetails.weaponReloadTime;
         
+        
         activeWeapon.GetAnimator().Play("Gun_Reload");
         
         
