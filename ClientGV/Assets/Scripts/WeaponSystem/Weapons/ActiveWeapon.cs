@@ -54,10 +54,15 @@ public class ActiveWeapon : MonoBehaviour
         currentWeapon = weapon;
         
         // Set current weapon sprite
-        weaponSpriteRenderer.sprite = currentWeapon.weaponDetails.weaponSprite;
+        if (currentWeapon.weaponDetails.weaponSprite != null)
+        {
+            weaponSpriteRenderer.sprite = currentWeapon.weaponDetails.weaponSprite;
+        }
 
-        weaponAnimator.runtimeAnimatorController = currentWeapon.weaponDetails.animatorController;
-        
+        if (currentWeapon.weaponDetails.animatorController != null)
+        {
+            weaponAnimator.runtimeAnimatorController = currentWeapon.weaponDetails.animatorController;
+        }
 
         // If the weapon has a polygon collider and a sprite then set it to the weapon sprite physics shape
         if (weaponPolygonCollider2D != null && weaponSpriteRenderer.sprite != null)

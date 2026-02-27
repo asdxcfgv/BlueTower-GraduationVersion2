@@ -86,7 +86,11 @@ public class Enemy : MonoBehaviour
 
         SetEnemyMovementUpdateFrame(enemySpawnNumber);
         
+        SetEnemyStartingWeapon();
+        
         SetEnemyAnimationSpeed();
+        
+        
         
         // Materialise enemy
         StartCoroutine(MaterializeEnemy());
@@ -100,6 +104,22 @@ public class Enemy : MonoBehaviour
     {
         // Set frame number that enemy should process it's updates
         enemyMovementAI.SetUpdateFrameNumber(enemySpawnNumber % Global.targetFrameRateToSpreadPathfindingOver);
+    }
+    
+    /// <summary>
+    /// Set enemy starting weapon as per the weapon details SO
+    /// </summary>
+    private void SetEnemyStartingWeapon()
+    {
+        // Process if enemy has a weapon
+        if (enemyDetails.enemyWeapon != null)
+        {
+            Weapon weapon = new Weapon() { weaponDetails = enemyDetails.enemyWeapon, weaponReloadTimer = 0f, weaponClipRemainingAmmo = enemyDetails.enemyWeapon.weaponClipAmmoCapacity, weaponRemainingAmmo = enemyDetails.enemyWeapon.weaponAmmoCapacity, isWeaponReloading = false };
+
+            //Set weapon for enemy
+            setActiveWeaponEvent.OnSetActiveWeapon.Trigger(new SetActiveWeaponEventArgs(weapon));
+
+        }
     }
     
     /// <summary>
