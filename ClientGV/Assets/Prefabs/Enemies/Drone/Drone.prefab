@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 5534211052790629400, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b72a754fcf31bed43969188bb26b919f, type: 2}
+      objectReference: {fileID: 9100000, guid: 4e2928a0ef57fff46a105782c5b37203, type: 2}
     - target: {fileID: 5671464132092681284, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: weaponRotationPointTransform
       value: 

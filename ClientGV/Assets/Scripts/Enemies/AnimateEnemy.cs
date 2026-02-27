@@ -18,6 +18,8 @@ public class AnimateEnemy : MonoBehaviour
         // Subscribe to movement event
         enemy.movementToPositionEvent.OnMovementToPosition.Register(MovementToPositionEvent_OnMovementToPosition);
 
+        enemy.fireWeaponEvent.OnFireWeapon.Register(FireWeaponEvent_OnFire);
+        
         // Subscribe to idle event
         enemy.idleEvent.OnIdle.Register(IdleEvent_OnIdle);
 
@@ -29,7 +31,9 @@ public class AnimateEnemy : MonoBehaviour
     {
         // Unsubscribe from movement event
         enemy.movementToPositionEvent.OnMovementToPosition.UnRegister(MovementToPositionEvent_OnMovementToPosition);
-
+        
+        enemy.fireWeaponEvent.OnFireWeapon.UnRegister(FireWeaponEvent_OnFire);
+        
         // Unsubscribe from idle event
         enemy.idleEvent.OnIdle.UnRegister(IdleEvent_OnIdle);
 
@@ -52,6 +56,11 @@ public class AnimateEnemy : MonoBehaviour
     private void MovementToPositionEvent_OnMovementToPosition(MovementToPositionArgs movementToPositionArgs)
     {
         SetMovementAnimationParameters();
+    }
+
+    private void FireWeaponEvent_OnFire(FireWeaponEventArgs fireWeaponEventArgs)
+    {
+        SetAttackAnimationParameters();
     }
 
     /// <summary>
@@ -91,7 +100,15 @@ public class AnimateEnemy : MonoBehaviour
     {
         // Set idle
         enemy.animator.SetBool(Global.isMoving, false);
+        enemy.animator.SetBool(Global.isAttacking, false);
         enemy.animator.SetBool(Global.isIdle, true);
+    }
+
+    private void SetAttackAnimationParameters()
+    {
+        enemy.animator.SetBool(Global.isAttacking, true);
+        enemy.animator.SetBool(Global.isIdle,false);
+        enemy.animator.SetBool(Global.isMoving,false);
     }
 
     /// <summary>
