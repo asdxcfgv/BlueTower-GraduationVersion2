@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(EnemyWeaponAI))]
 [RequireComponent(typeof(AimWeaponEvent))]
 [RequireComponent(typeof(AimWeapon))]
 [RequireComponent(typeof(FireWeaponEvent))]

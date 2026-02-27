@@ -92,12 +92,25 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b72a754fcf31bed43969188bb26b919f, type: 2}
+    - target: {fileID: 5671464132092681284, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
+      propertyPath: weaponRotationPointTransform
+      value: 
+      objectReference: {fileID: 1211629884305110663}
     - target: {fileID: 6532170329075677956, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: movementDetails
       value: 
       objectReference: {fileID: 11400000, guid: 51d75923ff28e3d43bc57ece9929e449, type: 2}
+    - target: {fileID: 8228506114046045989, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
+--- !u!4 &1211629884305110663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1039560642918370740, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
+  m_PrefabInstance: {fileID: 2215155360197557043}
+  m_PrefabAsset: {fileID: 0}

@@ -7,7 +7,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class MovementToPositionEvent : MonoBehaviour
 {
-    public  EasyEvent<MovementToPositionArgs> OnMovementToPosition;
+    public  EasyEvent<MovementToPositionArgs> OnMovementToPosition = new EasyEvent<MovementToPositionArgs>();
 }
 
 public class MovementToPositionArgs : EventArgs

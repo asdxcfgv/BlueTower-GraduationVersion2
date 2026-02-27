@@ -168,11 +168,14 @@ public class EnemyMovementAI : MonoBehaviour
     /// </summary>
     private Vector3Int GetNearestNonObstaclePlayerPosition(Room currentRoom)
     {
+        
         Vector3 playerPosition = GameManager.Instance.GetPlayer().GetPlayerPosition();
 
         Vector3Int playerCellPosition = currentRoom.instantiatedRoom.grid.WorldToCell(playerPosition);
+        
 
         Vector2Int adjustedPlayerCellPositon = new Vector2Int(playerCellPosition.x - currentRoom.templateLowerBounds.x, playerCellPosition.y - currentRoom.templateLowerBounds.y);
+        
 
         int obstacle = currentRoom.instantiatedRoom.aStarMovementPenalty[adjustedPlayerCellPositon.x, adjustedPlayerCellPositon.y];
 
