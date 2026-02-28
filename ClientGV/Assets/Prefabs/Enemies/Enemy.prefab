@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 870222583663671118}
   - component: {fileID: 3641539732417966356}
   - component: {fileID: 1962399652418194251}
+  - component: {fileID: 7608231906727401243}
   m_Layer: 15
   m_Name: Enemy
   m_TagString: Untagged
@@ -550,6 +551,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 9216
   weaponShootPosition: {fileID: 1328402831810359304}
+--- !u!114 &7608231906727401243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162314730051727331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80fbf8be071f7624c914eb71cb0ff497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2205887552322657161
 GameObject:
   m_ObjectHideFlags: 0

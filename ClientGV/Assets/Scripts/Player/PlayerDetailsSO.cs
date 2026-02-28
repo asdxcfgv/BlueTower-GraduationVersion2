@@ -33,6 +33,12 @@ public class PlayerDetailsSO : ScriptableObject
     #endregion
     public int playerHealthAmount;
     
+    public bool isImmuneAfterHit = false;
+    #region Tooltip
+    [Tooltip("Immunity time in seconds after being hit")]
+    #endregion
+    public float hitImmunityTime;
+    
     #region Header WEAPON
     [Space(10)]
     [Header("WEAPON")]

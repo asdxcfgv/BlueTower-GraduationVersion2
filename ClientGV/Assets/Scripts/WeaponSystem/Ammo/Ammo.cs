@@ -10,14 +10,24 @@ public class Ammo : MonoBehaviour, IFireable
     [SerializeField] private TrailRenderer trailRenderer;
 
     private float ammoRange = 0f; // the range of each ammo
+    
     private float ammoSpeed;
+    
     private Vector3 fireDirectionVector;
+    
     private float fireDirectionAngle;
+    
     private SpriteRenderer spriteRenderer;
+    
     private AmmoDetailsSO ammoDetails;
+    
     private float ammoChargeTimer;
+    
     private bool isAmmoMaterialSet = false;
+    
     private bool overrideAmmoMovement;
+    
+    private bool isColliding = false;
 
     private void Awake()
     {
@@ -56,7 +66,27 @@ public class Ammo : MonoBehaviour, IFireable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // If already colliding with something return
+        if (isColliding) return;
+        
+        // Deal Damage To Collision Object
+        DealDamage(collision);
+        
         DisableAmmo();
+    }
+    
+    private void DealDamage(Collider2D collision)
+    {
+        Health health = collision.GetComponent<Health>();
+
+        if (health != null)
+        {
+            // Set isColliding to prevent ammo dealing damage multiple times
+            isColliding = true;
+
+            health.TakeDamage(ammoDetails.ammoDamage);
+        }
+
     }
 
     /// <summary>
