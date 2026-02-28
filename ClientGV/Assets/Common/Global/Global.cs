@@ -274,7 +274,7 @@ public  class Global : Architecture<Global>
 
     }
 
-    public static float GetAnimationClipLength(Animator animator, string clipName)
+    public static float GetAnimationClipLengthBySuffix(Animator animator, string clipName)
     {
         // 获取所有动画片段
         AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
