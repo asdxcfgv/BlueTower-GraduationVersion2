@@ -4,3 +4,5 @@ ClientGV/.idea
 ClientGV/UserSettings
 ClientGV/obj
 ClientGV/Logs
+*.csproj
+*.sln
