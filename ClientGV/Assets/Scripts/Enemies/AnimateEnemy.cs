@@ -90,6 +90,7 @@ public class AnimateEnemy : MonoBehaviour
         // Set Moving
         enemy.animator.SetBool(Global.isIdle, false);
         enemy.animator.SetBool(Global.isMoving, true);
+        enemy.animator.SetBool(Global.isAttacking, false);
     }
 
 

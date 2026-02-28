@@ -170,7 +170,7 @@ public class Ammo : MonoBehaviour, IFireable
         
         animator.Play("Bullet_Disappear");
 
-        ActionKit.Delay(Global.GetAnimationClipLength(animator, "Bullet_Disappear"), () =>
+        ActionKit.Delay(Global.GetAnimationClipLength(animator, "Disappear"), () =>
         {
             animator.Rebind();
             

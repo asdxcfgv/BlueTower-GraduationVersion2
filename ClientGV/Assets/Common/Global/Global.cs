@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using QFramework;
+using UnityEditor.Animations;
 using UnityEngine;
 using static GlobalEnums;
 
@@ -277,12 +278,13 @@ public  class Global : Architecture<Global>
     {
         // 获取所有动画片段
         AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
-
+        
+        
         // 遍历所有动画片段
         foreach (AnimationClip clip in clips)
         {
             // 如果找到了需要的动画片段
-            if (clip.name.Equals(clipName))
+            if (clip.name.Contains(clipName))
             {
                 // 获取并返回动画时长
                 return clip.length;
@@ -291,6 +293,7 @@ public  class Global : Architecture<Global>
 
         return 0f;
     }
+    
     
     /// <summary>
     /// Get the nearest spawn position to the player
