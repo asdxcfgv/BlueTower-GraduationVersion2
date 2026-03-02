@@ -19,6 +19,7 @@ public class Ammo : MonoBehaviour, IFireable
     private bool isAmmoMaterialSet = false;
     private bool overrideAmmoMovement;
     private bool isColliding = false;
+    private bool isDestoryed = false;
 
 
     private void Awake()
@@ -49,7 +50,7 @@ public class Ammo : MonoBehaviour, IFireable
         // Disable after max range reached
         ammoRange -= distanceVector.magnitude;
 
-        if (ammoRange < 0f)
+        if (ammoRange < 0f&&!isDestoryed)
         {
             DisableAmmo();
         }
@@ -61,6 +62,9 @@ public class Ammo : MonoBehaviour, IFireable
         // If already colliding with something return
         if (isColliding) return;
 
+        // Set isColliding to prevent ammo dealing damage multiple times
+        isColliding = true;
+        
         // Deal Damage To Collision Object
         DealDamage(collision);
 
@@ -73,9 +77,6 @@ public class Ammo : MonoBehaviour, IFireable
 
         if (health != null)
         {
-            // Set isColliding to prevent ammo dealing damage multiple times
-            isColliding = true;
-
             health.TakeDamage(ammoDetails.ammoDamage);
         }
 
@@ -95,6 +96,8 @@ public class Ammo : MonoBehaviour, IFireable
 
         // Initialise isColliding
         isColliding = false;
+
+        isDestoryed = false;
 
         // Set fire direction
         SetFireDirection(ammoDetails, aimAngle, weaponAimAngle, weaponAimDirectionVector);
@@ -190,13 +193,13 @@ public class Ammo : MonoBehaviour, IFireable
     /// </summary>
     private void DisableAmmo()
     {
+        isDestoryed = true;
+        
         Animator animator = GetComponent<Animator>();
 
         ammoSpeed = 0f;
         
         animator.Play("Bullet_Disappear");
-
-        Debug.Log(Global.GetAnimationClipLengthBySuffix(animator, "Disappear"));
         
         ActionKit.Sequence().
             Delay(Global.GetAnimationClipLengthBySuffix(animator, "Disappear")).
@@ -205,10 +208,9 @@ public class Ammo : MonoBehaviour, IFireable
                 animator.Rebind();
             
                 gameObject.SetActive(false);
-                
-                Debug.Log(1);
             
             }).Start(this);
+        
     }
 
     public void SetAmmoMaterial(Material material)
