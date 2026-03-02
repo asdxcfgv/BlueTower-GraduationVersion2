@@ -1,3 +1,4 @@
+using QFramework;
 using UnityEngine;
 using static GlobalEnums;
 
@@ -6,11 +7,17 @@ using static GlobalEnums;
 public class AnimateEnemy : MonoBehaviour
 {
     private Enemy enemy;
+    
+    private DestroyedEvent destroyedEvent;
 
+    private bool isDead;
+    
     private void Awake()
     {
         // Load components
         enemy = GetComponent<Enemy>();
+        
+        destroyedEvent = GetComponent<DestroyedEvent>();
     }
 
     private void OnEnable()
@@ -20,11 +27,15 @@ public class AnimateEnemy : MonoBehaviour
 
         enemy.fireWeaponEvent.OnFireWeapon.Register(FireWeaponEvent_OnFire);
         
+        destroyedEvent.OnDestroyed.Register(DestroyedEvent_OnDestroyed);
+        
         // Subscribe to idle event
         enemy.idleEvent.OnIdle.Register(IdleEvent_OnIdle);
 
         // Subscribe to weapon aim event
         enemy.aimWeaponEvent.OnWeaponAim.Register(AimWeaponEvent_OnWeaponAim);
+
+        isDead = false;
     }
 
     private void OnDisable()
@@ -33,6 +44,8 @@ public class AnimateEnemy : MonoBehaviour
         enemy.movementToPositionEvent.OnMovementToPosition.UnRegister(MovementToPositionEvent_OnMovementToPosition);
         
         enemy.fireWeaponEvent.OnFireWeapon.UnRegister(FireWeaponEvent_OnFire);
+        
+        destroyedEvent.OnDestroyed.Register(DestroyedEvent_OnDestroyed);
         
         // Unsubscribe from idle event
         enemy.idleEvent.OnIdle.UnRegister(IdleEvent_OnIdle);
@@ -63,6 +76,11 @@ public class AnimateEnemy : MonoBehaviour
         SetAttackAnimationParameters();
     }
 
+    private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent,DestroyedEventArgs destroyedEventArgs)
+    {
+        SetDeadAnimationParameters();
+    }
+
     /// <summary>
     /// On idle event handler
     /// </summary>
@@ -88,9 +106,13 @@ public class AnimateEnemy : MonoBehaviour
     private void SetMovementAnimationParameters()
     {
         // Set Moving
-        enemy.animator.SetBool(Global.isIdle, false);
-        enemy.animator.SetBool(Global.isMoving, true);
-        enemy.animator.SetBool(Global.isAttacking, false);
+        if (!isDead)
+        {
+            enemy.animator.SetBool(Global.isIdle, false);
+            enemy.animator.SetBool(Global.isMoving, true);
+            enemy.animator.SetBool(Global.isAttacking, false);
+        }
+        
     }
 
 
@@ -99,19 +121,63 @@ public class AnimateEnemy : MonoBehaviour
     /// </summary>
     private void SetIdleAnimationParameters()
     {
-        // Set idle
-        enemy.animator.SetBool(Global.isMoving, false);
-        enemy.animator.SetBool(Global.isAttacking, false);
-        enemy.animator.SetBool(Global.isIdle, true);
+        if (!isDead)
+        {
+            // Set idle
+            enemy.animator.SetBool(Global.isMoving, false);
+            enemy.animator.SetBool(Global.isAttacking, false);
+            enemy.animator.SetBool(Global.isIdle, true);
+        }
+        
     }
 
     private void SetAttackAnimationParameters()
     {
-        enemy.animator.SetBool(Global.isAttacking, true);
-        enemy.animator.SetBool(Global.isIdle,false);
-        enemy.animator.SetBool(Global.isMoving,false);
+        if (!isDead)
+        {
+            enemy.animator.SetBool(Global.isAttacking, true);
+            enemy.animator.SetBool(Global.isIdle,false);
+            enemy.animator.SetBool(Global.isMoving,false);
+        }
+        
     }
 
+    private void SetDeadAnimationParameters()
+    {
+        enemy.animator.SetBool(Global.isAttacking, false);
+        enemy.animator.SetBool(Global.isIdle,false);
+        enemy.animator.SetBool(Global.isMoving,false);
+        
+        enemy.animator.SetTrigger(Global.isDead);
+        
+        isDead = true;
+
+        ActionKit.Delay(GetDeadAnimationClipLength(), () =>
+        {
+            Destroy(gameObject);
+        }).Start(this);
+    }
+
+    private float GetDeadAnimationClipLength()
+    {
+        if (enemy.animator.GetBool(Global.aimUp))
+        {
+            return Global.GetAnimationClipLengthBySuffix(enemy.animator, "Back_Destroy");
+        }
+        else if (enemy.animator.GetBool(Global.aimDown))
+        {
+            return Global.GetAnimationClipLengthBySuffix(enemy.animator, "Front_Destroy");
+        }
+        else if (enemy.animator.GetBool(Global.aimLeft))
+        {
+            return Global.GetAnimationClipLengthBySuffix(enemy.animator, "Left_Destroy");
+        }
+        else
+        {
+            return Global.GetAnimationClipLengthBySuffix(enemy.animator, "Right_Destroy");
+        }
+    }
+    
     /// <summary>
     /// Set aim animation parameters
     /// </summary>
@@ -123,8 +189,6 @@ public class AnimateEnemy : MonoBehaviour
             case AimDirection.Up:
                 enemy.animator.SetBool(Global.aimUp, true);
                 break;
-            
-            
 
             case AimDirection.Right:
                 enemy.animator.SetBool(Global.aimRight, true);

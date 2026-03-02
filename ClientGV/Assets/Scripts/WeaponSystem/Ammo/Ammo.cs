@@ -10,24 +10,16 @@ public class Ammo : MonoBehaviour, IFireable
     [SerializeField] private TrailRenderer trailRenderer;
 
     private float ammoRange = 0f; // the range of each ammo
-    
     private float ammoSpeed;
-    
     private Vector3 fireDirectionVector;
-    
     private float fireDirectionAngle;
-    
     private SpriteRenderer spriteRenderer;
-    
     private AmmoDetailsSO ammoDetails;
-    
     private float ammoChargeTimer;
-    
     private bool isAmmoMaterialSet = false;
-    
     private bool overrideAmmoMovement;
-    
     private bool isColliding = false;
+
 
     private void Awake()
     {
@@ -68,13 +60,13 @@ public class Ammo : MonoBehaviour, IFireable
     {
         // If already colliding with something return
         if (isColliding) return;
-        
+
         // Deal Damage To Collision Object
         DealDamage(collision);
-        
+
         DisableAmmo();
     }
-    
+
     private void DealDamage(Collider2D collision)
     {
         Health health = collision.GetComponent<Health>();
@@ -89,6 +81,7 @@ public class Ammo : MonoBehaviour, IFireable
 
     }
 
+
     /// <summary>
     /// Initialise the ammo being fired - using the ammodetails, the aimangle, weaponAngle, and
     /// weaponAimDirectionVector. If this ammo is part of a pattern the ammo movement can be
@@ -99,6 +92,9 @@ public class Ammo : MonoBehaviour, IFireable
         #region Ammo
 
         this.ammoDetails = ammoDetails;
+
+        // Initialise isColliding
+        isColliding = false;
 
         // Set fire direction
         SetFireDirection(ammoDetails, aimAngle, weaponAimAngle, weaponAimDirectionVector);
@@ -200,13 +196,19 @@ public class Ammo : MonoBehaviour, IFireable
         
         animator.Play("Bullet_Disappear");
 
-        ActionKit.Delay(Global.GetAnimationClipLengthBySuffix(animator, "Disappear"), () =>
-        {
-            animator.Rebind();
+        Debug.Log(Global.GetAnimationClipLengthBySuffix(animator, "Disappear"));
+        
+        ActionKit.Sequence().
+            Delay(Global.GetAnimationClipLengthBySuffix(animator, "Disappear")).
+            Callback(() =>
+            {
+                animator.Rebind();
             
-            gameObject.SetActive(false);
+                gameObject.SetActive(false);
+                
+                Debug.Log(1);
             
-        }).Start(this);
+            }).Start(this);
     }
 
     public void SetAmmoMaterial(Material material)

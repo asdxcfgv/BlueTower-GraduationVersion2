@@ -151,6 +151,8 @@ public class ReloadWeapon : MonoBehaviour
             reloadWeaponCoroutine = StartCoroutine(ReloadWeaponRoutine(setActiveWeaponEventArgs.weapon, 0));
         }
     }
+    
+    
 
 
 }

@@ -24,7 +24,6 @@ public class Destroyed : MonoBehaviour
     {
         //Unsubscribe to destroyed event
         destroyedEvent.OnDestroyed.UnRegister(DestroyedEvent_OnDestroyed);
-
     }
 
     private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent,DestroyedEventArgs destroyedEventArgs)
@@ -32,10 +31,6 @@ public class Destroyed : MonoBehaviour
         if (destroyedEventArgs.playerDied)
         {
             gameObject.SetActive(false);
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 }

@@ -63,6 +63,8 @@ public  class Global : Architecture<Global>
     
     public static int isAttacking = Animator.StringToHash("isAttacking");
     
+    public static int isDead = Animator.StringToHash("isDead");
+    
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
     
