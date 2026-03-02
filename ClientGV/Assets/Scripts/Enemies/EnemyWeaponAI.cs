@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using static GlobalEnums;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Enemy))]
 [DisallowMultipleComponent]
@@ -17,11 +19,16 @@ public class EnemyWeaponAI : MonoBehaviour
     private EnemyDetailsSO enemyDetails;
     private float firingIntervalTimer;
     private float firingDurationTimer;
+    
+    private bool isDestroyed;
+    private DestroyedEvent destroyedEvent;
 
     private void Awake()
     {
         // Load Components
         enemy = GetComponent<Enemy>();
+        
+        destroyedEvent = GetComponent<DestroyedEvent>();
     }
 
     private void Start()
@@ -32,9 +39,21 @@ public class EnemyWeaponAI : MonoBehaviour
         firingDurationTimer = WeaponShootDuration();
     }
 
+    private void OnEnable()
+    {
+        destroyedEvent.OnDestroyed.Register(DestroyedEvent_OnDestroyed);
+    }
+
+    private void OnDisable()
+    {
+        destroyedEvent.OnDestroyed.Register(DestroyedEvent_OnDestroyed);
+    }
 
     private void Update()
     {
+        if(isDestroyed)
+            return;
+        
         // Update timers
         firingIntervalTimer -= Time.deltaTime;
 
@@ -56,6 +75,11 @@ public class EnemyWeaponAI : MonoBehaviour
         }
     }
 
+    private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
+    {
+        isDestroyed = true;
+    }
+    
     /// <summary>
     /// Calculate a random weapon shoot duration between the min and max values
     /// </summary>

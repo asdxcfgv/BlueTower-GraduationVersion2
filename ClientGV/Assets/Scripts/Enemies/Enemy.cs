@@ -112,7 +112,10 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void EnemyDestroyed()
     {
+        polygonCollider2D.enabled = false;
+        
         DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
+        
         destroyedEvent.OnDestroyed.Trigger(destroyedEvent,new DestroyedEventArgs(false));
     }
     

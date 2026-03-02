@@ -152,7 +152,7 @@ public class AnimateEnemy : MonoBehaviour
         
         isDead = true;
 
-        ActionKit.Delay(GetDeadAnimationClipLength(), () =>
+        ActionKit.Delay(GetDeadAnimationClipLength()/enemy.animator.speed, () =>
         {
             Destroy(gameObject);
         }).Start(this);

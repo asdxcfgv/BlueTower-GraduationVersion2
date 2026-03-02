@@ -20,6 +20,9 @@ public class EnemyMovementAI : MonoBehaviour
     [HideInInspector] public float moveSpeed;
     private bool chasePlayer = false;
     [HideInInspector] public int updateFrameNumber = 1; // default value.  This is set by the enemy spawner.
+    
+    private bool isDestroyed;
+    private DestroyedEvent destroyedEvent;
 
     private void Awake()
     {
@@ -27,6 +30,18 @@ public class EnemyMovementAI : MonoBehaviour
         enemy = GetComponent<Enemy>();
 
         moveSpeed = movementDetails.GetMoveSpeed();
+        
+        destroyedEvent = GetComponent<DestroyedEvent>();
+    }
+    
+    private void OnEnable()
+    {
+        destroyedEvent.OnDestroyed.Register(DestroyedEvent_OnDestroyed);
+    }
+
+    private void OnDisable()
+    {
+        destroyedEvent.OnDestroyed.Register(DestroyedEvent_OnDestroyed);
     }
 
     private void Start()
@@ -41,10 +56,19 @@ public class EnemyMovementAI : MonoBehaviour
 
     private void Update()
     {
-        MoveEnemy();
+        if (!isDestroyed) 
+        {
+            MoveEnemy();
+        }
     }
-
-
+    
+    private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
+    {
+        isDestroyed = true;
+        StopAllCoroutines();
+        enemy.movementToPositionEvent.OnMovementToPosition.Trigger(new MovementToPositionArgs(this.transform.position, transform.position, 0f, transform.position.normalized,false));
+    }
+    
     /// <summary>
     /// Use AStar pathfinding to build a path to the player - and then move the enemy to each grid location on the path
     /// </summary>
