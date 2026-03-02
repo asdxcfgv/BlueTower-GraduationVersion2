@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(HealthEvent))]
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(DealContactDamage))]
 [RequireComponent(typeof(DestroyedEvent))]
 [RequireComponent(typeof(Destroyed))]
 [RequireComponent(typeof(EnemyWeaponAI))]
@@ -36,33 +37,19 @@ using UnityEngine.Rendering;
 public class Enemy : MonoBehaviour
 {
     [HideInInspector] public EnemyDetailsSO enemyDetails;
-    
     private HealthEvent healthEvent;
-    
     private Health health;
-    
     [HideInInspector] public AimWeaponEvent aimWeaponEvent;
-    
     [HideInInspector] public FireWeaponEvent fireWeaponEvent;
-    
     private FireWeapon fireWeapon;
-    
     private SetActiveWeaponEvent setActiveWeaponEvent;
-    
     private EnemyMovementAI enemyMovementAI;
-    
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
-    
     [HideInInspector] public IdleEvent idleEvent;
-    
     private MaterializeEffect materializeEffect;
-    
     private CircleCollider2D circleCollider2D;
-    
     private PolygonCollider2D polygonCollider2D;
-    
     [HideInInspector] public SpriteRenderer[] spriteRendererArray;
-    
     [HideInInspector] public Animator animator;
 
     void Awake()

@@ -4,10 +4,17 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 #region REQUIRE COMPONENTS
+[RequireComponent(typeof(HealthEvent))]
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(DealContactDamage))]
+[RequireComponent(typeof(ReceiveContactDamage))]
+[RequireComponent(typeof(DestroyedEvent))]
+[RequireComponent(typeof(Destroyed))]
 [RequireComponent(typeof(PlayerControl))]
 [RequireComponent(typeof(MovementByVelocityEvent))]
 [RequireComponent(typeof(MovementByVelocity))]
+[RequireComponent(typeof(MovementToPositionEvent))]
+[RequireComponent(typeof(MovementToPosition))]
 [RequireComponent(typeof(IdleEvent))]
 [RequireComponent(typeof(Idle))]
 [RequireComponent(typeof(AimWeaponEvent))]
@@ -33,37 +40,34 @@ using UnityEngine.Rendering;
 public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerDetailsSO playerDetails;
-    
+    [HideInInspector] public HealthEvent healthEvent;
     [HideInInspector] public Health health;
-    
+    [HideInInspector] public DestroyedEvent destroyedEvent;
+    [HideInInspector] public PlayerControl playerControl;
     [HideInInspector] public MovementByVelocityEvent movementByVelocityEvent;
-    
+    [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
     [HideInInspector] public IdleEvent idleEvent;
-    
     [HideInInspector] public AimWeaponEvent aimWeaponEvent;
-    
     [HideInInspector] public FireWeaponEvent fireWeaponEvent;
-    
     [HideInInspector] public SetActiveWeaponEvent setActiveWeaponEvent;
-    
     [HideInInspector] public ActiveWeapon activeWeapon;
-    
     [HideInInspector] public WeaponFiredEvent weaponFiredEvent;
-    
     [HideInInspector] public ReloadWeaponEvent reloadWeaponEvent;
-    
     [HideInInspector] public WeaponReloadedEvent weaponReloadedEvent;
-    
     [HideInInspector] public SpriteRenderer spriteRenderer;
-    
     [HideInInspector] public Animator animator;
 
     public List<Weapon> weaponList = new List<Weapon>();
     
     private void Awake()
     { 
+        // Load components
+        healthEvent = GetComponent<HealthEvent>();
         health = GetComponent<Health>();
+        destroyedEvent = GetComponent<DestroyedEvent>();
+        playerControl = GetComponent<PlayerControl>();
         movementByVelocityEvent = GetComponent<MovementByVelocityEvent>();
+        movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         idleEvent = GetComponent<IdleEvent>();
         aimWeaponEvent = GetComponent<AimWeaponEvent>();
         fireWeaponEvent = GetComponent<FireWeaponEvent>();
@@ -89,6 +93,32 @@ public class Player : MonoBehaviour
 
         // Set player starting health
         SetPlayerHealth();
+    }
+    
+    private void OnEnable()
+    {
+        // Subscribe to player health event
+        healthEvent.OnHealthChanged.Register(HealthEvent_OnHealthChanged);
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from player health event
+        healthEvent.OnHealthChanged.UnRegister(HealthEvent_OnHealthChanged);
+    }
+    
+    /// <summary>
+    /// Handle health changed event
+    /// </summary>
+    private void HealthEvent_OnHealthChanged(HealthEventArgs healthEventArgs)
+    {
+        Debug.Log(healthEventArgs.healthAmount);
+        // If player has died
+        if (healthEventArgs.healthAmount <= 0f)
+        {
+            destroyedEvent.OnDestroyed.Trigger(destroyedEvent,new DestroyedEventArgs(true));
+        }
+
     }
 
     /// <summary>
