@@ -18,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     private float moveSpeed;
     private Coroutine playerRollCoroutine;
     private WaitForFixedUpdate waitForFixedUpdate;
+    private bool isPlayerMovementDisabled = false;
 
     private void Awake()
     {
@@ -69,7 +70,10 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
-
+        // if player movement disabled then return
+        if (isPlayerMovementDisabled)
+            return;
+        
         // Process the player movement input
         MovementInput();
 
@@ -315,6 +319,22 @@ public class PlayerControl : MonoBehaviour
         
     }
     
+    /// <summary>
+    /// Enable the player movement
+    /// </summary>
+    public void EnablePlayer()
+    {
+        isPlayerMovementDisabled = false;
+    }
+
+    /// <summary>
+    /// Disable the player movement
+    /// </summary>
+    public void DisablePlayer()
+    {
+        isPlayerMovementDisabled = true;
+        player.idleEvent.OnIdle.Trigger();
+    }
 
     /// <summary>
     /// Set the current weapon to be first in the player weapon list

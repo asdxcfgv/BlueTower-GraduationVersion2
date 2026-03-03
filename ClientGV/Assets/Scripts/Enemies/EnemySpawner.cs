@@ -71,9 +71,16 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     /// </summary>
     private void SpawnEnemies()
     {
-        // Set gamestate engaging enemies
-        if (GameManager.Instance.GetCurrentGameState() == GameState.playingLevel)
+        // Set gamestate engaging boss
+        if (GameManager.Instance.GetCurrentGameState() == GameState.bossStage)
         {
+            GameManager.Instance.previousGameState = GameState.bossStage;
+            GameManager.Instance.ChangeState(GameState.engagingBoss);
+        }
+        // Set gamestate engaging enemies
+        else if(GameManager.Instance.GetCurrentGameState() == GameState.playingLevel)
+        {
+            GameManager.Instance.previousGameState = GameState.playingLevel;
             GameManager.Instance.ChangeState(GameState.engagingEnemies);
         }
 
@@ -170,11 +177,13 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
             // Set game state
             if (GameManager.Instance.GetCurrentGameState() == GameState.engagingEnemies)
             {
+                GameManager.Instance.previousGameState = GameState.engagingEnemies;
                 GameManager.Instance.ChangeState(GameState.playingLevel);
             }
 
             else if (GameManager.Instance.GetCurrentGameState() ==GameState.engagingBoss)
             {
+                GameManager.Instance.previousGameState = GameState.engagingBoss;
                 GameManager.Instance.ChangeState(GameState.bossStage);
             }
 
