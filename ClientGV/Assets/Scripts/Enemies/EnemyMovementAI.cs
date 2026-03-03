@@ -65,7 +65,11 @@ public class EnemyMovementAI : MonoBehaviour
     private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
     {
         isDestroyed = true;
+        
         StopAllCoroutines();
+
+        movementSteps.Clear();
+        
         enemy.movementToPositionEvent.OnMovementToPosition.Trigger(new MovementToPositionArgs(this.transform.position, transform.position, 0f, transform.position.normalized,false));
     }
     
