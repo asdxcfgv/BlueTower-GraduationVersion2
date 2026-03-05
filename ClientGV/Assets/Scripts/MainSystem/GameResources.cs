@@ -50,6 +50,28 @@ public class GameResources : MonoBehaviour
     #endregion
     public Shader variableLitShader;
     
+    #region Tooltip
+    [Tooltip("Populate with the Materialize Shader")]
+    #endregion
+    public Shader materializeShader;
+    
+    #region Header CHESTS
+    [Space(10)]
+    [Header("CHESTS")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Chest item prefab")]
+    #endregion
+    public GameObject chestItemPrefab;
+    #region Tooltip
+    [Tooltip("Populate with heart icon sprite")]
+    #endregion
+    public Sprite heartIcon;
+    #region Tooltip
+    [Tooltip("Populate with bullet icon sprite")]
+    #endregion
+    public Sprite bulletIcon;
+    
     #region Header SPECIAL TILEMAP TILES
     [Space(10)]
     [Header("SPECIAL TILEMAP TILES")]

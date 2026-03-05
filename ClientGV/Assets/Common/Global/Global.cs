@@ -65,6 +65,8 @@ public  class Global : Architecture<Global>
     
     public static int isDead = Animator.StringToHash("isDead");
     
+    public static int use = Animator.StringToHash("use");
+    
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
     
