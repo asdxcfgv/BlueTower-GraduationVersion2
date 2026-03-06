@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8614588971705495603}
   - component: {fileID: 2868443853614006238}
   - component: {fileID: 3593213750149695156}
+  - component: {fileID: 4106802935614719003}
+  - component: {fileID: 3551347382055574532}
   m_Layer: 17
   m_Name: Chest
   m_TagString: Untagged
@@ -168,6 +170,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &4106802935614719003
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946967337892487541}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &3551347382055574532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946967337892487541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5871342e1832d1848abe59da01951eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materializeColor: {r: 0, g: 0, b: 0, a: 0}
+  materializeTime: 3
+  itemSpawnPoint: {fileID: 0}
 --- !u!1 &1481893615593588255
 GameObject:
   m_ObjectHideFlags: 0
