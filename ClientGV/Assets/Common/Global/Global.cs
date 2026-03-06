@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -5,6 +6,7 @@ using QFramework;
 using UnityEditor.Animations;
 using UnityEngine;
 using static GlobalEnums;
+using Object = UnityEngine.Object;
 
 public  class Global : Architecture<Global>
 {
@@ -69,6 +71,9 @@ public  class Global : Architecture<Global>
     
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
+    
+    public static int destroy = Animator.StringToHash("destroy");
+    public static String stateDestroyed = "Destroyed";
     
     public static float baseSpeedForPlayerAnimations = 8f;
     
