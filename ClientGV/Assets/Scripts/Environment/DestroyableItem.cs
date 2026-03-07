@@ -12,6 +12,7 @@ public class DestroyableItem : MonoBehaviour
     [Tooltip("What the starting health for this destroyable item should be")]
     #endregion Tooltip
     [SerializeField] private int startingHealthAmount = 1;
+    [SerializeField] private bool isObstacleWhenDestroyed;
     #region SOUND EFFECT
     [Header("SOUND EFFECT")]
     #endregion SOUND EFFECT
@@ -57,7 +58,11 @@ public class DestroyableItem : MonoBehaviour
     private IEnumerator PlayAnimation()
     {
         // Destroy the trigger collider
-        Destroy(boxCollider2D);
+        if (!isObstacleWhenDestroyed)
+        {
+            Destroy(boxCollider2D);
+        }
+        
 
         // Play sound effect
         /*if (destroySoundEffect != null)

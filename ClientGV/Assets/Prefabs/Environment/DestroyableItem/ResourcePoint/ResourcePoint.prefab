@@ -8,9 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 150153723916930604, guid: f42400dac0250084583268395ede17e2, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 6963115313734266483}
     - target: {fileID: 720423774865508402, guid: f42400dac0250084583268395ede17e2, type: 3}
       propertyPath: startingHealthAmount
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 720423774865508402, guid: f42400dac0250084583268395ede17e2, type: 3}
+      propertyPath: isObstacleWhenDestroyed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1113815534897985030, guid: f42400dac0250084583268395ede17e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -120,7 +128,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3526472204840646852, guid: f42400dac0250084583268395ede17e2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -131,6 +140,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6681751198262445470}
   m_SourcePrefab: {fileID: 100100000, guid: f42400dac0250084583268395ede17e2, type: 3}
+--- !u!212 &6963115313734266483 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8199449223257545608, guid: f42400dac0250084583268395ede17e2, type: 3}
+  m_PrefabInstance: {fileID: 1255307873155085819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9113923141257936782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8003062646365276789, guid: f42400dac0250084583268395ede17e2, type: 3}

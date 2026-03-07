@@ -211,7 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materializeColor: {r: 0, g: 0, b: 0, a: 0}
   materializeTime: 3
-  itemSpawnPoint: {fileID: 0}
+  itemSpawnPoint: {fileID: 5379342717787585046}
 --- !u!1 &1481893615593588255
 GameObject:
   m_ObjectHideFlags: 0

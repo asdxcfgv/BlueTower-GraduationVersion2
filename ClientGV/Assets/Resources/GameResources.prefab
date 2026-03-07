@@ -52,7 +52,7 @@ MonoBehaviour:
   materializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
   chestItemPrefab: {fileID: 2110344870448175279, guid: 0d7a8176caf245f4c9a0cc346d88ec99, type: 3}
   heartIcon: {fileID: 865841775, guid: d19332b42ad9ce9498e8a15b1e82642c, type: 3}
-  bulletIcon: {fileID: 0}
+  bulletIcon: {fileID: 865841775, guid: d19332b42ad9ce9498e8a15b1e82642c, type: 3}
   enemyUnwalkableCollisionTilesArray:
   - {fileID: 11400000, guid: 37e2c9e0227bfbc409cd632b9bd0c81f, type: 2}
   - {fileID: 11400000, guid: 98f177f8276c38b429705e6720c48672, type: 2}
