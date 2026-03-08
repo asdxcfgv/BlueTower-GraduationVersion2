@@ -41,6 +41,14 @@ public class GlobalEnums
         weaponItem,
         empty
     }
+
+    public enum ResourcePointState
+    {
+        notDestroyed,
+        healthItem,
+        ammoItem,
+        obstacle
+    }
     
     public enum GameState
     {
