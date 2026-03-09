@@ -114,7 +114,7 @@ public class ResourcePoint : MonoBehaviour,IUseable
         Destroy(health);
         Destroy(healthEvent);
 
-        RespawnResources();
+        UpdateChestState();
 
     }
     public void UseItem()
@@ -140,20 +140,7 @@ public class ResourcePoint : MonoBehaviour,IUseable
                 return;
         }
     }
-
-    private void RespawnResources()
-    {
-        if (healthPercent != 0)
-        {
-            resourcePointState = ResourcePointState.healthItem;
-            InstantiateHealthItem();
-        }
-        else if (ammoPercent != 0)
-        {
-            resourcePointState = ResourcePointState.ammoItem;
-            InstantiateAmmoItem();
-        }
-    }
+    
     
     private void InstantiateItem()
     {
@@ -187,7 +174,7 @@ public class ResourcePoint : MonoBehaviour,IUseable
     {
         InstantiateItem();
 
-        chestItem.Initialize(GameResources.Instance.heartIcon, healthPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        chestItem.InitializeWithAnimator(GameResources.Instance.heartIcon,GameResources.Instance.heartAnimator, healthPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
     }
     
     private void CollectHealthItem()
@@ -212,7 +199,7 @@ public class ResourcePoint : MonoBehaviour,IUseable
     {
         InstantiateItem();
 
-        chestItem.Initialize(GameResources.Instance.bulletIcon, ammoPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        chestItem.InitializeWithAnimator(GameResources.Instance.bulletIcon,GameResources.Instance.bulletAnimator, ammoPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
     }
     
     /// <summary>

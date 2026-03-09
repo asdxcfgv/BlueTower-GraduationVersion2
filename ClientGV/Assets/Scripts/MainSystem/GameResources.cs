@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -67,10 +68,14 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate with heart icon sprite")]
     #endregion
     public Sprite heartIcon;
+    public AnimatorController heartAnimator;
     #region Tooltip
     [Tooltip("Populate with bullet icon sprite")]
     #endregion
     public Sprite bulletIcon;
+    public AnimatorController bulletAnimator;
+    
+    
     
     #region Header SPECIAL TILEMAP TILES
     [Space(10)]

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
 
 [RequireComponent(typeof(MaterializeEffect))]
@@ -9,6 +10,7 @@ public class ChestItem : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private TextMeshPro textTMP;
     private MaterializeEffect materializeEffect;
+    private Animator animator;
     [HideInInspector] public bool isItemMaterialized = false;
 
     private void Awake()
@@ -16,11 +18,21 @@ public class ChestItem : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         textTMP = GetComponentInChildren<TextMeshPro>();
         materializeEffect = GetComponent<MaterializeEffect>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     /// <summary>
     /// Initialize the chest item
     /// </summary>
+    public void InitializeWithAnimator(Sprite sprite,AnimatorController animatorController, string text, Vector3 spawnPosition, Color materializeColor)
+    {
+        spriteRenderer.sprite = sprite;
+        transform.position = spawnPosition;
+        animator.runtimeAnimatorController = animatorController; 
+
+        StartCoroutine(MaterializeItem(materializeColor, text));
+    }
+
     public void Initialize(Sprite sprite, string text, Vector3 spawnPosition, Color materializeColor)
     {
         spriteRenderer.sprite = sprite;

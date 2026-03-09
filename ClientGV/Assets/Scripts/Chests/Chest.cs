@@ -179,7 +179,7 @@ public class Chest : MonoBehaviour, IUseable
     {
         InstantiateItem();
 
-        chestItem.Initialize(GameResources.Instance.heartIcon, healthPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        chestItem.InitializeWithAnimator(GameResources.Instance.heartIcon,GameResources.Instance.heartAnimator, healthPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
     }
 
 
@@ -211,7 +211,7 @@ public class Chest : MonoBehaviour, IUseable
     {
         InstantiateItem();
 
-        chestItem.Initialize(GameResources.Instance.bulletIcon, ammoPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        chestItem.InitializeWithAnimator(GameResources.Instance.bulletIcon, GameResources.Instance.bulletAnimator,ammoPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
     }
 
 
