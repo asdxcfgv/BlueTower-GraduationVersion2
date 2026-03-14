@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
@@ -9,6 +10,15 @@ namespace QFramework.Example
 	}
 	public partial class PlayerUIPanel : UIPanel
 	{
+		[SerializeField] private Sprite disableHealthSprite;
+		[SerializeField] private Sprite enableHealthSprite;
+		[SerializeField] private Sprite disableAmmoSprite;
+		[SerializeField] private Sprite enableAmmoSprite;
+		[SerializeField] private int ammoSpawnNum;
+		[SerializeField] private int heartSpawnNum;
+		private List<GameObject> ammoIconList = new List<GameObject>();
+		private List<GameObject> healthHeartsList = new List<GameObject>();
+		private Player player;
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as PlayerUIPanelData ?? new PlayerUIPanelData();
@@ -17,6 +27,37 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			// Get player
+			player = GameManager.Instance.GetPlayer();
+
+			for (int i = 0; i < heartSpawnNum; i++)
+			{
+				healthHeartsList.Add(Instantiate(HeartIcon_Pre,HeartIcon_Content.transform));
+			}
+
+			HeartIcon_Pre.Hide();
+
+			for (int i = 0; i < ammoSpawnNum; i++)
+			{
+				ammoIconList.Add(Instantiate(BulletIcon_Pre,BulletIcon_Content.transform));
+			}
+
+			BulletIcon_Pre.Hide();
+			
+			// Subscribe to set active weapon event
+			player.setActiveWeaponEvent.OnSetActiveWeapon.Register(SetActiveWeaponEvent_OnSetActiveWeapon);
+
+			// Subscribe to weapon fired event
+			player.weaponFiredEvent.OnWeaponFired.Register(WeaponFiredEvent_OnWeaponFired);
+			
+
+			// Subscribe to weapon reloaded event
+			player.weaponReloadedEvent.OnWeaponReloaded.Register(WeaponReloadedEvent_OnWeaponReloaded);
+			
+			player.healthEvent.OnHealthChanged.Register(HealthEvent_OnHealthChanged);
+			
+			// Update active weapon status on the UI
+			SetActiveWeapon(player.activeWeapon.GetCurrentWeapon());
 		}
 		
 		protected override void OnShow()
@@ -29,6 +70,131 @@ namespace QFramework.Example
 		
 		protected override void OnClose()
 		{
+			// Subscribe to set active weapon event
+			player.setActiveWeaponEvent.OnSetActiveWeapon.UnRegister(SetActiveWeaponEvent_OnSetActiveWeapon);
+
+			// Subscribe to weapon fired event
+			player.weaponFiredEvent.OnWeaponFired.UnRegister(WeaponFiredEvent_OnWeaponFired);
+
+			// Subscribe to weapon reloaded event
+			player.weaponReloadedEvent.OnWeaponReloaded.UnRegister(WeaponReloadedEvent_OnWeaponReloaded);
+			
+			player.healthEvent.OnHealthChanged.UnRegister(HealthEvent_OnHealthChanged);
+		}
+		
+		private void HealthEvent_OnHealthChanged(HealthEventArgs healthEventArgs)
+		{
+			SetHealthBar(healthEventArgs);
+		}
+		/// <summary>
+		/// Handle set active weapon event on the UI
+		/// </summary>
+		private void SetActiveWeaponEvent_OnSetActiveWeapon(SetActiveWeaponEventArgs setActiveWeaponEventArgs)
+		{
+			SetActiveWeapon(setActiveWeaponEventArgs.weapon);
+		}
+		/// <summary>
+		/// Handle Weapon fired event on the UI
+		/// </summary>
+		private void WeaponFiredEvent_OnWeaponFired(WeaponFiredEventArgs weaponFiredEventArgs)
+		{
+			WeaponFired(weaponFiredEventArgs.weapon);
+		}
+		/// <summary>
+		/// Handle weapon reloaded event on the UI
+		/// </summary>
+		private void WeaponReloadedEvent_OnWeaponReloaded(WeaponReloadedEventArgs weaponReloadedEventArgs)
+		{
+			WeaponReloaded(weaponReloadedEventArgs.weapon);
+		}
+		/// <summary>
+		/// Set the active weapon on the UI
+		/// </summary>
+		private void SetActiveWeapon(Weapon weapon)
+		{
+			UpdateActiveWeaponImage(weapon.weaponDetails);
+			UpdateAmmoLoadedIcons(weapon);
+		}
+		
+		/// <summary>
+		/// Weapon fired update UI
+		/// </summary>
+		private void WeaponFired(Weapon weapon)
+		{
+			UpdateAmmoLoadedIcons(weapon);
+		}
+		
+		/// <summary>
+		/// Weapon has been reloaded - update UI if current weapon
+		/// </summary>
+		private void WeaponReloaded(Weapon weapon)
+		{
+			// if weapon reloaded is the current weapon
+			if (player.activeWeapon.GetCurrentWeapon() == weapon)
+			{
+				UpdateAmmoLoadedIcons(weapon);
+			}
+		}
+		
+		/// <summary>
+		/// Update ammo clip icons on the UI
+		/// </summary>
+		private void UpdateAmmoLoadedIcons(Weapon weapon)
+		{
+			ClearAmmoLoadedIcons();
+			float myWeaponClipRemainingAmmo = weapon.weaponClipRemainingAmmo;
+			float myWeaponClipAmmoCapacity = weapon.weaponDetails.weaponClipAmmoCapacity;
+
+			// Instantiate heart image prefabs
+			int ammo = Mathf.CeilToInt((myWeaponClipRemainingAmmo/myWeaponClipAmmoCapacity) * 100f / 5f);
+			
+			for (int i = 0; i < ammo; i++)
+			{
+				ammoIconList[i].GetComponent<Image>().sprite = enableAmmoSprite;
+			}
+		}
+		/// <summary>
+		/// Clear ammo icons
+		/// </summary>
+		private void ClearAmmoLoadedIcons()
+		{
+			// Loop through icon gameobjects and destroy
+			foreach (GameObject ammoIcon in ammoIconList)
+			{
+				ammoIcon.GetComponent<Image>().sprite = disableAmmoSprite;
+			}
+			
+		}
+		
+		/// <summary>
+		/// Populate active weapon image
+		/// </summary>
+		private void UpdateActiveWeaponImage(WeaponDetailsSO weaponDetails)
+		{
+			Gun_Sprite.sprite = weaponDetails.weaponSprite;
+		}
+		
+		private void ClearHealthBar()
+		{
+			foreach (GameObject heartIcon in healthHeartsList)
+			{
+				heartIcon.GetComponent<Image>().sprite = disableHealthSprite;
+			}
+			
+		}
+		
+		private void SetHealthBar(HealthEventArgs healthEventArgs)
+		{
+			ClearHealthBar();
+
+			// Instantiate heart image prefabs
+			int healthHearts = Mathf.CeilToInt(healthEventArgs.healthPercent * 100f / 10f);
+
+			for (int i = 0; i < healthHearts; i++)
+			{
+				healthHeartsList[i].GetComponent<Image>().sprite = enableHealthSprite;
+			}
+
 		}
 	}
 }

@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour
         m_gameStateFSM.State(GameState.initializeGame).OnEnter(() =>
         {
             UIKit.OpenPanel<MinimapPanel>(UILevel.PopUI,null,"UIPrefabs/MinimapPanel");
+            UIKit.OpenPanel<PlayerUIPanel>(UILevel.Common, null, "UIPrefabs/PlayerUIPanel");
             
             previousGameState = GameState.gameStarted;
             m_gameStateFSM.ChangeState(GameState.gameStarted);
