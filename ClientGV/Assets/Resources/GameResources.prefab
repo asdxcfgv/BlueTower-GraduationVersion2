@@ -55,6 +55,7 @@ MonoBehaviour:
   heartAnimator: {fileID: 9100000, guid: 861cb31dfa93d504781f349ad8e975ce, type: 2}
   bulletIcon: {fileID: 865841775, guid: d19332b42ad9ce9498e8a15b1e82642c, type: 3}
   bulletAnimator: {fileID: 9100000, guid: 861cb31dfa93d504781f349ad8e975ce, type: 2}
+  minimapBossIconPrefab: {fileID: 7358308602698360715, guid: 6fea2d74897255140ae7efd965046fa0, type: 3}
   enemyUnwalkableCollisionTilesArray:
   - {fileID: 11400000, guid: 37e2c9e0227bfbc409cd632b9bd0c81f, type: 2}
   - {fileID: 11400000, guid: 98f177f8276c38b429705e6720c48672, type: 2}

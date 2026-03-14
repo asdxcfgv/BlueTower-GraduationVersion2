@@ -17,11 +17,10 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			DungeonMap.Instance.minimapUI = this.gameObject	;
 		}
 		
-		protected override void OnShow()
-		{
-		}
+				
 		
 		protected override void OnHide()
 		{

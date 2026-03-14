@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     
     private FSM<GameState> m_gameStateFSM = new FSM<GameState>();
     
+    private bool isFading = false;
     
     private InstantiatedRoom bossRoom;
     
@@ -178,7 +179,10 @@ public class GameManager : MonoBehaviour
 
         }).OnUpdate(() =>
         {
-
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                DisplayDungeonOverviewMap();
+            }
         });
         m_gameStateFSM.State(GameState.levelCompleted).OnEnter(() =>
         {
@@ -227,9 +231,45 @@ public class GameManager : MonoBehaviour
         {
             
         });
+        m_gameStateFSM.State(GameState.dungeonOverviewMap).OnEnter(() =>
+        {
+
+        }).OnExit(() =>
+        {
+
+        }).OnUpdate(() =>
+        {
+            if (Input.GetKeyUp(KeyCode.M))
+            {
+                // Clear dungeonOverviewMap
+                DungeonMap.Instance.ClearDungeonOverViewMap();
+            }
+        });
+        m_gameStateFSM.State(GameState.bossStage).OnEnter(() =>
+        {
+
+        }).OnExit(() =>
+        {
+
+        }).OnUpdate(() =>
+        {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                DisplayDungeonOverviewMap();
+            }
+        });
         m_gameStateFSM.StartState(GameState.initializeGame);
     }
 
+    private void DisplayDungeonOverviewMap()
+    {
+        // return if fading
+        if (isFading)
+            return;
+
+        // Display dungeonOverviewMap
+        DungeonMap.Instance.DisplayDungeonOverViewMap();
+    }
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
@@ -450,6 +490,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public IEnumerator Fade(float startFadeAlpha, float targetFadeAlpha, float fadeSeconds, Color backgroundColor)
     {
+        isFading = true;
+        
         Image image = canvasGroup.GetComponent<Image>();
         image.color = backgroundColor;
 
@@ -462,6 +504,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
+        isFading = false;
     }
     
     /// <summary>

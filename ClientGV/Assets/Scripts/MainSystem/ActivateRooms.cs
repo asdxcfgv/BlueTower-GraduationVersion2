@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GlobalEnums;
 
 [DisallowMultipleComponent]
 public class ActivateRooms : MonoBehaviour
@@ -23,6 +24,9 @@ public class ActivateRooms : MonoBehaviour
 
     private void EnableRooms()
     {
+        if(GameManager.Instance.GetCurrentGameState()==GameState.dungeonOverviewMap)
+            return;
+        
         Global.CameraWorldPositionBounds(out Vector2Int miniMapCameraWorldPositionLowerBounds, out Vector2Int miniMapCameraWorldPositionUpperBounds, miniMapCamera);
 
         Global.CameraWorldPositionBounds(out Vector2Int mainCameraWorldPositionLowerBounds, out Vector2Int mainCameraWorldPositionUpperBounds, cameraMain);

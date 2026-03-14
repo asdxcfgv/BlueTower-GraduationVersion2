@@ -74,6 +74,8 @@ public class GameResources : MonoBehaviour
     #endregion
     public Sprite bulletIcon;
     public AnimatorController bulletAnimator;
+
+    public GameObject minimapBossIconPrefab;
     
     
     
