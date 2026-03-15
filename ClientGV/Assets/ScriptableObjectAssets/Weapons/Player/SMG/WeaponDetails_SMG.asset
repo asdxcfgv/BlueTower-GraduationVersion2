@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: SMG
   weaponSprite: {fileID: -772088967, guid: 29c3277ee43808941be0ffe2a56a55fd, type: 3}
-  animatorController: {fileID: 9100000, guid: da146afc9c35156439e45aa5c5775efc, type: 2}
+  animatorController: {fileID: 9100000, guid: 01f5263bf24cae5408c60191734cc30a, type: 2}
   weaponShootPosition: {x: 1.09, y: -0.04, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 7d23427d5cf5be74dbb7bca1b59c5a30, type: 2}
   hasInfiniteAmmo: 0

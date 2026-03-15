@@ -141,15 +141,14 @@ public class ReloadWeapon : MonoBehaviour
     /// </summary>
     private void SetActiveWeaponEvent_OnSetActiveWeapon(SetActiveWeaponEventArgs setActiveWeaponEventArgs)
     {
-        if (setActiveWeaponEventArgs.weapon.isWeaponReloading)
+        if (reloadWeaponCoroutine != null)
         {
-            if (reloadWeaponCoroutine != null)
-            {
-                StopCoroutine(reloadWeaponCoroutine);
-            }
-
-            reloadWeaponCoroutine = StartCoroutine(ReloadWeaponRoutine(setActiveWeaponEventArgs.weapon, 0));
+            StopCoroutine(reloadWeaponCoroutine);
         }
+
+        setActiveWeaponEventArgs.weapon.weaponReloadTimer = 0f;
+        setActiveWeaponEventArgs.weapon.isWeaponReloading = false;
+        
     }
     
     

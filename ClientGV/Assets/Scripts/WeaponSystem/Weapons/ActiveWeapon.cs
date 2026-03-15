@@ -53,16 +53,26 @@ public class ActiveWeapon : MonoBehaviour
     {
         currentWeapon = weapon;
         
-        // Set current weapon sprite
+        // 先换图片！！！
         if (currentWeapon.weaponDetails.weaponSprite != null)
         {
+            
             weaponSpriteRenderer.sprite = currentWeapon.weaponDetails.weaponSprite;
+            
         }
 
+        //再换动画机！！！
         if (currentWeapon.weaponDetails.animatorController != null)
         {
             weaponAnimator.runtimeAnimatorController = currentWeapon.weaponDetails.animatorController;
         }
+        
+        if (currentWeapon.weaponDetails.weaponSprite != null)
+        {
+            weaponSpriteRenderer.sprite = currentWeapon.weaponDetails.weaponSprite;
+            Debug.Log("成功设置Sprite为: " + weaponSpriteRenderer.sprite.name);
+        }
+        
 
         // If the weapon has a polygon collider and a sprite then set it to the weapon sprite physics shape
         if (weaponPolygonCollider2D != null && weaponSpriteRenderer.sprite != null)
@@ -78,6 +88,7 @@ public class ActiveWeapon : MonoBehaviour
 
         // Set weapon shoot position
         weaponShootPositionTransform.localPosition = currentWeapon.weaponDetails.weaponShootPosition;
+        
     }
 
     public AmmoDetailsSO GetCurrentAmmo()
