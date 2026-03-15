@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7066d60367d03c44da8274c236c5f20d, type: 3}
+  m_Name: WeaponDetails_SMG
+  m_EditorClassIdentifier: 
+  weaponName: SMG
+  weaponSprite: {fileID: -772088967, guid: 29c3277ee43808941be0ffe2a56a55fd, type: 3}
+  animatorController: {fileID: 9100000, guid: da146afc9c35156439e45aa5c5775efc, type: 2}
+  weaponShootPosition: {x: 1.09, y: -0.04, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 7d23427d5cf5be74dbb7bca1b59c5a30, type: 2}
+  hasInfiniteAmmo: 0
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 20
+  weaponAmmoCapacity: 60
+  weaponFireRate: 0.15
+  weaponPrechargeTime: 0
+  weaponReloadTime: 2
