@@ -179,6 +179,10 @@ public class GameManager : MonoBehaviour
 
         }).OnUpdate(() =>
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGameMenu();
+            }
             if (Input.GetKeyDown(KeyCode.M))
             {
                 DisplayDungeonOverviewMap();
@@ -253,12 +257,78 @@ public class GameManager : MonoBehaviour
 
         }).OnUpdate(() =>
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGameMenu();
+            }
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 DisplayDungeonOverviewMap();
             }
         });
+        m_gameStateFSM.State(GameState.engagingEnemies).OnEnter(() =>
+        {
+
+        }).OnExit(() =>
+        {
+
+        }).OnUpdate(() =>
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGameMenu();
+            }
+        });
+        m_gameStateFSM.State(GameState.engagingBoss).OnEnter(() =>
+        {
+
+        }).OnExit(() =>
+        {
+
+        }).OnUpdate(() =>
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGameMenu();
+            }
+        });
+        m_gameStateFSM.State(GameState.gamePaused).OnEnter(() =>
+        {
+
+        }).OnExit(() =>
+        {
+
+        }).OnUpdate(() =>
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                PauseGameMenu();
+            }
+        });
         m_gameStateFSM.StartState(GameState.initializeGame);
+    }
+    
+    public void PauseGameMenu()
+    {
+        if (m_gameStateFSM.CurrentStateId != GameState.gamePaused)
+        {
+            UIKit.OpenPanel<PauseMenuPanel>(UILevel.Common, null, "UIPrefabs/PauseMenuPanel");
+            GetPlayer().playerControl.DisablePlayer();
+
+            // Set game state
+            previousGameState = m_gameStateFSM.CurrentStateId;
+            m_gameStateFSM.ChangeState(GameState.gamePaused);
+        }
+        else if (m_gameStateFSM.CurrentStateId == GameState.gamePaused)
+        {
+            UIKit.ClosePanel<PauseMenuPanel>();
+            GetPlayer().playerControl.EnablePlayer();
+
+            // Set game state
+            m_gameStateFSM.ChangeState(previousGameState);
+            previousGameState = GameState.gamePaused;
+
+        }
     }
 
     private void DisplayDungeonOverviewMap()
