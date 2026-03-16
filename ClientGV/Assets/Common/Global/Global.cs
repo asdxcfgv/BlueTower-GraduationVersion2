@@ -90,6 +90,11 @@ public  class Global : Architecture<Global>
     public const float contactDamageCollisionResetDelay = 0.5f;
     #endregion
     
+    #region AUDIO
+    public const float musicFadeOutTime = 0.5f;  // Defualt Music Fade Out Transition
+    public const float musicFadeInTime = 0.5f;  // Default Music Fade In Transition
+    #endregion
+    
     protected override void Init()
     {
         

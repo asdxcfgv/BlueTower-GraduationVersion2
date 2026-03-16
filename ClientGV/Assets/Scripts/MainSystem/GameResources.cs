@@ -87,6 +87,28 @@ public class GameResources : MonoBehaviour
     #endregion
     public AudioMixerGroup soundsMasterMixerGroup;
     
+    
+    #region Header MUSIC
+    [Space(10)]
+    [Header("MUSIC")]
+    #endregion Header MUSIC
+    #region Tooltip
+    [Tooltip("Populate with the music master mixer group")]
+    #endregion
+    public AudioMixerGroup musicMasterMixerGroup;
+    #region Tooltip
+    [Tooltip("music on full snapshot")]
+    #endregion Tooltip
+    public AudioMixerSnapshot musicOnFullSnapshot;
+    #region Tooltip
+    [Tooltip("music low snapshot")]
+    #endregion Tooltip
+    public AudioMixerSnapshot musicLowSnapshot;
+    #region Tooltip
+    [Tooltip("music off snapshot")]
+    #endregion Tooltip
+    public AudioMixerSnapshot musicOffSnapshot;
+    
     #region Header SPECIAL TILEMAP TILES
     [Space(10)]
     [Header("SPECIAL TILEMAP TILES")]
