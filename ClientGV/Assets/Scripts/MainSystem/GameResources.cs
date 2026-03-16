@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Tilemaps;
 
 public class GameResources : MonoBehaviour
@@ -77,7 +78,14 @@ public class GameResources : MonoBehaviour
 
     public GameObject minimapBossIconPrefab;
     
-    
+    #region Header SOUNDS
+    [Space(10)]
+    [Header("SOUNDS")]
+    #endregion Header
+    #region Tooltip
+    [Tooltip("Populate with the sounds master mixer group")]
+    #endregion
+    public AudioMixerGroup soundsMasterMixerGroup;
     
     #region Header SPECIAL TILEMAP TILES
     [Space(10)]
