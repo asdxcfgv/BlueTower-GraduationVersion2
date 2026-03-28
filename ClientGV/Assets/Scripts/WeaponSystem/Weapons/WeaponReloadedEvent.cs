@@ -14,14 +14,16 @@ public class WeaponReloadedEvent : MonoBehaviour
 public class WeaponReloadedEventArgs : EventArgs
 {
     public Weapon weapon;
+    public int ammoCost;
 
     public WeaponReloadedEventArgs()
     {
         
     }
 
-    public WeaponReloadedEventArgs(Weapon weapon)
+    public WeaponReloadedEventArgs(Weapon weapon,int ammoCost)
     {
         this.weapon = weapon;
+        this.ammoCost = ammoCost;
     }
 }

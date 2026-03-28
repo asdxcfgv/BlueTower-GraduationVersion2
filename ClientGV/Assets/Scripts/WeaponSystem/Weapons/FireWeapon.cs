@@ -96,9 +96,6 @@ public class FireWeapon : MonoBehaviour
     /// </summary>
     private bool IsWeaponReadyToFire()
     {
-        // if there is no ammo and weapon doesn't have infinite ammo then return false.
-        if (activeWeapon.GetCurrentWeapon().weaponRemainingAmmo <= 0 && !activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteAmmo)
-            return false;
 
         // if the weapon is reloading then return false.
         if (activeWeapon.GetCurrentWeapon().isWeaponReloading)
@@ -111,8 +108,19 @@ public class FireWeapon : MonoBehaviour
         // if no ammo in the clip and the weapon doesn't have infinite clip capacity then return false.
         if (!activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteClipCapacity && activeWeapon.GetCurrentWeapon().weaponClipRemainingAmmo <= 0)
         {
-            // trigger a reload weapon event.
-            reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(activeWeapon.GetCurrentWeapon(), 0));
+            if (this.GetComponent<Player>() != null)
+            {
+                if (this.GetComponent<Player>().GetAmmoNum(activeWeapon.GetCurrentWeapon().weaponDetails.usingBulletType) > 0 || activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteAmmo)
+                {
+                    // trigger a reload weapon event.
+                    reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(activeWeapon.GetCurrentWeapon()));
+                }
+            }
+            else
+            {
+                reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(activeWeapon.GetCurrentWeapon()));
+            }
+            
 
             return false;
         }
@@ -182,7 +190,6 @@ public class FireWeapon : MonoBehaviour
         if (!activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteClipCapacity)
         {
             activeWeapon.GetCurrentWeapon().weaponClipRemainingAmmo--;
-            activeWeapon.GetCurrentWeapon().weaponRemainingAmmo--;
         }
 
         // Call weapon fired event

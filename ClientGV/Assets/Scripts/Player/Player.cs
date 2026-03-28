@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static GlobalEnums;
 
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(HealthEvent))]
@@ -34,6 +35,7 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(PolygonCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerResources))]
 [DisallowMultipleComponent]
 #endregion REQUIRE COMPONENTS
 
@@ -56,6 +58,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public WeaponReloadedEvent weaponReloadedEvent;
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Animator animator;
+    [HideInInspector] public PlayerResources playerResources;
 
     public List<Weapon> weaponList = new List<Weapon>();
     
@@ -78,6 +81,7 @@ public class Player : MonoBehaviour
         weaponReloadedEvent = GetComponent<WeaponReloadedEvent>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerResources = GetComponent<PlayerResources>();
     }
 
 
@@ -93,6 +97,8 @@ public class Player : MonoBehaviour
 
         // Set player starting health
         SetPlayerHealth();
+
+        SetPlayerResources();
     }
     
     private void OnEnable()
@@ -128,6 +134,11 @@ public class Player : MonoBehaviour
     {
         health.SetStartingHealth(playerDetails.playerHealthAmount);
     }
+
+    private void SetPlayerResources()
+    {
+        playerResources.InitializeResources(playerDetails.playerNormalBullet,playerDetails.playerElectronBullet,playerDetails.playerBoomBullet);
+    }
     
     /// <summary>
     /// Set the player starting weapon
@@ -159,7 +170,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
     {
-        Weapon weapon = new Weapon() { weaponDetails = weaponDetails, weaponReloadTimer = 0f, weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity, weaponRemainingAmmo = weaponDetails.weaponAmmoCapacity, isWeaponReloading = false };
+        Weapon weapon = new Weapon() { weaponDetails = weaponDetails, weaponReloadTimer = 0f, weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity, isWeaponReloading = false };
 
         // Add the weapon to the list
         weaponList.Add(weapon);
@@ -186,5 +197,10 @@ public class Player : MonoBehaviour
         }
 
         return false;
+    }
+
+    public int GetAmmoNum(BulletType type)
+    {
+        return playerResources.GetAmmoNum(type);
     }
 }

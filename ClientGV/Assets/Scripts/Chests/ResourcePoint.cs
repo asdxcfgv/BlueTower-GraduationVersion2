@@ -213,7 +213,7 @@ public class ResourcePoint : MonoBehaviour,IUseable
         Player player = GameManager.Instance.GetPlayer();
 
         // Update ammo for current weapon
-        player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), ammoPercent));
+        //player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), ammoPercent));
 
         // Play pickup sound effect
         //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.ammoPickup);

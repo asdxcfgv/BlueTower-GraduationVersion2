@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c6776da391c764f9fe769346983858, type: 3}
   m_Name: PlayerDetails
   m_EditorClassIdentifier: 
-  playerCharacterName: Cheif
+  playerCharacterName: Charm
   playerPrefab: {fileID: 6603016963618215150, guid: 780d4de2e3f0fb54f907cf1e5ac5ea84, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 04dbb8e6912076f4a9a584a4601a78bb, type: 2}
   playerHealthAmount: 100
@@ -23,3 +23,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b07793edb363fc44bae0cffea9682082, type: 2}
   - {fileID: 11400000, guid: 0b9f0fa05e8dc9e4d87b45224bea1cc2, type: 2}
   playerMiniMapIcon: {fileID: 21300000, guid: 2d758a4a59c8f9c4fbd07087750ad2e5, type: 3}
+  playerNormalBullet: 99
+  playerElectronBullet: 10
+  playerBoomBullet: 10

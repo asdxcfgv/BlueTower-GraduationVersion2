@@ -298,7 +298,7 @@ public class PlayerControl : MonoBehaviour
         if (currentWeapon.isWeaponReloading) return;
 
         // remaining ammo is less than clip capacity then return and not infinite ammo then return
-        if (currentWeapon.weaponRemainingAmmo < currentWeapon.weaponDetails.weaponClipAmmoCapacity && !currentWeapon.weaponDetails.hasInfiniteAmmo) return;
+        if (player.GetAmmoNum(currentWeapon.weaponDetails.usingBulletType) <= 0 && !currentWeapon.weaponDetails.hasInfiniteAmmo) return;
 
         // if ammo in clip equals clip capacity then return
         if (currentWeapon.weaponClipRemainingAmmo == currentWeapon.weaponDetails.weaponClipAmmoCapacity) return;
@@ -306,7 +306,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             // Call the reload weapon event
-            player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), 0));
+            player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon()));
         }
 
     }
@@ -329,7 +329,7 @@ public class PlayerControl : MonoBehaviour
                 IUseable iUseable = collider2D.GetComponent<IUseable>();
 
                 if (iUseable != null)
-                {
+                { 
                     iUseable.UseItem();
                 }
             }

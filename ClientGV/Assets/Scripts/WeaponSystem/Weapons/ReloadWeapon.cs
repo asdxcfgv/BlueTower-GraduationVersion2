@@ -71,39 +71,25 @@ public class ReloadWeapon : MonoBehaviour
             activeWeapon.GetAnimator().Play("Gun_Reload");
         }
         
-        reloadWeaponCoroutine = StartCoroutine(ReloadWeaponRoutine(reloadWeaponEventArgs.weapon, reloadWeaponEventArgs.topUpAmmoPercent));
+        reloadWeaponCoroutine = StartCoroutine(ReloadWeaponRoutine(reloadWeaponEventArgs.weapon));
     }
 
     /// <summary>
     /// Reload weapon coroutine
     /// </summary>
-    private IEnumerator ReloadWeaponRoutine(Weapon weapon, int topUpAmmoPercent)
+    private IEnumerator ReloadWeaponRoutine(Weapon weapon)
     {
+        int cost = 0;
+        
         // Set weapon as reloading
         weapon.isWeaponReloading = true;
+        
 
         // Update reload progress timer
         while (weapon.weaponReloadTimer < weapon.weaponDetails.weaponReloadTime)
         {
             weapon.weaponReloadTimer += Time.deltaTime;
             yield return null;
-        }
-
-        // If total ammo is to be increased then update
-        if (topUpAmmoPercent != 0)
-        {
-            int ammoIncrease = Mathf.RoundToInt((weapon.weaponDetails.weaponAmmoCapacity * topUpAmmoPercent) / 100f);
-
-            int totalAmmo = weapon.weaponRemainingAmmo + ammoIncrease;
-
-            if (totalAmmo > weapon.weaponDetails.weaponAmmoCapacity)
-            {
-                weapon.weaponRemainingAmmo = weapon.weaponDetails.weaponAmmoCapacity;
-            }
-            else
-            {
-                weapon.weaponRemainingAmmo = totalAmmo;
-            }
         }
 
         // If weapon has infinite ammo then just refil the clip
@@ -113,14 +99,17 @@ public class ReloadWeapon : MonoBehaviour
         }
         // else if not infinite ammo then if remaining ammo is greater than the amount required to
         // refill the clip, then fully refill the clip
-        else if (weapon.weaponRemainingAmmo >= weapon.weaponDetails.weaponClipAmmoCapacity)
+        else if (this.GetComponent<Player>()!=null
+                 &&this.GetComponent<Player>().GetAmmoNum(activeWeapon.GetCurrentWeapon().weaponDetails.usingBulletType) >= (weapon.weaponDetails.weaponClipAmmoCapacity-weapon.weaponClipRemainingAmmo))
         {
             weapon.weaponClipRemainingAmmo = weapon.weaponDetails.weaponClipAmmoCapacity;
+            cost = weapon.weaponDetails.weaponClipAmmoCapacity - weapon.weaponClipRemainingAmmo;
         }
         // else set the clip to the remaining ammo
-        else
+        else if(this.GetComponent<Player>()!=null)
         {
-            weapon.weaponClipRemainingAmmo = weapon.weaponRemainingAmmo;
+            weapon.weaponClipRemainingAmmo += this.GetComponent<Player>().GetAmmoNum(activeWeapon.GetCurrentWeapon().weaponDetails.usingBulletType);
+            cost = this.GetComponent<Player>().GetAmmoNum(activeWeapon.GetCurrentWeapon().weaponDetails.usingBulletType);
         }
 
         // Reset weapon reload timer
@@ -132,7 +121,7 @@ public class ReloadWeapon : MonoBehaviour
         activeWeapon.GetAnimator().Rebind();
 
         // Call weapon reloaded event
-        weaponReloadedEvent.OnWeaponReloaded.Trigger(new WeaponReloadedEventArgs(weapon));
+        weaponReloadedEvent.OnWeaponReloaded.Trigger(new WeaponReloadedEventArgs(weapon,cost));
 
     }
 

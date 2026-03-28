@@ -1,4 +1,5 @@
 using System.Collections;
+using QFramework;
 using UnityEngine;
 using TMPro;
 using static GlobalEnums;
@@ -22,6 +23,9 @@ public class Chest : MonoBehaviour, IUseable
     [Tooltip("Populate withItemSpawnPoint transform")]
     #endregion Tooltip
     [SerializeField] private Transform itemSpawnPoint;
+
+    [SerializeField] private GameObject tipText;
+    
     private int healthPercent;
     private WeaponDetailsSO weaponDetails;
     private int ammoPercent;
@@ -113,6 +117,37 @@ public class Chest : MonoBehaviour, IUseable
 
             default:
                 return;
+        }
+    }
+
+    void Update()
+    {
+        if(!isEnabled)
+            return;
+        ShowTip();
+
+
+    }
+
+    private void ShowTip()
+    {
+        
+        tipText.Hide();
+        
+        if(chestState!=ChestState.closed)
+            return;
+        
+        float checkPlayerRadius = 1.5f;
+        Collider2D[] collider2DArray = Physics2D.OverlapCircleAll(this.transform.position, checkPlayerRadius);
+        
+        
+        foreach (Collider2D collider2D in collider2DArray)
+        {
+            if (collider2D.gameObject.CompareTag("Player"))
+            {
+                tipText.Show();
+                return;
+            }
         }
     }
 
@@ -226,7 +261,7 @@ public class Chest : MonoBehaviour, IUseable
         Player player = GameManager.Instance.GetPlayer();
 
         // Update ammo for current weapon
-        player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), ammoPercent));
+        //player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), ammoPercent));
 
         // Play pickup sound effect
         //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.ammoPickup);

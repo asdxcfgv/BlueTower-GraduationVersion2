@@ -1,5 +1,6 @@
 using UnityEditor.Animations;
 using UnityEngine;
+using static GlobalEnums;
 
 [CreateAssetMenu(fileName = "WeaponDetails_", menuName = "Scriptable Objects/Weapons/Weapon Details")]
 public class WeaponDetailsSO : ScriptableObject
@@ -48,10 +49,7 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("The weapon capacity - shots before a reload")]
     #endregion Tooltip
     public int weaponClipAmmoCapacity = 6;
-    #region Tooltip
-    [Tooltip("Weapon ammo capacity - the maximum number of rounds at that can be held for this weapon")]
-    #endregion Tooltip
-    public int weaponAmmoCapacity = 100;
+
     #region Tooltip
     [Tooltip("Weapon Fire Rate - 0.2 means 5 shots a second")]
     #endregion Tooltip
@@ -64,5 +62,10 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("This is the weapon reload time in seconds")]
     #endregion Tooltip
     public float weaponReloadTime = 0f;
-    
+
+    #region Tooltip
+    [Tooltip("武器使用的子弹类型")]
+    #endregion Tooltip
+    public BulletType usingBulletType = BulletType.normal;
+
 }

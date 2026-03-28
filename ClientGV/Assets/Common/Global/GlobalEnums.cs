@@ -42,6 +42,13 @@ public class GlobalEnums
         empty
     }
 
+    public enum BulletType
+    {
+        normal,
+        electron,
+        boom
+    }
+
     public enum ResourcePointState
     {
         notDestroyed,
