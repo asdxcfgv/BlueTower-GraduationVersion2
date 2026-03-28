@@ -55,9 +55,13 @@ namespace QFramework.Example
 			player.weaponReloadedEvent.OnWeaponReloaded.Register(WeaponReloadedEvent_OnWeaponReloaded);
 			
 			player.healthEvent.OnHealthChanged.Register(HealthEvent_OnHealthChanged);
+
+			player.playerResourcesChangedEvent.OnPlayerResourcesChanged.Register(PlayerResourcesChangedEvent_OnPlayerResourcesChanged);
 			
 			// Update active weapon status on the UI
 			SetActiveWeapon(player.activeWeapon.GetCurrentWeapon());
+			
+			AmmoReloaded();
 		}
 		
 		protected override void OnShow()
@@ -80,6 +84,8 @@ namespace QFramework.Example
 			player.weaponReloadedEvent.OnWeaponReloaded.UnRegister(WeaponReloadedEvent_OnWeaponReloaded);
 			
 			player.healthEvent.OnHealthChanged.UnRegister(HealthEvent_OnHealthChanged);
+			
+			player.playerResourcesChangedEvent.OnPlayerResourcesChanged.UnRegister(PlayerResourcesChangedEvent_OnPlayerResourcesChanged);
 		}
 		
 		private void HealthEvent_OnHealthChanged(HealthEventArgs healthEventArgs)
@@ -106,6 +112,12 @@ namespace QFramework.Example
 		private void WeaponReloadedEvent_OnWeaponReloaded(WeaponReloadedEventArgs weaponReloadedEventArgs)
 		{
 			WeaponReloaded(weaponReloadedEventArgs.weapon);
+		}
+
+		private void PlayerResourcesChangedEvent_OnPlayerResourcesChanged(
+			PlayerResourcesChangedEventArgs playerResourcesChangedEventArgs)
+		{
+			AmmoReloaded();
 		}
 		/// <summary>
 		/// Set the active weapon on the UI
@@ -134,6 +146,14 @@ namespace QFramework.Example
 			{
 				UpdateAmmoLoadedIcons(weapon);
 			}
+		}
+
+		private void AmmoReloaded()
+		{
+			int num = player.GetAmmoNum(GlobalEnums.BulletType.normal);
+			NormalBulletText.text = player.GetAmmoNum(GlobalEnums.BulletType.normal).ToString();
+			ElectronBulletText.text = player.GetAmmoNum(GlobalEnums.BulletType.electron).ToString();
+			BoomBulletText.text = player.GetAmmoNum(GlobalEnums.BulletType.boom).ToString();
 		}
 		
 		/// <summary>

@@ -105,6 +105,7 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   environmentGameObject: {fileID: 4176897901132757678}
+  obstacleItemsList: []
 --- !u!114 &8747354763360644262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41030,6 +41031,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 5937747e311dd434788ffc8e998f697d, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].max
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 5937747e311dd434788ffc8e998f697d, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].min
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 5937747e311dd434788ffc8e998f697d, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 5937747e311dd434788ffc8e998f697d, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 5937747e311dd434788ffc8e998f697d, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 5937747e311dd434788ffc8e998f697d, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41048,6 +41073,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5621245411097770903}
     m_Modifications:
+    - target: {fileID: 6262872107016200959, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].max
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].min
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7681158059027396774, guid: 43db77fbee3314141a94547c2f030fb8, type: 3}
       propertyPath: m_Name
       value: ChestSpawner_EnemiesDefeated_BossRoom

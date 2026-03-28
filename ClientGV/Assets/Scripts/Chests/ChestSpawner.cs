@@ -11,6 +11,15 @@ public class ChestSpawner : MonoBehaviour
         [Range(0, 100)] public int min;
         [Range(0, 100)] public int max;
     }
+    
+    [System.Serializable]
+    private struct AmmoRangeByLevel
+    {
+        public List<BulletType> bulletTypes;
+        public DungeonLevelSO dungeonLevel;
+        [Range(0, 100)] public int min;
+        [Range(0, 100)] public int max;
+    }
 
     #region Header CHEST PREFAB
     [Space(10)]
@@ -68,7 +77,7 @@ public class ChestSpawner : MonoBehaviour
     #region Tooltip
     [Tooltip("The range of ammo to spawn for each level")]
     #endregion Tooltip
-    [SerializeField] private List<RangeByLevel> ammoSpawnByLevelList;
+    [SerializeField] private List<AmmoRangeByLevel> ammoSpawnByLevelList;
 
     private bool chestSpawned = false;
     private Room chestRoom;
@@ -167,12 +176,12 @@ public class ChestSpawner : MonoBehaviour
         if (chestSpawnEvent == ChestSpawnEvent.onRoomEntry)
         {
             // Don't use materialize effect
-            chest.Initialize(false, GetHealthPercentToSpawn(healthNum), GetWeaponDetailsToSpawn(weaponNum), GetAmmoPercentToSpawn(ammoNum));
+            chest.Initialize(false, GetHealthPercentToSpawn(healthNum), GetWeaponDetailsToSpawn(weaponNum), GetAmmoPercentToSpawn(ammoNum),GetAmmoType(ammoNum));
         }
         else
         {
             // use materialize effect
-            chest.Initialize(true, GetHealthPercentToSpawn(healthNum), GetWeaponDetailsToSpawn(weaponNum), GetAmmoPercentToSpawn(ammoNum));
+            chest.Initialize(true, GetHealthPercentToSpawn(healthNum), GetWeaponDetailsToSpawn(weaponNum), GetAmmoPercentToSpawn(ammoNum),GetAmmoType(ammoNum));
         }
     }
 
@@ -251,7 +260,7 @@ public class ChestSpawner : MonoBehaviour
         if (ammoNumber == 0) return 0;
 
         // Get ammo spawn percent range for level
-        foreach (RangeByLevel spawnPercentByLevel in ammoSpawnByLevelList)
+        foreach (AmmoRangeByLevel spawnPercentByLevel in ammoSpawnByLevelList)
         {
             if (spawnPercentByLevel.dungeonLevel == GameManager.Instance.GetCurrentDungeonLevel())
             {
@@ -260,6 +269,20 @@ public class ChestSpawner : MonoBehaviour
         }
 
         return 0;
+    }
+
+    private BulletType GetAmmoType(int ammoNumber)
+    {
+        if (ammoNumber == 0) return BulletType.none;
+        // Get ammo spawn percent range for level
+        foreach (AmmoRangeByLevel spawnTypeByLevel in ammoSpawnByLevelList)
+        {
+            if (spawnTypeByLevel.dungeonLevel == GameManager.Instance.GetCurrentDungeonLevel())
+            {
+                return spawnTypeByLevel.bulletTypes[Random.Range(0, spawnTypeByLevel.bulletTypes.Count)];
+            }
+        }
+        return BulletType.none;
     }
 
     /// <summary>

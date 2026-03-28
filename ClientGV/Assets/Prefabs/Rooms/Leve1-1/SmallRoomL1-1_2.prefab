@@ -105,6 +105,7 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   environmentGameObject: {fileID: 4176897901132757678}
+  obstacleItemsList: []
 --- !u!114 &9191380767185440500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17600,6 +17601,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5621245411097770903}
     m_Modifications:
+    - target: {fileID: 6262872107016200959, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262872107016200959, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7681158059027396774, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
       propertyPath: m_Name
       value: ChestSpawner_EnemiesDefeated_SmallRoom
@@ -17705,6 +17722,22 @@ PrefabInstance:
     - target: {fileID: 5661337347136543279, guid: 9bdfde125b8bad741ac1ecd7a23add45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 9bdfde125b8bad741ac1ecd7a23add45, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 9bdfde125b8bad741ac1ecd7a23add45, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 9bdfde125b8bad741ac1ecd7a23add45, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497248436658410216, guid: 9bdfde125b8bad741ac1ecd7a23add45, type: 3}
+      propertyPath: ammoSpawnByLevelList.Array.data[0].bulletTypes.Array.data[2]
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,6 +10,10 @@ public class PlayerResources : MonoBehaviour
     private int normalBullet;
     private int electronBullet;
     private int boomBullet;
+    
+    private int maxNormalBullet;
+    private int maxElectronBullet;
+    private int maxBoomBullet;
 
     private void Awake()
     {
@@ -29,11 +33,14 @@ public class PlayerResources : MonoBehaviour
         player.weaponReloadedEvent.OnWeaponReloaded.UnRegister(WeaponReloadedEvent_OnWeaponReloaded);
     }
 
-    public void InitializeResources(int normal,int electron,int boom)
+    public void InitializeResources(int normal,int electron,int boom,int maxNormal,int maxElectron,int maxBoom)
     {
         normalBullet = normal;
         electronBullet = electron;
         boomBullet = boom;
+        maxNormalBullet = maxNormal;
+        maxElectronBullet = maxElectron;
+        maxBoomBullet = maxBoom;
     }
 
     public int GetAmmoNum(BulletType type)
@@ -54,6 +61,37 @@ public class PlayerResources : MonoBehaviour
     private void WeaponReloadedEvent_OnWeaponReloaded(WeaponReloadedEventArgs weaponReloadedEventArgs)
     {
         WeaponReloaded(weaponReloadedEventArgs.weapon,weaponReloadedEventArgs.ammoCost);
+    }
+
+    public void AddAmmo(int ammoPercent, BulletType bulletType)
+    {
+        switch (bulletType)
+        {
+            case BulletType.normal:
+                normalBullet += ammoPercent;
+                if (normalBullet >= maxNormalBullet)
+                {
+                    normalBullet = maxNormalBullet;
+                }
+                break;
+            case BulletType.electron:
+                electronBullet += ammoPercent;
+                if (electronBullet >= maxElectronBullet)
+                {
+                    electronBullet = maxElectronBullet;
+                }
+                break;
+            case BulletType.boom:
+                boomBullet += ammoPercent;
+                if (boomBullet >= maxBoomBullet)
+                {
+                    boomBullet = maxBoomBullet;
+                }
+                break;
+            default:
+                break;
+        }
+        player.playerResourcesChangedEvent.OnPlayerResourcesChanged.Trigger(new PlayerResourcesChangedEventArgs());
     }
 
     private void WeaponReloaded(Weapon weapon, int ammoCost)
@@ -84,5 +122,7 @@ public class PlayerResources : MonoBehaviour
             default:
                 break;
         }
+        
+        player.playerResourcesChangedEvent.OnPlayerResourcesChanged.Trigger(new PlayerResourcesChangedEventArgs());
     }
 }

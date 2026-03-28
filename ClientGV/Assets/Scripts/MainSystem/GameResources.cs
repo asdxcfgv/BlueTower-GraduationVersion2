@@ -73,8 +73,14 @@ public class GameResources : MonoBehaviour
     #region Tooltip
     [Tooltip("Populate with bullet icon sprite")]
     #endregion
-    public Sprite bulletIcon;
-    public AnimatorController bulletAnimator;
+    public Sprite normalBulletIcon;
+    public AnimatorController normalBulletAnimator;
+
+    public Sprite electronBulletIcon;
+    public AnimatorController electronBulletAnimator;
+
+    public Sprite boomBulletIcon;
+    public AnimatorController boomBulletAnimator;
 
     public GameObject minimapBossIconPrefab;
     

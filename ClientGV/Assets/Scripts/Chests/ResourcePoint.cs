@@ -30,6 +30,9 @@ public class ResourcePoint : MonoBehaviour,IUseable
     
     private int healthPercent;
     private int ammoPercent;
+    private BulletType bulletType;
+    private bool isDestroyed;
+    
     
     [SerializeField] private Transform itemSpawnPoint;
 
@@ -43,13 +46,13 @@ public class ResourcePoint : MonoBehaviour,IUseable
     private ChestItem chestItem;
     private TextMeshPro messageTextTMP;
 
-    public void Initialize(int healthPercent, int ammoPercent)
+    public void Initialize(int healthPercent, int ammoPercent,BulletType bulletType)
     {
-        
-        
+        this.bulletType = bulletType;
         this.healthPercent = healthPercent;
         this.ammoPercent = ammoPercent;
 
+        isDestroyed = false;
         resourcePointState = ResourcePointState.notDestroyed;
     }
 
@@ -76,8 +79,9 @@ public class ResourcePoint : MonoBehaviour,IUseable
     
     private void HealthEvent_OnHealthLost(HealthEventArgs healthEventArgs)
     {
-        if (healthEventArgs.healthAmount <= 0f)
+        if (healthEventArgs.healthAmount <= 0f&&!isDestroyed)
         {
+            isDestroyed = true;
             StartCoroutine(PlayAnimation());
         }
     }
@@ -199,7 +203,20 @@ public class ResourcePoint : MonoBehaviour,IUseable
     {
         InstantiateItem();
 
-        chestItem.InitializeWithAnimator(GameResources.Instance.bulletIcon,GameResources.Instance.bulletAnimator, ammoPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        switch (bulletType)
+        {
+            case BulletType.normal:
+                chestItem.InitializeWithAnimator(GameResources.Instance.normalBulletIcon, GameResources.Instance.normalBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                break;
+            case BulletType.electron:
+                chestItem.InitializeWithAnimator(GameResources.Instance.electronBulletIcon, GameResources.Instance.electronBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                break;
+            case BulletType.boom:
+                chestItem.InitializeWithAnimator(GameResources.Instance.boomBulletIcon, GameResources.Instance.boomBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                break;
+            default:
+                break;
+        }
     }
     
     /// <summary>
@@ -213,7 +230,7 @@ public class ResourcePoint : MonoBehaviour,IUseable
         Player player = GameManager.Instance.GetPlayer();
 
         // Update ammo for current weapon
-        //player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), ammoPercent));
+        GameManager.Instance.GetPlayer().playerResources.AddAmmo(ammoPercent,bulletType);
 
         // Play pickup sound effect
         //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.ammoPickup);

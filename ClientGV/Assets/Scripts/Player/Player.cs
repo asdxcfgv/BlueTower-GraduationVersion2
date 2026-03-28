@@ -36,6 +36,7 @@ using static GlobalEnums;
 [RequireComponent(typeof(PolygonCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerResources))]
+[RequireComponent(typeof(PlayerResourcesChangedEvent))]
 [DisallowMultipleComponent]
 #endregion REQUIRE COMPONENTS
 
@@ -59,7 +60,8 @@ public class Player : MonoBehaviour
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Animator animator;
     [HideInInspector] public PlayerResources playerResources;
-
+    [HideInInspector] public PlayerResourcesChangedEvent playerResourcesChangedEvent;
+    
     public List<Weapon> weaponList = new List<Weapon>();
     
     private void Awake()
@@ -82,6 +84,7 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         playerResources = GetComponent<PlayerResources>();
+        playerResourcesChangedEvent = GetComponent<PlayerResourcesChangedEvent>();
     }
 
 
@@ -137,7 +140,7 @@ public class Player : MonoBehaviour
 
     private void SetPlayerResources()
     {
-        playerResources.InitializeResources(playerDetails.playerNormalBullet,playerDetails.playerElectronBullet,playerDetails.playerBoomBullet);
+        playerResources.InitializeResources(playerDetails.playerNormalBullet,playerDetails.playerElectronBullet,playerDetails.playerBoomBullet,playerDetails.playerMaxNormalBullet,playerDetails.playerMaxElectronBullet,playerDetails.playerMaxBoomBullet);
     }
     
     /// <summary>

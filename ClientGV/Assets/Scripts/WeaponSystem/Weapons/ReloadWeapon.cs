@@ -102,8 +102,8 @@ public class ReloadWeapon : MonoBehaviour
         else if (this.GetComponent<Player>()!=null
                  &&this.GetComponent<Player>().GetAmmoNum(activeWeapon.GetCurrentWeapon().weaponDetails.usingBulletType) >= (weapon.weaponDetails.weaponClipAmmoCapacity-weapon.weaponClipRemainingAmmo))
         {
-            weapon.weaponClipRemainingAmmo = weapon.weaponDetails.weaponClipAmmoCapacity;
             cost = weapon.weaponDetails.weaponClipAmmoCapacity - weapon.weaponClipRemainingAmmo;
+            weapon.weaponClipRemainingAmmo = weapon.weaponDetails.weaponClipAmmoCapacity;
         }
         // else set the clip to the remaining ammo
         else if(this.GetComponent<Player>()!=null)

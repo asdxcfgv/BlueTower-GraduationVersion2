@@ -44,6 +44,7 @@ public class GlobalEnums
 
     public enum BulletType
     {
+        none,
         normal,
         electron,
         boom

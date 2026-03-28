@@ -69,4 +69,12 @@ public class PlayerDetailsSO : ScriptableObject
     [Range(0,99)]public int playerNormalBullet;
     [Range(0,99)]public int playerElectronBullet;
     [Range(0,99)]public int playerBoomBullet;
+    
+    #region Header OTHER
+    [Space(10)]
+    [Header("玩家最大子弹数量")]
+    #endregion
+    [Range(0,99)]public int playerMaxNormalBullet;
+    [Range(0,99)]public int playerMaxElectronBullet;
+    [Range(0,99)]public int playerMaxBoomBullet;
 }

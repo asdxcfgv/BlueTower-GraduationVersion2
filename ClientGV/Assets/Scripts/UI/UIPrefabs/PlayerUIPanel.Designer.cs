@@ -5,7 +5,7 @@ using QFramework;
 
 namespace QFramework.Example
 {
-	// Generate Id:73281033-013a-48ba-86f4-1244764a8f88
+	// Generate Id:04fe291f-9f8e-44d0-a9a8-b7c136d0d3ab
 	public partial class PlayerUIPanel
 	{
 		public const string Name = "PlayerUIPanel";
@@ -20,6 +20,12 @@ namespace QFramework.Example
 		public UnityEngine.GameObject HeartIcon_Content;
 		[SerializeField]
 		public UnityEngine.GameObject HeartIcon_Pre;
+		[SerializeField]
+		public TMPro.TextMeshProUGUI NormalBulletText;
+		[SerializeField]
+		public TMPro.TextMeshProUGUI ElectronBulletText;
+		[SerializeField]
+		public TMPro.TextMeshProUGUI BoomBulletText;
 		
 		private PlayerUIPanelData mPrivateData = null;
 		
@@ -30,6 +36,9 @@ namespace QFramework.Example
 			BulletIcon_Pre = null;
 			HeartIcon_Content = null;
 			HeartIcon_Pre = null;
+			NormalBulletText = null;
+			ElectronBulletText = null;
+			BoomBulletText = null;
 			
 			mData = null;
 		}

@@ -29,6 +29,7 @@ public class Chest : MonoBehaviour, IUseable
     private int healthPercent;
     private WeaponDetailsSO weaponDetails;
     private int ammoPercent;
+    private BulletType bulletType;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private MaterializeEffect materializeEffect;
@@ -50,12 +51,13 @@ public class Chest : MonoBehaviour, IUseable
     /// <summary>
     /// Initialize Chest and either make it visible immediately or materialize it
     /// </summary>
-    public void Initialize(bool shouldMaterialize, int healthPercent, WeaponDetailsSO weaponDetails, int ammoPercent)
+    public void Initialize(bool shouldMaterialize, int healthPercent, WeaponDetailsSO weaponDetails, int ammoPercent,BulletType bulletType)
     {
         this.healthPercent = healthPercent;
         this.weaponDetails = weaponDetails;
         this.ammoPercent = ammoPercent;
-
+        this.bulletType = bulletType;
+        
         if (shouldMaterialize)
         {
             StartCoroutine(MaterializeChest());
@@ -246,7 +248,21 @@ public class Chest : MonoBehaviour, IUseable
     {
         InstantiateItem();
 
-        chestItem.InitializeWithAnimator(GameResources.Instance.bulletIcon, GameResources.Instance.bulletAnimator,ammoPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        switch (bulletType)
+        {
+            case BulletType.normal:
+                chestItem.InitializeWithAnimator(GameResources.Instance.normalBulletIcon, GameResources.Instance.normalBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                break;
+            case BulletType.electron:
+                chestItem.InitializeWithAnimator(GameResources.Instance.electronBulletIcon, GameResources.Instance.electronBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                break;
+            case BulletType.boom:
+                chestItem.InitializeWithAnimator(GameResources.Instance.boomBulletIcon, GameResources.Instance.boomBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                break;
+            default:
+                break;
+        }
+        
     }
 
 
@@ -261,7 +277,7 @@ public class Chest : MonoBehaviour, IUseable
         Player player = GameManager.Instance.GetPlayer();
 
         // Update ammo for current weapon
-        //player.reloadWeaponEvent.OnReloadWeapon.Trigger(new ReloadWeaponEventArgs(player.activeWeapon.GetCurrentWeapon(), ammoPercent));
+        GameManager.Instance.GetPlayer().playerResources.AddAmmo(ammoPercent,bulletType);
 
         // Play pickup sound effect
         //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.ammoPickup);
