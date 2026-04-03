@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using static GlobalEnums;
 
-public class ResourcePoint : MonoBehaviour,IUseable
+public class ResourcePoint : MonoBehaviour
 {
     [ColorUsage(false, true)]
     [SerializeField] private Color materializeColor;
@@ -29,7 +29,9 @@ public class ResourcePoint : MonoBehaviour,IUseable
     #endregion Tooltip
     
     private int healthPercent;
+    private int tempHealthPercent;
     private int ammoPercent;
+    private int tempAmmoPercent;
     private BulletType bulletType;
     private bool isDestroyed;
     
@@ -121,30 +123,6 @@ public class ResourcePoint : MonoBehaviour,IUseable
         UpdateChestState();
 
     }
-    public void UseItem()
-    {
-
-        switch (resourcePointState)
-        {
-            case ResourcePointState.notDestroyed:
-                return;
-            
-            case ResourcePointState.healthItem:
-                CollectHealthItem();
-                break;
-
-            case ResourcePointState.ammoItem:
-                CollectAmmoItem();
-                break;
-
-            case ResourcePointState.obstacle:
-                return;
-
-            default:
-                return;
-        }
-    }
-    
     
     private void InstantiateItem()
     {
@@ -178,25 +156,25 @@ public class ResourcePoint : MonoBehaviour,IUseable
     {
         InstantiateItem();
 
-        chestItem.InitializeWithAnimator(GameResources.Instance.heartIcon,GameResources.Instance.heartAnimator, healthPercent.ToString() + "%", itemSpawnPoint.position, materializeColor);
+        chestItem.InitializeWithAnimator(GameResources.Instance.heartIcon,GameResources.Instance.heartAnimator, itemSpawnPoint.position,CollectHealthItem);
+
+        tempHealthPercent = healthPercent;
+        
+        healthPercent = 0;
+        
+        chestItem = null;
+        
+        UpdateChestState();
     }
     
     private void CollectHealthItem()
     {
-        // Check item exists and has been materialized
-        if (chestItem == null || !chestItem.isItemMaterialized) return;
-
         // Add health to player
-        GameManager.Instance.GetPlayer().health.AddHealth(healthPercent);
+        GameManager.Instance.GetPlayer().health.AddHealth(tempHealthPercent);
 
         // Play pickup sound effect
         //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.healthPickup);
-
-        healthPercent = 0;
-
-        Destroy(chestItemGameObject);
-
-        UpdateChestState();
+        
     }
     
     private void InstantiateAmmoItem()
@@ -206,17 +184,25 @@ public class ResourcePoint : MonoBehaviour,IUseable
         switch (bulletType)
         {
             case BulletType.normal:
-                chestItem.InitializeWithAnimator(GameResources.Instance.normalBulletIcon, GameResources.Instance.normalBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                chestItem.InitializeWithAnimator(GameResources.Instance.normalBulletIcon, GameResources.Instance.normalBulletAnimator, itemSpawnPoint.position,CollectAmmoItem);
                 break;
             case BulletType.electron:
-                chestItem.InitializeWithAnimator(GameResources.Instance.electronBulletIcon, GameResources.Instance.electronBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                chestItem.InitializeWithAnimator(GameResources.Instance.electronBulletIcon, GameResources.Instance.electronBulletAnimator, itemSpawnPoint.position,CollectAmmoItem);
                 break;
             case BulletType.boom:
-                chestItem.InitializeWithAnimator(GameResources.Instance.boomBulletIcon, GameResources.Instance.boomBulletAnimator,ammoPercent.ToString(), itemSpawnPoint.position, materializeColor);
+                chestItem.InitializeWithAnimator(GameResources.Instance.boomBulletIcon, GameResources.Instance.boomBulletAnimator, itemSpawnPoint.position,CollectAmmoItem);
                 break;
             default:
                 break;
         }
+
+        tempAmmoPercent = ammoPercent;
+        
+        ammoPercent = 0;
+        
+        UpdateChestState();
+
+        chestItem = null;
     }
     
     /// <summary>
@@ -224,21 +210,11 @@ public class ResourcePoint : MonoBehaviour,IUseable
     /// </summary>
     private void CollectAmmoItem()
     {
-        // Check item exists and has been materialized
-        if (chestItem == null || !chestItem.isItemMaterialized) return;
-
-        Player player = GameManager.Instance.GetPlayer();
-
         // Update ammo for current weapon
-        GameManager.Instance.GetPlayer().playerResources.AddAmmo(ammoPercent,bulletType);
+        GameManager.Instance.GetPlayer().playerResources.AddAmmo(tempAmmoPercent,bulletType);
 
         // Play pickup sound effect
         //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.ammoPickup);
-
-        ammoPercent = 0;
-
-        Destroy(chestItemGameObject);
-
-        UpdateChestState();
+        
     }
 }

@@ -21,7 +21,6 @@ MonoBehaviour:
   startingWeapon: {fileID: 11400000, guid: b07793edb363fc44bae0cffea9682082, type: 2}
   startingWeaponList:
   - {fileID: 11400000, guid: b07793edb363fc44bae0cffea9682082, type: 2}
-  - {fileID: 11400000, guid: 0b9f0fa05e8dc9e4d87b45224bea1cc2, type: 2}
   playerMiniMapIcon: {fileID: 21300000, guid: 2d758a4a59c8f9c4fbd07087750ad2e5, type: 3}
   playerNormalBullet: 50
   playerElectronBullet: 50

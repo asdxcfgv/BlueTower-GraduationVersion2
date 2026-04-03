@@ -99,7 +99,7 @@ public class PlayerResources : MonoBehaviour
         switch (weapon.weaponDetails.usingBulletType)
         {
             case BulletType.normal:
-                normalBullet-=ammoCost;
+                normalBullet -= ammoCost;
                 if (normalBullet < 0)
                 {
                     normalBullet = 0;
