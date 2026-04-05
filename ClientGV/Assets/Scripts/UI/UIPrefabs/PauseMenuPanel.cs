@@ -22,6 +22,7 @@ namespace QFramework.Example
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			Time.timeScale = 0f;
 		}
 		
 		protected override void OnShow()
@@ -34,6 +35,7 @@ namespace QFramework.Example
 		
 		protected override void OnClose()
 		{
+			Time.timeScale = 1f;
 		}
 
 		private void Exit()

@@ -409,7 +409,7 @@ MonoBehaviour:
   MarkType: 0
   CustomComponentName: ElectronBulletText
   CustomComment: 
-  mComponentName: 
+  mComponentName: TMPro.TextMeshProUGUI
 --- !u!1 &3710359745652394841
 GameObject:
   m_ObjectHideFlags: 0

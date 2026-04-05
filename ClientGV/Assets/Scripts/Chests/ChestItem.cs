@@ -14,18 +14,28 @@ public class ChestItem : MonoBehaviour
     private Animator animator;
     
     [Header("物品设置")]
-    [SerializeField]private float maxHeight = 2.5f;        // 弧线最大高度（带小数点）
-    [SerializeField]private float arcDuration = 1.0f;      // 弧线运动持续时间（带小数点）
-    [SerializeField]private float floatAmplitude = 0.1f;   // 悬浮振幅（带小数点）
-    [SerializeField]private float floatFrequency = 2.0f;   // 悬浮频率（带小数点）
-    [SerializeField]private float rotationSpeed = 180.0f;  // 旋转速度（带小数点）
+    [Tooltip("弧线最大高度（带小数点）")]
+    [SerializeField]private float maxHeight = 2.5f;
+    [Tooltip("弧线运动持续时间（带小数点）")]
+    [SerializeField]private float arcDuration = 1.0f;    
+    [Tooltip("悬浮振幅（带小数点）")]
+    [SerializeField]private float floatAmplitude = 0.1f;
+    [Tooltip("悬浮频率（带小数点）")]
+    [SerializeField]private float floatFrequency = 2.0f;
+    [Tooltip("旋转速度（带小数点）")]
+    [SerializeField]private float rotationSpeed = 180.0f;
+    [Tooltip("漂浮速度")]
     [SerializeField]private float floatSpeed;
+    [Tooltip("弹出力度")]
     [SerializeField]private float popForce;
     
     [Header("自动吸附设置")]
-    [SerializeField]private float attractionDistance = 2.0f;  // 吸附距离（带小数点）
-    [SerializeField]private float attractionSpeed = 3.0f;     // 吸附速度（带小数点）
-    [SerializeField]private float magnetEffectIntensity = 0.5f; // 磁力效果强度（带小数点）
+    [Tooltip("吸附距离（带小数点）")]
+    [SerializeField]private float attractionDistance = 2.0f;
+    [Tooltip("吸附速度（带小数点）")]
+    [SerializeField]private float attractionSpeed = 3.0f;
+    [Tooltip("磁力效果强度（带小数点）")]
+    [SerializeField]private float magnetEffectIntensity = 0.5f;
     
     private Rigidbody2D rb;
     private Vector3 startPosition;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
+[RequireComponent(typeof(HitShake))]
 public class DestroyableItem : MonoBehaviour
 {
     #region Header HEALTH
@@ -21,19 +22,25 @@ public class DestroyableItem : MonoBehaviour
     #endregion Tooltip
     //[SerializeField] private SoundEffectSO destroySoundEffect;
     private Animator animator;
+    private HitShake hitShake;
     private BoxCollider2D boxCollider2D;
     private HealthEvent healthEvent;
     private Health health;
     private ReceiveContactDamage receiveContactDamage;
+    
+    private bool isDestroyed;
 
     private void Awake()
     {
+        isDestroyed = false;
+        
         animator = GetComponent<Animator>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         healthEvent = GetComponent<HealthEvent>();
         health = GetComponent<Health>();
         health.SetStartingHealth(startingHealthAmount);
         receiveContactDamage = GetComponent<ReceiveContactDamage>();
+        hitShake = GetComponent<HitShake>();
     }
 
     private void OnEnable()
@@ -49,8 +56,13 @@ public class DestroyableItem : MonoBehaviour
 
     private void HealthEvent_OnHealthLost(HealthEventArgs healthEventArgs)
     {
-        if (healthEventArgs.healthAmount <= 0f)
+        if (healthEventArgs.damageAmount > 0&&!isDestroyed)
         {
+            hitShake.PlayShake();
+        }
+        if (healthEventArgs.healthAmount <= 0f&&!isDestroyed)
+        {
+            isDestroyed = true;
             StartCoroutine(PlayAnimation());
         }
     }

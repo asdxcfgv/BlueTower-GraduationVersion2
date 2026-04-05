@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3526472204840646852}
   - component: {fileID: 720423774865508402}
   - component: {fileID: 150153723916930604}
+  - component: {fileID: 4914157841173379835}
   m_Layer: 17
   m_Name: DestroyableItem
   m_TagString: Untagged
@@ -209,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealthAmount: 1
+  isObstacleWhenDestroyed: 0
 --- !u!114 &150153723916930604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,3 +223,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b6cf4a6bf8fef4c8ab7a8986362d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8199449223257545608}
+--- !u!114 &4914157841173379835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003062646365276789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c796f6ee93b04c4294d7a006b3451a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakePower: 0.2
+  shakeTime: 0.1

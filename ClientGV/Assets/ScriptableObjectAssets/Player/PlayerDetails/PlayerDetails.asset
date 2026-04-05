@@ -17,7 +17,7 @@ MonoBehaviour:
   runtimeAnimatorController: {fileID: 9100000, guid: 04dbb8e6912076f4a9a584a4601a78bb, type: 2}
   playerHealthAmount: 100
   isImmuneAfterHit: 1
-  hitImmunityTime: 3
+  hitImmunityTime: 2
   startingWeapon: {fileID: 11400000, guid: b07793edb363fc44bae0cffea9682082, type: 2}
   startingWeaponList:
   - {fileID: 11400000, guid: b07793edb363fc44bae0cffea9682082, type: 2}

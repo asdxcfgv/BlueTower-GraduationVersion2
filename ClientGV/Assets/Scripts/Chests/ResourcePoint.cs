@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using static GlobalEnums;
 
+[RequireComponent(typeof(HitShake))]
 public class ResourcePoint : MonoBehaviour
 {
     [ColorUsage(false, true)]
@@ -47,6 +48,7 @@ public class ResourcePoint : MonoBehaviour
     private GameObject chestItemGameObject;
     private ChestItem chestItem;
     private TextMeshPro messageTextTMP;
+    private HitShake hitShake;
 
     public void Initialize(int healthPercent, int ammoPercent,BulletType bulletType)
     {
@@ -56,6 +58,7 @@ public class ResourcePoint : MonoBehaviour
 
         isDestroyed = false;
         resourcePointState = ResourcePointState.notDestroyed;
+        
     }
 
     private void Awake()
@@ -66,6 +69,7 @@ public class ResourcePoint : MonoBehaviour
         health = GetComponent<Health>();
         health.SetStartingHealth(startingHealthAmount);
         receiveContactDamage = GetComponent<ReceiveContactDamage>();
+        hitShake = GetComponent<HitShake>();
     }
     
     private void OnEnable()
@@ -81,6 +85,10 @@ public class ResourcePoint : MonoBehaviour
     
     private void HealthEvent_OnHealthLost(HealthEventArgs healthEventArgs)
     {
+        if (healthEventArgs.damageAmount > 0&&!isDestroyed)
+        {
+            hitShake.PlayShake();
+        }
         if (healthEventArgs.healthAmount <= 0f&&!isDestroyed)
         {
             isDestroyed = true;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using QFramework;
 using QFramework.Example;
 using TMPro;
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     [Tooltip("Populate with the MessageText textmeshpro component in the FadeScreenUI")]
     #endregion Tooltip
     [SerializeField] private TextMeshProUGUI messageTextTMP;
+
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
     #region Tooltip
     [Tooltip("Populate with the FadeImage canvasgroup component in the FadeScreenUI")]
@@ -682,6 +685,11 @@ public class GameManager : MonoBehaviour
     public GameState GetCurrentGameState()
     {
         return m_gameStateFSM.CurrentStateId;
+    }
+
+    public CinemachineVirtualCamera GetCamera()
+    {
+        return virtualCamera;
     }
 
     public void ChangeState(GameState newState)
