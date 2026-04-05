@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static GlobalEnums;
 using QFramework;
 
 namespace QFramework.Example
@@ -126,6 +127,27 @@ namespace QFramework.Example
 		{
 			UpdateActiveWeaponImage(weapon.weaponDetails);
 			UpdateAmmoLoadedIcons(weapon);
+			Color m_Color = new Color(86f/255f, 86f/255f, 86f/255f);
+			switch (weapon.weaponDetails.usingBulletType)
+			{
+				case BulletType.normal:
+					NormalBulletText.color = Color.white;
+					BoomBulletText.color = m_Color;
+					ElectronBulletText.color = m_Color;
+					break;
+				case BulletType.electron:
+					NormalBulletText.color = m_Color;
+					BoomBulletText.color = m_Color;
+					ElectronBulletText.color = Color.white;
+					break;
+				case BulletType.boom:
+					NormalBulletText.color = m_Color;
+					BoomBulletText.color = Color.white;
+					ElectronBulletText.color = m_Color;
+					break;
+				default:
+					break;
+			}
 		}
 		
 		/// <summary>
