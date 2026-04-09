@@ -14,16 +14,14 @@ namespace MyBehaviourTree {
         BehaviourTreeView treeView;
         BehaviourTree tree;
         InspectorView inspectorView;
-        IMGUIContainer blackboardView;
         ToolbarMenu toolbarMenu;
         TextField treeNameField;
         TextField locationPathField;
         Button createNewTreeButton;
         VisualElement overlay;
         BehaviourTreeSettings settings;
+        
 
-        SerializedObject treeObject;
-        SerializedProperty blackboardProperty;
 
         [MenuItem("BehaviourTree/BehaviourTreeEditor")]
         public static void OpenWindow() {
@@ -74,16 +72,6 @@ namespace MyBehaviourTree {
 
             // Inspector View
             inspectorView = root.Q<InspectorView>();
-
-            // Blackboard view
-            blackboardView = root.Q<IMGUIContainer>();
-            blackboardView.onGUIHandler = () => {
-                if (treeObject != null && treeObject.targetObject != null) {
-                    treeObject.Update();
-                    EditorGUILayout.PropertyField(blackboardProperty);
-                    treeObject.ApplyModifiedProperties();
-                }
-            };
 
             // Toolbar assets menu
             toolbarMenu = root.Q<ToolbarMenu>();
@@ -169,10 +157,7 @@ namespace MyBehaviourTree {
             } else {
                 treeView.PopulateView(tree);
             }
-
             
-            treeObject = new SerializedObject(tree);
-            blackboardProperty = treeObject.FindProperty("blackboard");
 
             EditorApplication.delayCall += () => {
                 treeView.FrameAll();
