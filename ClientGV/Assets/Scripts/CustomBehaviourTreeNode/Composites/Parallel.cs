@@ -21,15 +21,19 @@ namespace MyBehaviourTree
 
         protected override State OnUpdate() {
             bool stillRunning = false;
-            for (int i = 0; i < childrenLeftToExecute.Count(); ++i) {
-                if (childrenLeftToExecute[i] == State.Running) {
+            for (int i = 0; i < childrenLeftToExecute.Count(); ++i) 
+            {
+                if (childrenLeftToExecute[i] == State.Running) 
+                {
                     var status = children[i].Update();
-                    if (status == State.Failure) {
+                    if (status == State.Failure) 
+                    {
                         AbortRunningChildren();
                         return State.Failure;
                     }
 
-                    if (status == State.Running) {
+                    if (status == State.Running) 
+                    {
                         stillRunning = true;
                     }
 

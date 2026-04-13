@@ -15,8 +15,10 @@ namespace MyBehaviourTree {
         [HideInInspector] public string guid;
         [HideInInspector] public Vector2 position;
         [HideInInspector] public Blackboard blackboard;
+        [HideInInspector] public GameObject gameObject;
         [TextArea] public string description;
         public bool drawGizmos = false;
+        
 
         public State Update() {
 

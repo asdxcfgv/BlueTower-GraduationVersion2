@@ -75,6 +75,11 @@ public class EnemyWeaponAI : MonoBehaviour
         }
     }
 
+    public void Fire()
+    {
+        
+    }
+
     private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
     {
         isDestroyed = true;

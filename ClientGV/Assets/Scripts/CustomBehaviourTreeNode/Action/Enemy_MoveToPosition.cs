@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace MyBehaviourTree
 {
-    public class MoveToPosition : ActionNode
+    public class Enemy_MoveToPosition : ActionNode
     {
-        protected override void OnStart() 
+        private Enemy enemy;
+        protected override void OnStart()
         {
-            
+            enemy = gameObject.GetComponent<Enemy>();
         }
 
         protected override void OnStop() 
@@ -17,6 +18,7 @@ namespace MyBehaviourTree
 
         protected override State OnUpdate() 
         {
+            
             return State.Running;
         }
     }

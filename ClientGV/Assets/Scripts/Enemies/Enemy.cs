@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MyBehaviourTree;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -34,6 +35,7 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(PolygonCollider2D))]
 [RequireComponent(typeof(EnemyDamageFlash))]
+[RequireComponent(typeof(BehaviourTreeRunner))]
 #endregion REQUIRE COMPONENTS
 public class Enemy : MonoBehaviour
 {
@@ -53,6 +55,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public SpriteRenderer[] spriteRendererArray;
     [HideInInspector] public Animator animator;
     private EnemyDamageFlash enemyDamageFlash;
+    [HideInInspector] public BehaviourTreeRunner behaviourTreeRunner;
 
     void Awake()
     {
@@ -72,6 +75,7 @@ public class Enemy : MonoBehaviour
         spriteRendererArray = GetComponentsInChildren<SpriteRenderer>();
         animator = GetComponent<Animator>();
         enemyDamageFlash = GetComponent<EnemyDamageFlash>();
+        behaviourTreeRunner = GetComponent<BehaviourTreeRunner>();
     }
     
     private void OnEnable()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MyBehaviourTree
 {
-    public class Attack : ActionNode
+    public class Enemy_Attack : ActionNode
     {
         protected override void OnStart() 
         {

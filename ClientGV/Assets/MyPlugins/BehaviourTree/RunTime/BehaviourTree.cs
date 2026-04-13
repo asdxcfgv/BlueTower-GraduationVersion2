@@ -58,9 +58,10 @@ namespace MyBehaviourTree {
             return tree;
         }
 
-        public void Bind() {
+        public void Bind(GameObject gameObject) {
             Traverse(rootNode, node => {
                 node.blackboard = blackboard;
+                node.gameObject = gameObject;
             });
         }
 
