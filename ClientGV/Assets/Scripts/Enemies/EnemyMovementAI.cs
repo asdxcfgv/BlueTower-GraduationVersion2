@@ -58,10 +58,7 @@ public class EnemyMovementAI : MonoBehaviour
 
     private void Update()
     {
-        if (!isDestroyed) 
-        {
-            MoveEnemy();
-        }
+        
     }
     
     private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
@@ -78,8 +75,12 @@ public class EnemyMovementAI : MonoBehaviour
     /// <summary>
     /// Use AStar pathfinding to build a path to the player - and then move the enemy to each grid location on the path
     /// </summary>
-    private void MoveEnemy()
+    public void MoveEnemy()
     {
+        if (isDestroyed) 
+        {
+            return;
+        }
         // Movement cooldown timer
         currentEnemyPathRebuildCooldown -= Time.deltaTime;
 

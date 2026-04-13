@@ -51,34 +51,9 @@ public class EnemyWeaponAI : MonoBehaviour
 
     private void Update()
     {
-        if(isDestroyed)
-            return;
-        
-        // Update timers
-        firingIntervalTimer -= Time.deltaTime;
-
-        // Interval Timer
-        if (firingIntervalTimer < 0f)
-        {
-            if (firingDurationTimer >= 0)
-            {
-                firingDurationTimer -= Time.deltaTime;
-
-                FireWeapon();
-            }
-            else
-            {
-                // Reset timers
-                firingIntervalTimer = WeaponShootInterval();
-                firingDurationTimer = WeaponShootDuration();
-            }
-        }
+       
     }
-
-    public void Fire()
-    {
-        
-    }
+    
 
     private void DestroyedEvent_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
     {
@@ -106,8 +81,31 @@ public class EnemyWeaponAI : MonoBehaviour
     /// <summary>
     /// Fire the weapon
     /// </summary>
-    private void FireWeapon()
+    public void FireWeapon()
     {
+        if(isDestroyed)
+            return;
+        
+        // Update timers
+        firingIntervalTimer -= Time.deltaTime;
+
+        // Interval Timer
+        if (firingIntervalTimer < 0f)
+        {
+            if (firingDurationTimer >= 0)
+            {
+                firingDurationTimer -= Time.deltaTime;
+                
+            }
+            else
+            {
+                // Reset timers
+                firingIntervalTimer = WeaponShootInterval();
+                firingDurationTimer = WeaponShootDuration();
+                
+                return;
+            }
+        }
         // Player distance
         Vector3 playerDirectionVector = GameManager.Instance.GetPlayer().GetPlayerPosition() - transform.position;
 

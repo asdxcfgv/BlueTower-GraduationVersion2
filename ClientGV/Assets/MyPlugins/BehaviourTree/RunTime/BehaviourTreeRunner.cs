@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace MyBehaviourTree {
+    [DisallowMultipleComponent]
     public class BehaviourTreeRunner : MonoBehaviour {
 
         // The main behaviour tree asset

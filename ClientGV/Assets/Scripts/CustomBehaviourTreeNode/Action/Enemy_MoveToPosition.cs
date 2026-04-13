@@ -16,9 +16,9 @@ namespace MyBehaviourTree
         {
         }
 
-        protected override State OnUpdate() 
+        protected override State OnUpdate()
         {
-            
+            enemy.GetComponent<EnemyMovementAI>().MoveEnemy();
             return State.Running;
         }
     }

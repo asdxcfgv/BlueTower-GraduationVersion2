@@ -17,6 +17,7 @@ MonoBehaviour:
   guid: f0309d460d655c54894f30757bf91760
   position: {x: 0.8000183, y: 137.11569}
   blackboard: {fileID: 0}
+  gameObject: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: -678590146379374007}
@@ -39,6 +40,7 @@ MonoBehaviour:
   guid: d91b4856f99c67046907a35782429010
   position: {x: 116.80007, y: 471.176}
   blackboard: {fileID: 0}
+  gameObject: {fileID: 0}
   description: 
   drawGizmos: 0
 --- !u!114 &-2763225238344424329
@@ -58,6 +60,7 @@ MonoBehaviour:
   guid: 1fb6c4bf507c42b47b4626169bd458f8
   position: {x: 0, y: -11.887993}
   blackboard: {fileID: 0}
+  gameObject: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: -5334566675013290407}
@@ -78,6 +81,7 @@ MonoBehaviour:
   guid: f6b06a9ca3db353488d2e32bddc3b89a
   position: {x: 0.000019073486, y: 292.776}
   blackboard: {fileID: 0}
+  gameObject: {fileID: 0}
   description: 
   drawGizmos: 0
   children:
@@ -121,5 +125,6 @@ MonoBehaviour:
   guid: f0bcb71b8ee171b44bac651742d37008
   position: {x: -95.99993, y: 471.176}
   blackboard: {fileID: 0}
+  gameObject: {fileID: 0}
   description: 
   drawGizmos: 0
