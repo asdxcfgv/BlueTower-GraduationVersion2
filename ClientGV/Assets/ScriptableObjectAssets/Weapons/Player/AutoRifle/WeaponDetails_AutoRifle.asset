@@ -17,10 +17,11 @@ MonoBehaviour:
   animatorController: {fileID: 9100000, guid: feec17a663c69be4a98371d248e5dca8, type: 2}
   weaponShootPosition: {x: 1.23, y: 0.05, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 9d2769b6c8eca324f9208d99e91fd00f, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: 7ee9ddc21c8bc8e4d9007d821c23e437, type: 2}
   hasInfiniteAmmo: 0
   hasInfiniteClipCapacity: 0
   weaponClipAmmoCapacity: 15
-  weaponAmmoCapacity: 50
   weaponFireRate: 0.2
   weaponPrechargeTime: 0
   weaponReloadTime: 3
+  usingBulletType: 1

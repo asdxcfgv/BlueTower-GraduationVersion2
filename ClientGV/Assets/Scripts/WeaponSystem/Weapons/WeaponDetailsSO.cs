@@ -32,6 +32,10 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("Weapon current ammo")]
     #endregion Tooltip
     public AmmoDetailsSO weaponCurrentAmmo;
+    #region Tooltip
+    [Tooltip("武器枪口烟雾特效")]
+    #endregion Tooltip
+    public WeaponShootEffectSO weaponShootEffect;
 
     #region Header WEAPON OPERATING VALUES
     [Space(10)]
