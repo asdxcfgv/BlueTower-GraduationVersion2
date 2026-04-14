@@ -1,17 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WeaponShootEffect_", menuName = "Scriptable Objects/Weapons/Weapon Shoot Effect")]
-public class WeaponShootEffectSO : ScriptableObject
+[CreateAssetMenu(fileName = "AmmoHitEffect_", menuName = "Scriptable Objects/Weapons/Ammo Hit Effect")]
+
+public class AmmoHitEffectSO : ScriptableObject
 {
-     #region Header WEAPON SHOOT EFFECT DETAILS
+     #region Header AMMO HIT EFFECT DETAILS
     [Space(10)]
-    [Header("WEAPON SHOOT EFFECT DETAILS")]
-    #endregion Header WEAPON SHOOT EFFECT DETAILS
+    [Header("AMMO HIT EFFECT DETAILS")]
+    #endregion Header AMMO HIT EFFECT DETAILS
 
     #region Tooltip
-    [Tooltip("The color gradient for the shoot effect.  This gradient show the color of particles during their lifetime - from left to right ")]
+    [Tooltip("The color gradient for the hit effect.  This gradient show the color of particles during their lifetime - from left to right ")]
     #endregion Tooltip
     public Gradient colorGradient;
 
@@ -71,8 +70,7 @@ public class WeaponShootEffectSO : ScriptableObject
     public Vector3 velocityOverLifetimeMax;
 
     #region Tooltip
-    [Tooltip("weaponShootEffectPrefab contains the particle system for the shoot effect - and is configured by the weaponShootEffect SO")]
-    #endregion Tooltip
-    public GameObject weaponShootEffectPrefab;
-    
+    [Tooltip("The prefab containing the hit effect particle system - requires a corresponding ammoHitEffectSO to be defined")]
+    #endregion
+    public GameObject ammoHitEffectPrefab;
 }
