@@ -16,6 +16,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 53979261445559504, guid: d9178e1fc093aab4397a49a84adffcf6, type: 3}
   chaseDistance: 50
   enemyStandardMaterial: {fileID: 2100000, guid: 023c16bd51a714340b1d2ce6019c5561, type: 2}
+  enemyDestroyEffect: {fileID: 11400000, guid: 2db8f78a72e7f774f8cb19ab00acdc01, type: 2}
   enemyMaterializeTime: 1
   enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
   enemyMaterializeColor: {r: 11.313708, g: 0.2104537, b: 0, a: 1}

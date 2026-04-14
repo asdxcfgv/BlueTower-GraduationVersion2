@@ -31,6 +31,10 @@ public class EnemyDetailsSO : ScriptableObject
     [Tooltip("This is the standard lit shader material for the enemy (used after the enemy materializes")]
     #endregion
     public Material enemyStandardMaterial;
+    #region Tooltip
+    [Tooltip("敌人死亡特效")]
+    #endregion Tooltip
+    public EnemyDestroyEffectSO enemyDestroyEffect;
 
     #region Header ENEMY MATERIALIZE SETTINGS
     [Space(10)]

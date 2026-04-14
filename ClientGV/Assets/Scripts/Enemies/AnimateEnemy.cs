@@ -154,6 +154,7 @@ public class AnimateEnemy : MonoBehaviour
 
         ActionKit.Delay(GetDeadAnimationClipLength()/enemy.animator.speed, () =>
         {
+            EnemyDestroyEffect();
             Destroy(gameObject);
         }).Start(this);
     }
@@ -201,6 +202,20 @@ public class AnimateEnemy : MonoBehaviour
             case AimDirection.Down:
                 enemy.animator.SetBool(Global.aimDown, true);
                 break;
+        }
+    }
+
+    private void EnemyDestroyEffect()
+    {
+        // Process if a hit effect has been specified
+        if (enemy.enemyDetails.enemyDestroyEffect != null && enemy.enemyDetails.enemyDestroyEffect.enemyDestroyEffectPrefab != null)
+        {
+            // Get ammo hit effect gameobject from the pool (with particle system component)
+            EnemyDestroyEffect enemyDestroyEffect = (EnemyDestroyEffect)PoolManager.Instance.ReuseComponent(enemy.enemyDetails.enemyDestroyEffect.enemyDestroyEffectPrefab, transform.position, Quaternion.identity);
+            
+            enemyDestroyEffect.SetEnemyDestroyEffect(enemy.enemyDetails.enemyDestroyEffect);
+            
+            enemyDestroyEffect.gameObject.SetActive(true);
         }
     }
 }
