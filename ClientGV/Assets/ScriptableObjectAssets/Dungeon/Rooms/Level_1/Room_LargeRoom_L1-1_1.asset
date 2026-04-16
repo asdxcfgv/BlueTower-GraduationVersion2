@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2750b9d3c0b123c458dc37eba499233d, type: 3}
   m_Name: Room_LargeRoom_L1-1_1
   m_EditorClassIdentifier: 
-  guid: 35e0f011f37c5604fb0875cebe80bd72
-  prefab: {fileID: 1715949929663130391, guid: ee43238f8a280f5499e30a69f722fd27, type: 3}
-  previousPrefab: {fileID: 1715949929663130391, guid: ee43238f8a280f5499e30a69f722fd27, type: 3}
+  guid: 788478c7413272541a6884adf284635a
+  prefab: {fileID: 1715949929663130391, guid: eeada6748807e96438b41c84df6b1ed2, type: 3}
+  previousPrefab: {fileID: 1715949929663130391, guid: eeada6748807e96438b41c84df6b1ed2, type: 3}
   roomNodeType: {fileID: 11400000, guid: 864dbf449fd07bd428bd9a6c24306436, type: 2}
   lowerBounds: {x: -25, y: -18}
   upperBounds: {x: 10, y: 10}
