@@ -16,47 +16,46 @@ MonoBehaviour:
   prefab: {fileID: 1715949929663130391, guid: f2800a1515861134589f9eac17f9f428, type: 3}
   previousPrefab: {fileID: 1715949929663130391, guid: f2800a1515861134589f9eac17f9f428, type: 3}
   roomNodeType: {fileID: 11400000, guid: 4b2590bb735e3a04484db36c0990a3aa, type: 2}
-  lowerBounds: {x: -14, y: -19}
-  upperBounds: {x: 15, y: 7}
+  lowerBounds: {x: -35, y: -29}
+  upperBounds: {x: 21, y: 13}
   doorwayList:
-  - position: {x: -1, y: 7}
+  - position: {x: -6, y: 11}
     orientation: 0
     doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
-    doorwayStartCopyPosition: {x: -4, y: 7}
-    doorwayCopyTileWidth: 5
-    doorwayCopyTileHeight: 5
+    doorwayStartCopyPosition: {x: -11, y: 13}
+    doorwayCopyTileWidth: 10
+    doorwayCopyTileHeight: 11
     isConnected: 0
     isUnavailable: 0
-  - position: {x: 4, y: -19}
+  - position: {x: -1, y: -29}
     orientation: 2
     doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
-    doorwayStartCopyPosition: {x: 1, y: -14}
-    doorwayCopyTileWidth: 5
-    doorwayCopyTileHeight: 6
+    doorwayStartCopyPosition: {x: -6, y: -19}
+    doorwayCopyTileWidth: 10
+    doorwayCopyTileHeight: 11
     isConnected: 0
     isUnavailable: 0
-  - position: {x: -14, y: -10}
+  - position: {x: -35, y: -18}
     orientation: 3
     doorPrefab: {fileID: 7601368127187155245, guid: 053601f4eec3f3749b3d36329f40ed40, type: 3}
-    doorwayStartCopyPosition: {x: -14, y: -5}
-    doorwayCopyTileWidth: 6
-    doorwayCopyTileHeight: 7
+    doorwayStartCopyPosition: {x: -35, y: -8}
+    doorwayCopyTileWidth: 11
+    doorwayCopyTileHeight: 15
     isConnected: 0
     isUnavailable: 0
-  - position: {x: 15, y: -3}
+  - position: {x: 21, y: -9}
     orientation: 1
     doorPrefab: {fileID: 7601368127187155245, guid: 053601f4eec3f3749b3d36329f40ed40, type: 3}
-    doorwayStartCopyPosition: {x: 9, y: 2}
-    doorwayCopyTileWidth: 7
-    doorwayCopyTileHeight: 7
+    doorwayStartCopyPosition: {x: 12, y: 1}
+    doorwayCopyTileWidth: 10
+    doorwayCopyTileHeight: 15
     isConnected: 0
     isUnavailable: 0
   spawnPositionArray:
-  - {x: 6, y: 0}
-  - {x: -6, y: 0}
-  - {x: 6, y: -11}
-  - {x: -6, y: -11}
-  - {x: 0, y: -5}
+  - {x: -9, y: -1}
+  - {x: -2, y: -11}
+  - {x: 5, y: -7}
+  - {x: -19, y: -21}
   enemiesByLevelList:
   - dungeonLevel: {fileID: 11400000, guid: 3b1c2a27a1d5681458890aa105b91482, type: 2}
     spawnableObjectRatioList:
