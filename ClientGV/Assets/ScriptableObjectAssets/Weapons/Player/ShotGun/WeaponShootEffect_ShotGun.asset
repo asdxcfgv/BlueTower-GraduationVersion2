@@ -42,7 +42,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 6
     m_NumAlphaKeys: 3
-  duration: 0.5
+  duration: 0.2
   startParticleSize: 0.2
   startParticleSpeed: 0.4
   startLifetime: 2.5

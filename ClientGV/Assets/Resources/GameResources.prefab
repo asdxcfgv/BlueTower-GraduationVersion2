@@ -51,8 +51,8 @@ MonoBehaviour:
   variableLitShader: {fileID: -6465566751694194690, guid: 304a236819d488f409a1dfccdc33ea46, type: 3}
   materializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
   chestItemPrefab: {fileID: 2110344870448175279, guid: 0d7a8176caf245f4c9a0cc346d88ec99, type: 3}
-  heartIcon: {fileID: 865841775, guid: d19332b42ad9ce9498e8a15b1e82642c, type: 3}
-  heartAnimator: {fileID: 9100000, guid: 861cb31dfa93d504781f349ad8e975ce, type: 2}
+  heartIcon: {fileID: 1456286720, guid: 9f1f527ce492195419ca41635d1e8eb0, type: 3}
+  heartAnimator: {fileID: 9100000, guid: 6a7ce209316862147a8d7577a1941de2, type: 2}
   normalBulletIcon: {fileID: -1130643165, guid: ad1c77627f189564a9a69e75a53f6552, type: 3}
   normalBulletAnimator: {fileID: 9100000, guid: 40211d5d516d99a4782538efa304e0cf, type: 2}
   electronBulletIcon: {fileID: -137510055, guid: 646073a325184d3439d4f526af811388, type: 3}
