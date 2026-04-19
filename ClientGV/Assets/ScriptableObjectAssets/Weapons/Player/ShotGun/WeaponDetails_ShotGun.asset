@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7066d60367d03c44da8274c236c5f20d, type: 3}
+  m_Name: WeaponDetails_ShotGun
+  m_EditorClassIdentifier: 
+  weaponName: ShotGun
+  weaponSprite: {fileID: 1778628655, guid: ee4c43fa663dfe04aa506f22af1a26ba, type: 3}
+  animatorController: {fileID: 9100000, guid: 09005c27060188645b094620eb5c80b5, type: 2}
+  weaponShootPosition: {x: 1.202, y: 0.043, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 1b2bec47f5aac6744ba0ed3ff8a6aa62, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: dec8a24854c3eaf4b87bca8486505450, type: 2}
+  hasInfiniteAmmo: 0
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 4
+  weaponFireRate: 30
+  weaponPrechargeTime: 0.4
+  weaponReloadTime: 1
+  usingBulletType: 1
