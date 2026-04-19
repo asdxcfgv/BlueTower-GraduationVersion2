@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c2b16bd249c38742b98a94229f69138
-      internalID: 1778628655
+      spriteID: 8ab2f8bf83aa4f74ca3a81d81723091a
+      internalID: -165888291
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7798e4b457416a7438566f100f18861d
-      internalID: 1043638865
+      spriteID: f95594e026fd25b4592d674299a04b09
+      internalID: 746077073
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95604bb75d1e3f848b1d28c2a88d46a7
-      internalID: -1915427710
+      spriteID: 07b3d78f4236e6545b15d3902eacac2a
+      internalID: -1164346849
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4bf7950a11cab40bda3c14e177e26f
-      internalID: 1021792585
+      spriteID: f7835a14be5480b4f8549128ab085998
+      internalID: 963460721
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d426efa4104eb4a419ecfb6f229ae7e8
-      internalID: 1623340455
+      spriteID: 7775ad7d58c503849b5bceaf7d23571e
+      internalID: 1901036180
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39fd4230d1840a54085fad1a8576f453
-      internalID: 143663010
+      spriteID: 864b723ce4c56b446b06fffb71dc9835
+      internalID: -1998120049
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8878445e94422b24a9a309faa9f4da5e
-      internalID: 980309713
+      spriteID: d4e02c6592b8b964986672c6aba79ece
+      internalID: 140605455
       vertices: []
       indices: 
       edges: []
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92236154d5ede946b6d5a94dacd291a
-      internalID: 126664164
+      spriteID: 381a2f46f19c4a54885c4624cf90f851
+      internalID: -858811412
       vertices: []
       indices: 
       edges: []
@@ -279,8 +279,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7af89c5004530a4eb0ec29b693cbb74
-      internalID: 557731270
+      spriteID: 9a14e178bf5c84840807b0a4f7c90e82
+      internalID: 765052897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_ShotGun_9
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311f04df13ad52d4d9343b9063d0ab03
+      internalID: -1628828351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_ShotGun_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1049b25d00e31744188152ac254242c6
+      internalID: -1451380902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gun_ShotGun_11
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3f68f0418f51444b467a12ee68e3b2
+      internalID: 431299684
       vertices: []
       indices: 
       edges: []
@@ -296,15 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Gun_ShotGun_0: 1778628655
-      Gun_ShotGun_1: 1043638865
-      Gun_ShotGun_2: -1915427710
-      Gun_ShotGun_3: 1021792585
-      Gun_ShotGun_4: 1623340455
-      Gun_ShotGun_5: 143663010
-      Gun_ShotGun_6: 980309713
-      Gun_ShotGun_7: 126664164
-      Gun_ShotGun_8: 557731270
+      Gun_ShotGun_0: -165888291
+      Gun_ShotGun_1: 746077073
+      Gun_ShotGun_10: -1451380902
+      Gun_ShotGun_11: 431299684
+      Gun_ShotGun_2: -1164346849
+      Gun_ShotGun_3: 963460721
+      Gun_ShotGun_4: 1901036180
+      Gun_ShotGun_5: -1998120049
+      Gun_ShotGun_6: 140605455
+      Gun_ShotGun_7: -858811412
+      Gun_ShotGun_8: 765052897
+      Gun_ShotGun_9: -1628828351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
