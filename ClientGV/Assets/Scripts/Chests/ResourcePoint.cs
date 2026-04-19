@@ -7,8 +7,6 @@ using static GlobalEnums;
 [RequireComponent(typeof(HitShake))]
 public class ResourcePoint : MonoBehaviour
 {
-    [ColorUsage(false, true)]
-    [SerializeField] private Color materializeColor;
     
     #region Header HEALTH
     [Header("HEALTH")]
