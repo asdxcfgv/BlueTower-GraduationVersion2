@@ -237,25 +237,25 @@ public class InstantiatedRoom : MonoBehaviour
                 {
                     // create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
-                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y + tileDistance*2, 0f);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance, doorway.position.y + tileDistance, 0f);
                 }
                 else if (doorway.orientation == Orientation.south)
                 {
                     // create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
-                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y+tileDistance, 0f);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance, doorway.position.y, 0f);
                 }
                 else if (doorway.orientation == Orientation.east)
                 {
                     // create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
-                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance, doorway.position.y - tileDistance, 0f);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance, doorway.position.y-tileDistance*4f , 0f);
                 }
                 else if (doorway.orientation == Orientation.west)
                 {
                     // create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
-                    door.transform.localPosition = new Vector3(doorway.position.x, doorway.position.y - tileDistance, 0f);
+                    door.transform.localPosition = new Vector3(doorway.position.x, doorway.position.y-tileDistance*4f, 0f);
                 }
 
                 // Get door component

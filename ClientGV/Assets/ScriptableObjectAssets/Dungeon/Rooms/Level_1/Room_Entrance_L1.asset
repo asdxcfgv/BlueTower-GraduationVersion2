@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2750b9d3c0b123c458dc37eba499233d, type: 3}
+  m_Name: Room_Entrance_L1
+  m_EditorClassIdentifier: 
+  guid: d61b652ebaabf2042aef8a0a692bf780
+  prefab: {fileID: 1715949929663130391, guid: 89d58dfd76238ed43b3f9184c6c57e64, type: 3}
+  previousPrefab: {fileID: 1715949929663130391, guid: 89d58dfd76238ed43b3f9184c6c57e64, type: 3}
+  roomNodeType: {fileID: 11400000, guid: 0927fd53968645e4796bbc167f185edd, type: 2}
+  lowerBounds: {x: -31, y: -22}
+  upperBounds: {x: 12, y: 15}
+  doorwayList:
+  - position: {x: -10, y: 15}
+    orientation: 0
+    doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
+    doorwayStartCopyPosition: {x: -15, y: 15}
+    doorwayCopyTileWidth: 10
+    doorwayCopyTileHeight: 11
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: -10, y: -22}
+    orientation: 2
+    doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
+    doorwayStartCopyPosition: {x: -15, y: -12}
+    doorwayCopyTileWidth: 10
+    doorwayCopyTileHeight: 11
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: -31, y: -3}
+    orientation: 3
+    doorPrefab: {fileID: 7601368127187155245, guid: 053601f4eec3f3749b3d36329f40ed40, type: 3}
+    doorwayStartCopyPosition: {x: -31, y: 7}
+    doorwayCopyTileWidth: 11
+    doorwayCopyTileHeight: 15
+    isConnected: 0
+    isUnavailable: 0
+  - position: {x: 12, y: -3}
+    orientation: 1
+    doorPrefab: {fileID: 7601368127187155245, guid: 053601f4eec3f3749b3d36329f40ed40, type: 3}
+    doorwayStartCopyPosition: {x: 4, y: 7}
+    doorwayCopyTileWidth: 9
+    doorwayCopyTileHeight: 15
+    isConnected: 0
+    isUnavailable: 0
+  spawnPositionArray:
+  - {x: -10, y: -4}
+  enemiesByLevelList: []
+  roomEnemySpawnParametersList: []

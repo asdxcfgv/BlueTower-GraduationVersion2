@@ -30,7 +30,7 @@ MonoBehaviour:
   - position: {x: 2, y: -39}
     orientation: 2
     doorPrefab: {fileID: 1232300505726111939, guid: 72a812f80b038a54da6dc4dd36399e35, type: 3}
-    doorwayStartCopyPosition: {x: 3, y: -30}
+    doorwayStartCopyPosition: {x: -3, y: -30}
     doorwayCopyTileWidth: 10
     doorwayCopyTileHeight: 10
     isConnected: 0
