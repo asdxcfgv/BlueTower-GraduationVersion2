@@ -86,31 +86,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2162314730051727331, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: m_Name
-      value: Drone
+      value: BlackDrone
       objectReference: {fileID: 0}
     - target: {fileID: 5534211052790629400, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 4e2928a0ef57fff46a105782c5b37203, type: 2}
+      objectReference: {fileID: 9100000, guid: 2fd0a2800b2723143ac76702908aaab2, type: 2}
     - target: {fileID: 5671464132092681284, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: weaponRotationPointTransform
       value: 
       objectReference: {fileID: 1211629884305110663}
+    - target: {fileID: 6036852672025369055, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2146095300, guid: 29551dbf6e95c91448a18ad1d7391a59, type: 3}
     - target: {fileID: 6532170329075677956, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: movementDetails
       value: 
       objectReference: {fileID: 11400000, guid: 51d75923ff28e3d43bc57ece9929e449, type: 2}
     - target: {fileID: 7179058537591398526, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: m_Radius
-      value: 0.010131896
-      objectReference: {fileID: 0}
-    - target: {fileID: 7179058537591398526, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.03902167
+      value: 0.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 7179058537591398526, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: m_Offset.y
-      value: -0.5569293
+      value: -0.547868
       objectReference: {fileID: 0}
     - target: {fileID: 8228506114046045989, guid: a3f2be1c11d66054390b0fce1f9bf921, type: 3}
       propertyPath: m_GravityScale
