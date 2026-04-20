@@ -61,10 +61,10 @@ MonoBehaviour:
   boomBulletAnimator: {fileID: 9100000, guid: 2f09d18dc7323e04fb56e12cbe75bf42, type: 2}
   minimapBossIconPrefab: {fileID: 7358308602698360715, guid: 6fea2d74897255140ae7efd965046fa0, type: 3}
   soundsMasterMixerGroup: {fileID: -4734643798044506327, guid: 0b17aad0c73a46f4c9bcad10203827a3, type: 2}
-  musicMasterMixerGroup: {fileID: 0}
-  musicOnFullSnapshot: {fileID: 0}
-  musicLowSnapshot: {fileID: 0}
-  musicOffSnapshot: {fileID: 0}
+  musicMasterMixerGroup: {fileID: -7206380732494497733, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
+  musicOnFullSnapshot: {fileID: 24500006, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
+  musicLowSnapshot: {fileID: 8893122114324796974, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
+  musicOffSnapshot: {fileID: -3084740370723268673, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   enemyUnwalkableCollisionTilesArray:
   - {fileID: 11400000, guid: 37e2c9e0227bfbc409cd632b9bd0c81f, type: 2}
   - {fileID: 11400000, guid: 98f177f8276c38b429705e6720c48672, type: 2}

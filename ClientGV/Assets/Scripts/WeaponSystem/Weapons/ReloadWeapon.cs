@@ -81,6 +81,13 @@ public class ReloadWeapon : MonoBehaviour
     {
         int cost = 0;
         
+        // Play reload sound if there is one
+        if (weapon.weaponDetails.weaponReloadingSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(weapon.weaponDetails.weaponReloadingSoundEffect);
+
+        }
+        
         // Set weapon as reloading
         weapon.isWeaponReloading = true;
         

@@ -36,6 +36,15 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("武器枪口烟雾特效")]
     #endregion Tooltip
     public WeaponShootEffectSO weaponShootEffect;
+    
+    #region Tooltip
+    [Tooltip("开火声音")]
+    #endregion Tooltip
+    public SoundEffectSO weaponFiringSoundEffect;
+    #region Tooltip
+    [Tooltip("装弹声音")]
+    #endregion Tooltip
+    public SoundEffectSO weaponReloadingSoundEffect;
 
     #region Header WEAPON OPERATING VALUES
     [Space(10)]
