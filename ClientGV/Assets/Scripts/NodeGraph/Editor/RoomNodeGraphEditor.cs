@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class RoomNodeGraphEditor : EditorWindow
 {
-     private GUIStyle roomNodeStyle;
+    private GUIStyle roomNodeStyle;
     private GUIStyle roomNodeSelectedStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
 
