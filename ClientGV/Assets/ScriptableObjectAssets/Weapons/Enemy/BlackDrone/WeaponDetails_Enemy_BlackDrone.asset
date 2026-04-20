@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7066d60367d03c44da8274c236c5f20d, type: 3}
+  m_Name: WeaponDetails_Enemy_BlackDrone
+  m_EditorClassIdentifier: 
+  weaponName: BlackDroneWeapon
+  weaponSprite: {fileID: 0}
+  animatorController: {fileID: 0}
+  weaponShootPosition: {x: 0.5, y: 0, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 71a26bf52d01d49499bad91ce1fc9029, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: 0e1dd757ec4770c4789de6628ea156f2, type: 2}
+  hasInfiniteAmmo: 1
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 10
+  weaponFireRate: 0.25
+  weaponPrechargeTime: 0
+  weaponReloadTime: 1.2
+  usingBulletType: 1

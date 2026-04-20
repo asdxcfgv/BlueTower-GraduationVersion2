@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09f0873b82159634eb8c94200125df71, type: 3}
-  m_Name: EnemyDetails_Drone
+  m_Name: EnemyDetails_BlackDrone
   m_EditorClassIdentifier: 
-  enemyName: Drone
-  enemyPrefab: {fileID: 53979261445559504, guid: d9178e1fc093aab4397a49a84adffcf6, type: 3}
-  chaseDistance: 50
+  enemyName: BlackDrone
+  enemyPrefab: {fileID: 53979261445559504, guid: 4fe014791f7586049a936cf6853709b3, type: 3}
+  chaseDistance: 30
   enemyStandardMaterial: {fileID: 2100000, guid: 023c16bd51a714340b1d2ce6019c5561, type: 2}
-  enemyDestroyEffect: {fileID: 11400000, guid: 2db8f78a72e7f774f8cb19ab00acdc01, type: 2}
+  enemyDestroyEffect: {fileID: 11400000, guid: 7f408fbe2b5feb046adfce0c9e1ecfad, type: 2}
   enemyMaterializeTime: 0.5
   enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
   enemyMaterializeColor: {r: 11.313708, g: 0.2104537, b: 0, a: 1}
-  enemyWeapon: {fileID: 11400000, guid: e2c6a3f5482940f4092e7d1c06e27fdb, type: 2}
-  firingIntervalMin: 0.1
-  firingIntervalMax: 1
+  enemyWeapon: {fileID: 11400000, guid: 4be070385af47944385702bcd352cb74, type: 2}
+  firingIntervalMin: 1
+  firingIntervalMax: 2
   firingDurationMin: 1
-  firingDurationMax: 2
+  firingDurationMax: 1
   firingLineOfSightRequired: 1
   enemyHealthDetailsArray:
   - dungeonLevel: {fileID: 11400000, guid: 3b1c2a27a1d5681458890aa105b91482, type: 2}
-    enemyHealthAmount: 20
+    enemyHealthAmount: 30
   isImmuneAfterHit: 0
   hitImmunityTime: 0

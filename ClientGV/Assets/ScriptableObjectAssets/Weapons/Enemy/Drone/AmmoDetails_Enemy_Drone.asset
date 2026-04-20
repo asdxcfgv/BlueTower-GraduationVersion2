@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a031904220c52449867db0e09e4e754, type: 3}
   m_Name: AmmoDetails_Enemy_Drone
   m_EditorClassIdentifier: 
-  ammoName: EnemyDroneAmmo
+  ammoName: DroneAmmo
   isPlayerAmmo: 0
   ammoSprite: {fileID: -1103509202, guid: 9cb343fbec8a1d84eb833254b842a13a, type: 3}
   ammoPrefabArray:

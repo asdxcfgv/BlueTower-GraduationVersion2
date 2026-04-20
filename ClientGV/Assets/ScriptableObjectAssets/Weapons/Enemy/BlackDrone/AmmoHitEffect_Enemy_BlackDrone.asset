@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0406856637a469648a62849bef10a294, type: 3}
-  m_Name: EnemyDestroyEffect_Drone
+  m_Script: {fileID: 11500000, guid: 8fec37f4f008779409e91290f2558bea, type: 3}
+  m_Name: AmmoHitEffect_Enemy_BlackDrone
   m_EditorClassIdentifier: 
   colorGradient:
     serializedVersion: 2
@@ -50,7 +50,7 @@ MonoBehaviour:
   emissionRate: 0
   burstParticleNumber: 25
   effectGravity: -0.01
-  sprite: {fileID: 21300000, guid: bb7ccf2391a6a544ab96e81e36b6a0ed, type: 3}
+  sprite: {fileID: 0}
   velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
   velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
-  enemyDestroyEffectPrefab: {fileID: 7853615770937549561, guid: 22a0186d8e16c0746a7eb15342cdc72b, type: 3}
+  ammoHitEffectPrefab: {fileID: 7853615770937549561, guid: b673bbfd607d04649aadfed9240c9dea, type: 3}
