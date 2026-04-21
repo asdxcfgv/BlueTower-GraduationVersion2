@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 1.9554381, y: -2.5044003, z: 0}
   m_ShapePathHash: 898984383
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78018
+  m_InstanceId: 77710
   m_LocalBounds:
     m_Center: {x: -0.06422949, y: -0.014016151, z: 0}
     m_Extent: {x: 2.0196676, y: 2.490384, z: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   - {x: -3.411041, y: -5.4940033, z: 0.00000013969839}
   m_ShapePathHash: 1584948783
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78118
+  m_InstanceId: 77810
   m_LocalBounds:
     m_Center: {x: -1.9555206, y: -2.4940033, z: 0}
     m_Extent: {x: 2.4555206, y: 3, z: 0}
@@ -302,7 +302,7 @@ MonoBehaviour:
   - {x: 1.9554381, y: -2.5044003, z: 0}
   m_ShapePathHash: 898984383
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78058
+  m_InstanceId: 77750
   m_LocalBounds:
     m_Center: {x: -0.06422949, y: -0.014016151, z: 0}
     m_Extent: {x: 2.0196676, y: 2.490384, z: 0}
@@ -31741,7 +31741,7 @@ MonoBehaviour:
   - {x: -3.411041, y: -5.4940033, z: 0.00000013969839}
   m_ShapePathHash: 1480808546
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78056
+  m_InstanceId: 77748
   m_LocalBounds:
     m_Center: {x: -6.4110413, y: -2.564003, z: 0}
     m_Extent: {x: 3, y: 3, z: 0}
@@ -46418,14 +46418,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1674409123393077629}
     m_Modifications:
-    - target: {fileID: 91682020046411128, guid: 9336e37b648eef642b6dccbbcfb1b615, type: 3}
-      propertyPath: m_ShadowIntensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 91682020046411128, guid: 9336e37b648eef642b6dccbbcfb1b615, type: 3}
-      propertyPath: m_LightVolumeIntensityEnabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4885303586232312578, guid: 9336e37b648eef642b6dccbbcfb1b615, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4
@@ -46542,7 +46534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -30442
+      value: -140252
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46839,10 +46831,6 @@ PrefabInstance:
     - target: {fileID: 6042465292820970475, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
       propertyPath: m_Name
       value: Tube_Mid
-      objectReference: {fileID: 0}
-    - target: {fileID: 7234699903552096403, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
-      propertyPath: m_InstanceId
-      value: -30256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47287,34 +47275,6 @@ PrefabInstance:
     - target: {fileID: 4885303586232312578, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8057965
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_Color.g
-      value: 0.34445
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_Color.r
-      value: 0.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_LightVolumeIntensity
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 5.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5669651910361816368, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
-      propertyPath: m_LightVolumeIntensityEnabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7957322989988013899, guid: a8eee993d9ad1e6428e2bda10f43544d, type: 3}
       propertyPath: m_Name

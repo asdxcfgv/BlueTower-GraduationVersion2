@@ -197,19 +197,19 @@ MonoBehaviour:
   m_HasRenderer: 0
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
-  m_SelfShadows: 0
+  m_SelfShadows: 1
   m_ApplyToSortingLayers: 000000000722c536039cb7c5c9634cba0f72b78c7175ff6a
   m_ShapePath:
-  - {x: -2.1959765, y: 0.36027852, z: 0}
+  - {x: -2.1289387, y: 0.010722637, z: 0}
   - {x: -2.1930985, y: 0.664878, z: 0}
-  - {x: 1.0546184, y: 0.6597471, z: 0}
-  - {x: 1.0409389, y: 0.33213636, z: 0}
-  m_ShapePathHash: -555234776
+  - {x: 1.1360226, y: 0.6836896, z: 0}
+  - {x: 1.0361519, y: 0.011310577, z: 0}
+  m_ShapePathHash: -1460370833
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1184966
+  m_InstanceId: -157680
   m_LocalBounds:
-    m_Center: {x: -0.57067907, y: 0.4985072, z: 0}
-    m_Extent: {x: 1.6252974, y: 0.16637082, z: 0}
+    m_Center: {x: -0.528538, y: 0.34720612, z: 0}
+    m_Extent: {x: 1.6645606, y: 0.33648348, z: 0}
 --- !u!1 &8782529849597346682
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,27 +257,27 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.91
+  m_FalloffIntensity: 0.42
   m_Color: {r: 0.76553226, g: 0.703222, b: 0.96199995, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 0.01
-  m_LightVolumeIntensityEnabled: 1
+  m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000000722c536039cb7c5c9634cba0f72b78c7175ff6a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
+  m_NormalMapDistance: 10
   m_NormalMapQuality: 1
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
-  m_ShadowIntensity: 1
+  m_ShadowIntensity: 0.756
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.06515002, y: -4.12355, z: 0}
-    m_Extent: {x: 5.2590504, y: 6.23245, z: 0}
+    m_Center: {x: -0.4558499, y: -7.1935, z: 0}
+    m_Extent: {x: 7.4598503, y: 11.0024, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -285,10 +285,10 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 1.76
+  m_ShapeLightFalloffSize: 3.46
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -3.4359999, y: -8.595, z: 0}
-  - {x: 3.5640001, y: -8.595, z: 0}
+  - {x: -4.4560013, y: -14.735, z: 0}
+  - {x: 3.5439987, y: -14.735, z: 0}
   - {x: 1.2415041, y: 0.34789658, z: 0}
   - {x: -1.1166464, y: 0.3485148, z: 0}

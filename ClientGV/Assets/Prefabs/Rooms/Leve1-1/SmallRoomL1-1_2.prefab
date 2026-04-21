@@ -60,7 +60,7 @@ MonoBehaviour:
   - {x: 0.4823513, y: -7.4593344, z: 0.0000002682209}
   m_ShapePathHash: 1010520157
   m_Mesh: {fileID: 0}
-  m_InstanceId: 69962
+  m_InstanceId: 76274
   m_LocalBounds:
     m_Center: {x: 5.9823513, y: -3.4593344, z: 0}
     m_Extent: {x: 6.5, y: 4, z: 0}
@@ -284,7 +284,7 @@ MonoBehaviour:
   - {x: 11.562351, y: -0.5493345, z: 0.0000002682209}
   m_ShapePathHash: 537422453
   m_Mesh: {fileID: 0}
-  m_InstanceId: 69964
+  m_InstanceId: 76276
   m_LocalBounds:
     m_Center: {x: 9.062351, y: 0.9506655, z: 0}
     m_Extent: {x: 3.5, y: 3.5, z: 0}
@@ -53895,7 +53895,7 @@ MonoBehaviour:
   - {x: 5.5023518, y: -0.45933437, z: 0}
   m_ShapePathHash: 488365901
   m_Mesh: {fileID: 0}
-  m_InstanceId: 69816
+  m_InstanceId: 76128
   m_LocalBounds:
     m_Center: {x: 2.5023518, y: 0.5406656, z: 0}
     m_Extent: {x: 3, y: 1, z: 0}
@@ -54648,7 +54648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234699903552096403, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
       propertyPath: m_InstanceId
-      value: -17742
+      value: -133386
       objectReference: {fileID: 0}
     - target: {fileID: 7575936308201411965, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
       propertyPath: m_Color.b
@@ -54726,7 +54726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -18040
+      value: -133162
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54840,7 +54840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -17942
+      value: -133268
       objectReference: {fileID: 0}
     - target: {fileID: 8255372824118388305, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54954,7 +54954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -17896
+      value: -133226
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -55080,34 +55080,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NameBoard
       objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_Color.g
-      value: 0.509
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_Color.r
-      value: 0.74540746
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_PointLightInnerAngle
-      value: 337.24582
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_PointLightOuterAngle
-      value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393102954736173877, guid: 61cadaac55de5494f8c6cbb196d03450, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 12.59
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -55128,7 +55100,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 767378535909123752, guid: 8e5875688e04aa648b8366d6efd49b70, type: 3}
       propertyPath: m_InstanceId
-      value: -17766
+      value: -133362
       objectReference: {fileID: 0}
     - target: {fileID: 1437124873380767842, guid: 8e5875688e04aa648b8366d6efd49b70, type: 3}
       propertyPath: m_FalloffIntensity
