@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 using static GlobalEnums;
 
@@ -18,7 +17,7 @@ public class WeaponDetailsSO : ScriptableObject
     #endregion Tooltip
     public Sprite weaponSprite;
 
-    public AnimatorController animatorController;
+    public RuntimeAnimatorController animatorController;
 
     #region Header WEAPON CONFIGURATION
     [Space(10)]

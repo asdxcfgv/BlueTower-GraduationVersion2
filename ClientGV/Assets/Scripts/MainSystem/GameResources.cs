@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Tilemaps;
@@ -69,18 +68,18 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate with heart icon sprite")]
     #endregion
     public Sprite heartIcon;
-    public AnimatorController heartAnimator;
+    public RuntimeAnimatorController heartAnimator;
     #region Tooltip
     [Tooltip("Populate with bullet icon sprite")]
     #endregion
     public Sprite normalBulletIcon;
-    public AnimatorController normalBulletAnimator;
+    public RuntimeAnimatorController normalBulletAnimator;
 
     public Sprite electronBulletIcon;
-    public AnimatorController electronBulletAnimator;
+    public RuntimeAnimatorController electronBulletAnimator;
 
     public Sprite boomBulletIcon;
-    public AnimatorController boomBulletAnimator;
+    public RuntimeAnimatorController boomBulletAnimator;
 
     public GameObject minimapBossIconPrefab;
     

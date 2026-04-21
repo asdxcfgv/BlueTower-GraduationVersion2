@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Animations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -64,7 +63,7 @@ public class ChestItem : MonoBehaviour
     /// <summary>
     /// Initialize the chest item
     /// </summary>
-    public void InitializeWithAnimator(Sprite sprite,AnimatorController animatorController, Vector3 spawnPosition,Action callback)
+    public void InitializeWithAnimator(Sprite sprite,RuntimeAnimatorController animatorController, Vector3 spawnPosition,Action callback)
     {
         spriteRenderer.sprite = sprite;
         transform.position = spawnPosition;
