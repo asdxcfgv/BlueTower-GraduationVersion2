@@ -61,6 +61,9 @@ MonoBehaviour:
   boomBulletAnimator: {fileID: 9100000, guid: 2f09d18dc7323e04fb56e12cbe75bf42, type: 2}
   minimapBossIconPrefab: {fileID: 7358308602698360715, guid: 6fea2d74897255140ae7efd965046fa0, type: 3}
   soundsMasterMixerGroup: {fileID: -4734643798044506327, guid: 0b17aad0c73a46f4c9bcad10203827a3, type: 2}
+  doorOpenCloseSoundEffect: {fileID: 11400000, guid: 67f72a8c4660b014db21321df1c96688, type: 2}
+  chestOpen: {fileID: 11400000, guid: 261b6550c5d265a4a8c3a35448ae995f, type: 2}
+  itemPickup: {fileID: 11400000, guid: 1d22146ba1d6926429e38013bfd108b9, type: 2}
   musicMasterMixerGroup: {fileID: -7206380732494497733, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOnFullSnapshot: {fileID: 24500006, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicLowSnapshot: {fileID: 8893122114324796974, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}

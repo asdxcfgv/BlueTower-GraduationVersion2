@@ -6,6 +6,9 @@ using UnityEngine;
 public class SoundEffectManager : SingletonMonobehaviour<SoundEffectManager>
 {
     public int soundsVolume = 8;
+    
+    private Dictionary<SoundEffectSO, SoundEffect> loopingSoundDict = new Dictionary<SoundEffectSO, SoundEffect>();
+
 
     private void Start()
     {
@@ -34,6 +37,66 @@ public class SoundEffectManager : SingletonMonobehaviour<SoundEffectManager>
         sound.gameObject.SetActive(true);
         StartCoroutine(DisableSound(sound, soundEffect.soundEffectClip.length));
 
+    }
+    
+    /// <summary>
+    /// 循环播放音效（可多次调用不会重复创建）
+    /// </summary>
+    public void PlayLoopingSound(SoundEffectSO soundEffect)
+    {
+        if (soundEffect == null || soundEffect.soundEffectClip == null) return;
+
+        // 如果已经在播放，直接返回，不重复创建
+        if (loopingSoundDict.ContainsKey(soundEffect))
+        {
+            return;
+        }
+
+        // 从对象池获取音效
+        SoundEffect sound = (SoundEffect)PoolManager.Instance.ReuseComponent(soundEffect.soundPrefab, Vector3.zero, Quaternion.identity);
+        sound.SetSound(soundEffect);
+        
+        // 开启循环
+        sound.SetLoop(true);
+        
+        sound.gameObject.SetActive(true);
+
+        // 加入字典管理
+        loopingSoundDict.Add(soundEffect, sound);
+    }
+
+    /// <summary>
+    /// 停止指定的循环音效
+    /// </summary>
+    public void StopLoopingSound(SoundEffectSO soundEffect)
+    {
+        if (soundEffect == null || !loopingSoundDict.ContainsKey(soundEffect)) return;
+
+        SoundEffect sound = loopingSoundDict[soundEffect];
+        if (sound != null)
+        {
+            sound.SetStop();
+            sound.gameObject.SetActive(false);
+        }
+
+        loopingSoundDict.Remove(soundEffect);
+    }
+
+    /// <summary>
+    /// 停止所有循环音效
+    /// </summary>
+    public void StopAllLoopingSounds()
+    {
+        foreach (var sound in loopingSoundDict.Values)
+        {
+            if (sound != null)
+            {
+                sound.SetStop();
+                sound.gameObject.SetActive(false);
+            }
+        }
+
+        loopingSoundDict.Clear();
     }
 
 

@@ -49,6 +49,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1599639086180398883, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
+      propertyPath: destroySoundEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f21d563e5c6af6449d85a6e930670bf, type: 2}
+    - target: {fileID: 1599639086180398883, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: startingHealthAmount
       value: 10
       objectReference: {fileID: 0}

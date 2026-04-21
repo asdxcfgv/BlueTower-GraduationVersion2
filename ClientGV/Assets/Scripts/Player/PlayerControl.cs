@@ -93,7 +93,6 @@ public class PlayerControl : MonoBehaviour
         // Get movement input
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
         float verticalMovement = Input.GetAxisRaw("Vertical");
-        bool rightMouseButtonDown = Input.GetMouseButtonDown(1);
 
         // Create a direction vector based on the input
         Vector2 direction = new Vector2(horizontalMovement, verticalMovement);
@@ -107,16 +106,20 @@ public class PlayerControl : MonoBehaviour
         // If there is movement either move or roll
         if (direction != Vector2.zero)
         {
-            if (!rightMouseButtonDown)
+            // trigger movement event
+            if (player.playerDetails.playerMoveSound != null)
             {
-                // trigger movement event
-                player.movementByVelocityEvent.OnMovementByVelocity.Trigger(new MovementByVelocityArgs(direction, moveSpeed));
+                SoundEffectManager.Instance. PlayLoopingSound(player.playerDetails.playerMoveSound);
             }
-
+            player.movementByVelocityEvent.OnMovementByVelocity.Trigger(new MovementByVelocityArgs(direction, moveSpeed));
         }
         // else trigger idle event
         else
         {
+            if (player.playerDetails.playerMoveSound != null)
+            {
+                SoundEffectManager.Instance. StopLoopingSound(player.playerDetails.playerMoveSound);
+            }
             player.idleEvent.OnIdle.Trigger();
         }
     }

@@ -60,6 +60,10 @@ public class PlayerDetailsSO : ScriptableObject
     [Tooltip("玩家图标")]
     #endregion
     public Sprite playerMiniMapIcon;
+    #region Tooltip
+    [Tooltip("玩家移动声音")]
+    #endregion
+    public SoundEffectSO playerMoveSound;
 
 
     #region Header OTHER

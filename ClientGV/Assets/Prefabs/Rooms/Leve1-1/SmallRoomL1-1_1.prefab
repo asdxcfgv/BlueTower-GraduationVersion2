@@ -58,7 +58,7 @@ MonoBehaviour:
   - {x: 1.9554381, y: -2.5044003, z: 0}
   m_ShapePathHash: 898984383
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68812
+  m_InstanceId: 78018
   m_LocalBounds:
     m_Center: {x: -0.06422949, y: -0.014016151, z: 0}
     m_Extent: {x: 2.0196676, y: 2.490384, z: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   - {x: -3.411041, y: -5.4940033, z: 0.00000013969839}
   m_ShapePathHash: 1584948783
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68912
+  m_InstanceId: 78118
   m_LocalBounds:
     m_Center: {x: -1.9555206, y: -2.4940033, z: 0}
     m_Extent: {x: 2.4555206, y: 3, z: 0}
@@ -302,7 +302,7 @@ MonoBehaviour:
   - {x: 1.9554381, y: -2.5044003, z: 0}
   m_ShapePathHash: 898984383
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68852
+  m_InstanceId: 78058
   m_LocalBounds:
     m_Center: {x: -0.06422949, y: -0.014016151, z: 0}
     m_Extent: {x: 2.0196676, y: 2.490384, z: 0}
@@ -31741,7 +31741,7 @@ MonoBehaviour:
   - {x: -3.411041, y: -5.4940033, z: 0.00000013969839}
   m_ShapePathHash: 1480808546
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68850
+  m_InstanceId: 78056
   m_LocalBounds:
     m_Center: {x: -6.4110413, y: -2.564003, z: 0}
     m_Extent: {x: 3, y: 3, z: 0}
@@ -46542,7 +46542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -13196
+      value: -30442
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46842,7 +46842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234699903552096403, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
       propertyPath: m_InstanceId
-      value: -13328
+      value: -30256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46928,7 +46928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6262872107016200959, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
       propertyPath: weaponSpawnByLevelList.Array.data[0].spawnableObjectRatioList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6262872107016200959, guid: eaf66ff573f8b8f4fb1b463b43765bc1, type: 3}
       propertyPath: weaponSpawnByLevelList.Array.data[0].spawnableObjectRatioList.Array.data[0].ratio

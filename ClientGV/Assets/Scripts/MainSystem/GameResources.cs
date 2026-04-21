@@ -92,6 +92,19 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate with the sounds master mixer group")]
     #endregion
     public AudioMixerGroup soundsMasterMixerGroup;
+    #region Tooltip
+    [Tooltip("开关门声音")]
+    #endregion Tooltip
+    public SoundEffectSO doorOpenCloseSoundEffect;
+    #region Tooltip
+    [Tooltip("宝箱打开声音")]
+    #endregion
+    public SoundEffectSO chestOpen;
+    #region Tooltip
+    [Tooltip("物品拾起声音")]
+    #endregion
+    public SoundEffectSO itemPickup;
+
     
     
     #region Header MUSIC

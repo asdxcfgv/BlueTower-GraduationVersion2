@@ -17,15 +17,12 @@ public class ResourcePoint : MonoBehaviour
     [SerializeField] private int startingHealthAmount = 1;
     [SerializeField] private bool isObstacleWhenDestroyed;
     #region SOUND EFFECT
-
     [Header("SOUND EFFECT")]
-
     #endregion SOUND EFFECT
     #region Tooltip
-
     [Tooltip("The sound effect when this item is destroyed")]
-
     #endregion Tooltip
+    [SerializeField] private SoundEffectSO destroySoundEffect;
     
     private int healthPercent;
     private int tempHealthPercent;
@@ -104,10 +101,10 @@ public class ResourcePoint : MonoBehaviour
         
 
         // Play sound effect
-        /*if (destroySoundEffect != null)
+        if (destroySoundEffect != null)
         {
             SoundEffectManager.Instance.PlaySoundEffect(destroySoundEffect);
-        }*/
+        }
 
         // Trigger the destroy animation
         animator.SetBool(Global.destroy, true);

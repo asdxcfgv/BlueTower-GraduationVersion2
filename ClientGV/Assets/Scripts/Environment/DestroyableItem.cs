@@ -20,7 +20,8 @@ public class DestroyableItem : MonoBehaviour
     #region Tooltip
     [Tooltip("The sound effect when this item is destroyed")]
     #endregion Tooltip
-    //[SerializeField] private SoundEffectSO destroySoundEffect;
+    [SerializeField] private SoundEffectSO destroySoundEffect;
+    
     private Animator animator;
     private HitShake hitShake;
     private BoxCollider2D boxCollider2D;
@@ -77,10 +78,10 @@ public class DestroyableItem : MonoBehaviour
         
 
         // Play sound effect
-        /*if (destroySoundEffect != null)
+        if (destroySoundEffect != null)
         {
             SoundEffectManager.Instance.PlaySoundEffect(destroySoundEffect);
-        }*/
+        }
 
         // Trigger the destroy animation
         animator.SetBool(Global.destroy, true);

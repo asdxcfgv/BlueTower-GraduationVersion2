@@ -34,4 +34,15 @@ public class SoundEffect : MonoBehaviour
         audioSource.volume = soundEffect.soundEffectVolume;
         audioSource.clip = soundEffect.soundEffectClip;
     }
+
+    public void SetLoop(bool isTrue)
+    {
+        audioSource.loop = isTrue;
+    }
+
+    public void SetStop()
+    {
+        audioSource.Stop();
+    }
+    
 }

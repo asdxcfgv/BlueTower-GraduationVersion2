@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599639086180398883, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
+      propertyPath: destroySoundEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: ee335bf053611a8498d6ceee95de0b69, type: 2}
     - target: {fileID: 5853796923780200230, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_Size.x
       value: 1.1000571

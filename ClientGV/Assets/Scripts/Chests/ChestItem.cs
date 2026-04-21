@@ -246,6 +246,8 @@ public class ChestItem : MonoBehaviour
         if (distance < 0.3f)
         {
             collectAction.Invoke();
+            // play sound effect
+            SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.itemPickup);
             Destroy(this.gameObject);
         }
     }

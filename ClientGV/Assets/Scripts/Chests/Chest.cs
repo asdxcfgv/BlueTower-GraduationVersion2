@@ -152,9 +152,7 @@ public class Chest : MonoBehaviour, IUseable
         animator.SetBool(Global.use, true);
 
         // chest open sound effect
-        //SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.chestOpen);
-
-        
+        SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.chestOpen);
 
         UpdateChestState();
     }

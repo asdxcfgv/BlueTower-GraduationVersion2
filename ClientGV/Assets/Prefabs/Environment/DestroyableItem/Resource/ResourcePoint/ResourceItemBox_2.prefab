@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1113815534897985030, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1113815534897985030, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1113815534897985030, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_LocalScale.z
@@ -62,8 +62,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1113815534897985030, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599639086180398883, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
+      propertyPath: destroySoundEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 35b366ac8c194cc4f858374ef4dbc2d5, type: 2}
     - target: {fileID: 1599639086180398883, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: startingHealthAmount
       value: 25
@@ -78,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414280975315917762, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 5853796923780200230, guid: 7424dbcd42010844a967dfa900eca5ec, type: 3}
       propertyPath: m_Size.x
