@@ -410,8 +410,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dfe1ba23c638bec49a583843476bb5c9, type: 2}
-  m_sharedMaterial: {fileID: 8120199949304618070, guid: dfe1ba23c638bec49a583843476bb5c9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 23491aded1096494b88dda273df3bb2b, type: 2}
+  m_sharedMaterial: {fileID: 1511281968007578815, guid: 23491aded1096494b88dda273df3bb2b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -620,7 +620,9 @@ MonoBehaviour:
   virtualCamera: {fileID: 599950526}
   canvasGroup: {fileID: 1395796286}
   dungeonLevelList:
-  - {fileID: 11400000, guid: 3b1c2a27a1d5681458890aa105b91482, type: 2}
+  - {fileID: 11400000, guid: f565b17c43383d5418e746c4df12c1f9, type: 2}
+  - {fileID: 11400000, guid: cc247f92b41d7684286a684cacbce6fb, type: 2}
+  - {fileID: 11400000, guid: 40805af903262434b94dc360344b357d, type: 2}
   currentDungeonLevelListIndex: 0
   previousGameState: 0
 --- !u!114 &538060406

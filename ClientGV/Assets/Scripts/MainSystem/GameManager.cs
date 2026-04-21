@@ -376,7 +376,7 @@ public class GameManager : MonoBehaviour
 
         GetPlayer().playerControl.DisablePlayer();
 
-        string messageText = "LEVEL " + (currentDungeonLevelListIndex + 1).ToString() + "\n\n" + dungeonLevelList[currentDungeonLevelListIndex].levelName.ToUpper();
+        string messageText = dungeonLevelList[currentDungeonLevelListIndex].levelName.ToUpper();
 
         yield return StartCoroutine(DisplayMessageRoutine(messageText, Color.white, 2f));
 
@@ -551,7 +551,7 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(Fade(0f, 1f, 2f, new Color(0f, 0f, 0f, 0.4f)));
 
         // Display boss message
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE  " + GameResources.Instance.currentPlayer.playerName + "!  YOU'VE SURVIVED ....SO FAR\n\nNOW FIND AND DEFEAT THE BOSS....GOOD LUCK!", Color.white, 5f));
+        yield return StartCoroutine(DisplayMessageRoutine("干得好！你坚持了下来\n\n接下来，你将面临最终的考验!", Color.white, 5f));
 
         // Fade out canvas
         yield return StartCoroutine(Fade(1f, 0f, 2f, new Color(0f, 0f, 0f, 0.4f)));
@@ -595,9 +595,9 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(Fade(0f, 1f, 2f, new Color(0f, 0f, 0f, 0.4f)));
 
         // Display level completed
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\nYOU'VE SURVIVED THIS DUNGEON LEVEL", Color.white, 5f));
+        yield return StartCoroutine(DisplayMessageRoutine("干得好！\n\n你成功通过了这一层！", Color.white, 5f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("COLLECT ANY LOOT ....THEN PRESS RETURN\n\nTO DESCEND FURTHER INTO THE DUNGEON", Color.white, 5f));
+        yield return StartCoroutine(DisplayMessageRoutine("收集你的资源....按下回车键\n\n前往地牢的更深处", Color.white, 5f));
 
         // Fade out canvas
         yield return StartCoroutine(Fade(1f, 0f, 2f, new Color(0f, 0f, 0f, 0.4f)));
@@ -630,11 +630,11 @@ public class GameManager : MonoBehaviour
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
 
         // Display game won
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! YOU HAVE DEFEATED THE DUNGEON", Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("干得好！你成功到达了塔顶！", Color.white, 3f));
 
         //yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED " + gameScore.ToString("###,###0"), Color.white, 4f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO RESTART THE GAME", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("按回车键重启游戏", Color.white, 0f));
         
         // Set game state to restart game
         m_gameStateFSM.ChangeState(GameState.restartGame);
@@ -664,11 +664,11 @@ public class GameManager : MonoBehaviour
         }
 
         // Display game lost
-        yield return StartCoroutine(DisplayMessageRoutine("BAD LUCK " + GameResources.Instance.currentPlayer.playerName + "! YOU HAVE SUCCUMBED TO THE DUNGEON", Color.white, 2f));
+        yield return StartCoroutine(DisplayMessageRoutine("YOU ARE DEAD", Color.white, 2f));
 
         //yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED " + gameScore.ToString("###,###0"), Color.white, 4f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO RESTART THE GAME", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("按下回车键重启游戏", Color.white, 0f));
         
         // Set game state to restart game
         m_gameStateFSM.ChangeState(GameState.restartGame);
