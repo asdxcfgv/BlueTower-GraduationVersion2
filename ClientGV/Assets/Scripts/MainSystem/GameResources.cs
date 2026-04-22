@@ -115,6 +115,10 @@ public class GameResources : MonoBehaviour
     #endregion
     public AudioMixerGroup musicMasterMixerGroup;
     #region Tooltip
+    [Tooltip("主菜单音乐")]
+    #endregion Tooltip
+    public MusicTrackSO mainMenuMusic;
+    #region Tooltip
     [Tooltip("music on full snapshot")]
     #endregion Tooltip
     public AudioMixerSnapshot musicOnFullSnapshot;

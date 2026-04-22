@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,8 +25,14 @@ public class MainMenuUI : MonoBehaviour
         Btn_Start.onClick.AddListener(StartGame);
         Btn_Exit.onClick.AddListener(ExitGame);
     }
-    
-    
+
+    private void Start()
+    {
+        // Play Music
+        MusicManager.Instance.PlayMusic(GameResources.Instance.mainMenuMusic, 0f, 2f);
+    }
+
+
     public void StartGame()
     {
         SceneManager.LoadScene("MainScene");

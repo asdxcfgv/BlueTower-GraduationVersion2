@@ -23,6 +23,28 @@ public class RoomTemplateSO : ScriptableObject
     public GameObject prefab;
 
     [HideInInspector] public GameObject previousPrefab; // this is used to regenerate the guid if the so is copied and the prefab is changed
+    #region Header ROOM MUSIC
+
+    [Space(10)]
+    [Header("房间音乐")]
+
+    #endregion Header ROOM MUSIC
+
+    #region Tooltip
+
+    [Tooltip("战斗音乐")]
+
+    #endregion Tooltip
+
+    public MusicTrackSO battleMusic;
+
+    #region Tooltip
+
+    [Tooltip("非战斗音乐")]
+
+    #endregion Tooltip
+
+    public MusicTrackSO ambientMusic;
 
 
     #region Header ROOM CONFIGURATION

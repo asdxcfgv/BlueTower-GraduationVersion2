@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MusicTrack_", menuName = "Scriptable Objects/Sounds/MusicTrack")]
-public class MusicTrackSO : MonoBehaviour
+public class MusicTrackSO : ScriptableObject
 {
     #region Header MUSIC TRACK DETAILS
     [Space(10)]
