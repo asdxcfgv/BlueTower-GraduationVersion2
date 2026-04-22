@@ -13,7 +13,7 @@ public class DungeonMap : SingletonMonobehaviour<DungeonMap>
     #region Tooltip
     [Tooltip("Populate with the MinimapUI gameobject")]
     #endregion
-    [HideInInspector] public GameObject minimapUI;
+    [SerializeField] public GameObject minimapUI;
     private Camera dungeonMapCamera;
     private Camera cameraMain;
 

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 523501776
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: playeruipanel_prefab
+      Dependencies: {}
+    Info_1:
+      Name: pausemenupanel_prefab
+      Dependencies: {}
+    Info_2:
+      Name: minimappanel_prefab
+      Dependencies:
+        Dependency_0: minimap render texture_rendertexture
+    Info_3:
+      Name: hitredpanel_prefab
+      Dependencies: {}
+    Info_4:
+      Name: minimap render texture_rendertexture
+      Dependencies: {}

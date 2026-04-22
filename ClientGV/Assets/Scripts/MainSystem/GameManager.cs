@@ -72,6 +72,8 @@ public class GameManager : MonoBehaviour
             }
         }
         
+        ResKit.Init();
+        
         // Set player details - saved in current player scriptable object from the main menu
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
 
@@ -144,8 +146,7 @@ public class GameManager : MonoBehaviour
     {
         m_gameStateFSM.State(GameState.initializeGame).OnEnter(() =>
         {
-            UIKit.OpenPanel<MinimapPanel>(UILevel.PopUI,null,"UIPrefabs/MinimapPanel");
-            UIKit.OpenPanel<PlayerUIPanel>(UILevel.Common, null, "UIPrefabs/PlayerUIPanel");
+            UIKit.OpenPanel("PlayerUIPanel",UILevel.Common);
             
             previousGameState = GameState.gameStarted;
             m_gameStateFSM.ChangeState(GameState.gameStarted);
@@ -315,7 +316,7 @@ public class GameManager : MonoBehaviour
     {
         if (m_gameStateFSM.CurrentStateId != GameState.gamePaused)
         {
-            UIKit.OpenPanel<PauseMenuPanel>(UILevel.Common, null, "UIPrefabs/PauseMenuPanel");
+            UIKit.OpenPanel("PauseMenuPanel",UILevel.Common);
             GetPlayer().playerControl.DisablePlayer();
 
             // Set game state

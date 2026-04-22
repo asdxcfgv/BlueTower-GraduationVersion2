@@ -127,9 +127,9 @@ public class Player : MonoBehaviour
         Debug.Log(healthEventArgs.healthAmount);
         if (healthEventArgs.damageAmount > 0)
         {
-            if (UIKit.GetPanel<HitRedPanel>() == null)
+            if (UIKit.GetPanel("HitRedPanel") == null)
             {
-                UIKit.OpenPanel<HitRedPanel>(UILevel.Common, null, "UIPrefabs/HitRedPanel");
+                UIKit.OpenPanel("HitRedPanel",UILevel.Common);
             }
             
         }

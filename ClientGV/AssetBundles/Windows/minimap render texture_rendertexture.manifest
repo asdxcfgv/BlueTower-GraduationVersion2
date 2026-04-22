@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2218762351
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 54f47d20bc9b6014edb4e6a522cc70b5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d9da41d144468ef771ac0bfebf61c5d
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 54f47d20bc9b6014edb4e6a522cc70b5
+HashAppended: 0
+ClassTypes:
+- Class: 84
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ArtWork/Textures/Minimap/Minimap Render Texture.renderTexture
+Dependencies: []
