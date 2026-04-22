@@ -22,6 +22,8 @@ MonoBehaviour:
   startingWeaponList:
   - {fileID: 11400000, guid: b07793edb363fc44bae0cffea9682082, type: 2}
   - {fileID: 11400000, guid: 5b8ee5965400c07479d5df1d0a824041, type: 2}
+  - {fileID: 11400000, guid: 8d32631e6eb80fd40ba3bde5b65affc6, type: 2}
+  - {fileID: 11400000, guid: afd8323981ef2884bb5b18b0d5fd83e8, type: 2}
   playerMiniMapIcon: {fileID: 21300000, guid: 2d758a4a59c8f9c4fbd07087750ad2e5, type: 3}
   playerMoveSound: {fileID: 11400000, guid: d62aa4c09b8e37543b53d8da4f4ddf5b, type: 2}
   playerNormalBullet: 50

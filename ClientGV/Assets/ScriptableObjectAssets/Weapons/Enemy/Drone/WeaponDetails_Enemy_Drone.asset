@@ -26,4 +26,4 @@ MonoBehaviour:
   weaponFireRate: 0.25
   weaponPrechargeTime: 0
   weaponReloadTime: 1.2
-  usingBulletType: 1
+  usingBulletType: 0

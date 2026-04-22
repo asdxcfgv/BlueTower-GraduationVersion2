@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a7eca1f45f4d24fa252bed8d93f1fa, type: 3}
+  m_Name: SoundEffect_Sniper_Reload
+  m_EditorClassIdentifier: 
+  soundEffectName: Sniper Reload
+  soundPrefab: {fileID: 2835884798138610790, guid: d1bf3be6af59152449ba4b4ac9b0715a, type: 3}
+  soundEffectClip: {fileID: 8300000, guid: 69ea17bb2d14e3a4a9ebad3056954a7a, type: 3}
+  soundEffectPitchRandomVariationMin: 0.8
+  soundEffectPitchRandomVariationMax: 1.2
+  soundEffectVolume: 1

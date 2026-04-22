@@ -43,12 +43,12 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   duration: 0.5
-  startParticleSize: 0.5
-  startParticleSpeed: 4.5
-  startLifetime: 0.7
-  maxParticleNumber: 25
+  startParticleSize: 0.25
+  startParticleSpeed: 3
+  startLifetime: 0.5
+  maxParticleNumber: 20
   emissionRate: 0
-  burstParticleNumber: 25
+  burstParticleNumber: 20
   effectGravity: -0.01
   sprite: {fileID: 0}
   velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
