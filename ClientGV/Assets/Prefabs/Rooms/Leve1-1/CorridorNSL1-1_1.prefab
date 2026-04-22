@@ -1519,8 +1519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5052599897382654227}
-  - {fileID: 7068200307066021088}
+  - {fileID: 1291376870795048746}
   m_Father: {fileID: 5621245411097770903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5263208960651453300
@@ -5023,13 +5022,46 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!1 &8638415979073560874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1291376870795048746}
+  m_Layer: 12
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1291376870795048746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8638415979073560874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5052599897382654227}
+  - {fileID: 7068200307066021088}
+  m_Father: {fileID: 1674409123393077629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5281696054860601407
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1674409123393077629}
+    m_TransformParent: {fileID: 1291376870795048746}
     m_Modifications:
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5049,11 +5081,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5089,7 +5121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -431240
+      value: -921004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5107,7 +5139,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1674409123393077629}
+    m_TransformParent: {fileID: 1291376870795048746}
     m_Modifications:
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5127,11 +5159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1103991322456836396, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5163,7 +5195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -434144
+      value: -920980
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

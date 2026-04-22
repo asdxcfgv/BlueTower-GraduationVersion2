@@ -54,11 +54,11 @@ MonoBehaviour:
     isConnected: 0
     isUnavailable: 0
   spawnPositionArray:
-  - {x: -33, y: -30}
-  - {x: -11, y: -27}
-  - {x: -3, y: -33}
+  - {x: -30, y: -30}
+  - {x: -6, y: -31}
   - {x: 28, y: -32}
-  - {x: 18, y: -51}
+  - {x: 15, y: -54}
+  - {x: 14, y: -10}
   enemiesByLevelList:
   - dungeonLevel: {fileID: 11400000, guid: f565b17c43383d5418e746c4df12c1f9, type: 2}
     spawnableObjectRatioList:
@@ -87,16 +87,16 @@ MonoBehaviour:
     minSpawnInterval: 2
     maxSpawnInterval: 5
   - dungeonLevel: {fileID: 11400000, guid: cc247f92b41d7684286a684cacbce6fb, type: 2}
-    minTotalEnemiesToSpawn: 7
-    maxTotalEnemiesToSpawn: 10
-    minConcurrentEnemies: 4
-    maxConcurrentEnemies: 6
-    minSpawnInterval: 2
+    minTotalEnemiesToSpawn: 10
+    maxTotalEnemiesToSpawn: 15
+    minConcurrentEnemies: 5
+    maxConcurrentEnemies: 7
+    minSpawnInterval: 1
     maxSpawnInterval: 5
   - dungeonLevel: {fileID: 11400000, guid: 40805af903262434b94dc360344b357d, type: 2}
-    minTotalEnemiesToSpawn: 7
-    maxTotalEnemiesToSpawn: 10
-    minConcurrentEnemies: 4
-    maxConcurrentEnemies: 6
-    minSpawnInterval: 2
-    maxSpawnInterval: 5
+    minTotalEnemiesToSpawn: 15
+    maxTotalEnemiesToSpawn: 20
+    minConcurrentEnemies: 6
+    maxConcurrentEnemies: 10
+    minSpawnInterval: 1
+    maxSpawnInterval: 4
