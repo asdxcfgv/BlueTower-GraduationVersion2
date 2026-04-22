@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     #endregion Tooltip
 
     [SerializeField] private int currentDungeonLevelListIndex = 0;
+
+    [SerializeField] private GameObject pauseMenu;
     
     
     private Room currentRoom;
@@ -146,9 +148,8 @@ public class GameManager : MonoBehaviour
     {
         m_gameStateFSM.State(GameState.initializeGame).OnEnter(() =>
         {
-            UIKit.OpenPanel("PlayerUIPanel",UILevel.Common);
-            
             previousGameState = GameState.gameStarted;
+            pauseMenu.Hide();
             m_gameStateFSM.ChangeState(GameState.gameStarted);
             
         }).OnExit(() =>
@@ -316,7 +317,7 @@ public class GameManager : MonoBehaviour
     {
         if (m_gameStateFSM.CurrentStateId != GameState.gamePaused)
         {
-            UIKit.OpenPanel("PauseMenuPanel",UILevel.Common);
+            pauseMenu.Show();
             GetPlayer().playerControl.DisablePlayer();
 
             // Set game state
@@ -325,7 +326,7 @@ public class GameManager : MonoBehaviour
         }
         else if (m_gameStateFSM.CurrentStateId == GameState.gamePaused)
         {
-            UIKit.ClosePanel<PauseMenuPanel>();
+            pauseMenu.Hide();
             GetPlayer().playerControl.EnablePlayer();
 
             // Set game state

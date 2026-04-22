@@ -1,16 +1,29 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using static GlobalEnums;
 using QFramework;
+using TMPro;
 
-namespace QFramework.Example
-{
-	public class PlayerUIPanelData : UIPanelData
+	public partial class PlayerUIPanel : MonoBehaviour
 	{
-	}
-	public partial class PlayerUIPanel : UIPanel
-	{
+		[SerializeField]
+		private Image Gun_Sprite;
+		[SerializeField]
+		private GameObject BulletIcon_Content;
+		[SerializeField]
+		private GameObject BulletIcon_Pre;
+		[SerializeField]
+		private GameObject HeartIcon_Content;
+		[SerializeField]
+		private GameObject HeartIcon_Pre;
+		[SerializeField]
+		private TextMeshProUGUI NormalBulletText;
+		[SerializeField]
+		private TextMeshProUGUI ElectronBulletText;
+		[SerializeField]
+		private TextMeshProUGUI BoomBulletText;
 		[SerializeField] private Sprite disableHealthSprite;
 		[SerializeField] private Sprite enableHealthSprite;
 		[SerializeField] private Sprite disableAmmoSprite;
@@ -20,16 +33,16 @@ namespace QFramework.Example
 		private List<GameObject> ammoIconList = new List<GameObject>();
 		private List<GameObject> healthHeartsList = new List<GameObject>();
 		private Player player;
-		protected override void OnInit(IUIData uiData = null)
-		{
-			mData = uiData as PlayerUIPanelData ?? new PlayerUIPanelData();
-			// please add init code here
-		}
-		
-		protected override void OnOpen(IUIData uiData = null)
+
+		private void Awake()
 		{
 			// Get player
 			player = GameManager.Instance.GetPlayer();
+			
+			healthHeartsList.Clear();
+			
+			ammoIconList.Clear();
+			
 
 			for (int i = 0; i < heartSpawnNum; i++)
 			{
@@ -45,6 +58,20 @@ namespace QFramework.Example
 
 			BulletIcon_Pre.Hide();
 			
+			
+			// Update active weapon status on the UI
+			SetActiveWeapon(player.activeWeapon.GetCurrentWeapon());
+			
+			AmmoReloaded();
+		}
+
+		private void Start()
+		{
+			
+		}
+
+		private void OnEnable()
+		{
 			// Subscribe to set active weapon event
 			player.setActiveWeaponEvent.OnSetActiveWeapon.Register(SetActiveWeaponEvent_OnSetActiveWeapon);
 
@@ -58,22 +85,9 @@ namespace QFramework.Example
 			player.healthEvent.OnHealthChanged.Register(HealthEvent_OnHealthChanged);
 
 			player.playerResourcesChangedEvent.OnPlayerResourcesChanged.Register(PlayerResourcesChangedEvent_OnPlayerResourcesChanged);
-			
-			// Update active weapon status on the UI
-			SetActiveWeapon(player.activeWeapon.GetCurrentWeapon());
-			
-			AmmoReloaded();
 		}
-		
-		protected override void OnShow()
-		{
-		}
-		
-		protected override void OnHide()
-		{
-		}
-		
-		protected override void OnClose()
+
+		private void OnDisable()
 		{
 			// Subscribe to set active weapon event
 			player.setActiveWeaponEvent.OnSetActiveWeapon.UnRegister(SetActiveWeaponEvent_OnSetActiveWeapon);
@@ -88,7 +102,7 @@ namespace QFramework.Example
 			
 			player.playerResourcesChangedEvent.OnPlayerResourcesChanged.UnRegister(PlayerResourcesChangedEvent_OnPlayerResourcesChanged);
 		}
-		
+
 		private void HealthEvent_OnHealthChanged(HealthEventArgs healthEventArgs)
 		{
 			SetHealthBar(healthEventArgs);
@@ -244,4 +258,3 @@ namespace QFramework.Example
 
 		}
 	}
-}

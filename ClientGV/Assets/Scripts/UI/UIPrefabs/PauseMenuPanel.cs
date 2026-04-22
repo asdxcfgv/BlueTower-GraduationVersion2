@@ -1,45 +1,51 @@
+using System;
 using UnityEngine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
+using UnityEngine.UI;
 
-namespace QFramework.Example
-{
-	public class PauseMenuPanelData : UIPanelData
+
+	public class PauseMenuPanel : MonoBehaviour
 	{
-	}
-	public partial class PauseMenuPanel : UIPanel
-	{
+		[SerializeField]
+		private Button ResumeButton;
+		[SerializeField]
+		private Button QuitButton;
+		[SerializeField]
+		private TextMeshProUGUI MusicLevelText;
+		[SerializeField]
+		private Button MusicIncreaseBtn;
+		[SerializeField]
+		private Button MusicDecreaseBtn;
+		[SerializeField]
+		private TextMeshProUGUI SoundLevelText;
+		[SerializeField]
+		private Button SoundIncreaseBtn;
+		[SerializeField]
+		private Button SoundDecreaseBtn;
 		
-		protected override void OnInit(IUIData uiData = null)
+
+		private void Awake()
 		{
-			mData = uiData as PauseMenuPanelData ?? new PauseMenuPanelData();
 			ResumeButton.onClick.AddListener(PauseGameMenu);
 			QuitButton.onClick.AddListener(Exit);
 			MusicIncreaseBtn.onClick.AddListener(IncreaseMusicVolume);
 			MusicDecreaseBtn.onClick.AddListener(DecreaseMusicVolume);
 			SoundIncreaseBtn.onClick.AddListener(IncreaseSoundsVolume);
 			SoundDecreaseBtn.onClick.AddListener(DecreaseSoundsVolume);
-			// please add init code here
 		}
-		
-		protected override void OnOpen(IUIData uiData = null)
+
+		private void OnEnable()
 		{
 			Time.timeScale = 0f;
-			
+
 			// Initialise UI text
 			StartCoroutine(InitializeUI());
 		}
 		
-		protected override void OnShow()
-		{
-		}
-		
-		protected override void OnHide()
-		{
-		}
-		
-		protected override void OnClose()
+		private void OnDisable()
 		{
 			Time.timeScale = 1f;
 		}
@@ -99,4 +105,3 @@ namespace QFramework.Example
 			SoundLevelText.SetText(SoundEffectManager.Instance.soundsVolume.ToString());
 		}
 	}
-}
