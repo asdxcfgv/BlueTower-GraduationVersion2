@@ -103,7 +103,7 @@ MonoBehaviour:
   roomColliderBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  environmentGameObject: {fileID: 0}
+  environmentGameObject: {fileID: 1715949929663130391}
   obstacleItemsList: []
 --- !u!114 &9141735360272128996
 MonoBehaviour:
@@ -13210,7 +13210,7 @@ MonoBehaviour:
   - {x: 4.517048, y: -0.5244942, z: 0}
   m_ShapePathHash: -1238997875
   m_Mesh: {fileID: 0}
-  m_InstanceId: 113856
+  m_InstanceId: 136028
   m_LocalBounds:
     m_Center: {x: 0.5062132, y: -0.028576374, z: 0}
     m_Extent: {x: 4.0108347, y: 0.5040822, z: 0}
@@ -36930,7 +36930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -400450
+      value: -562144
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36996,7 +36996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234699903552096403, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
       propertyPath: m_InstanceId
-      value: -400540
+      value: -562096
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37292,7 +37292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7507178926655661503, guid: a427307724337d3429c9b5e58de1e8f7, type: 3}
       propertyPath: m_InstanceId
-      value: -400498
+      value: -562120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37420,7 +37420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234699903552096403, guid: aed90f5e895d18d459a98174cde894ed, type: 3}
       propertyPath: m_InstanceId
-      value: -400474
+      value: -562054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

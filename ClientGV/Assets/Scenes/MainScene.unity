@@ -1575,7 +1575,7 @@ MonoBehaviour:
   - poolSize: 20
     prefab: {fileID: 7853615770937549561, guid: 22a0186d8e16c0746a7eb15342cdc72b, type: 3}
     componentType: EnemyDestroyEffect
-  - poolSize: 40
+  - poolSize: 50
     prefab: {fileID: 2835884798138610790, guid: d1bf3be6af59152449ba4b4ac9b0715a, type: 3}
     componentType: SoundEffect
 --- !u!4 &979511327
