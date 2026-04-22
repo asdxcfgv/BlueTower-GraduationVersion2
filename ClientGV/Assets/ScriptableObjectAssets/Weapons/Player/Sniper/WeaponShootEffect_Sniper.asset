@@ -42,15 +42,15 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 8
     m_NumAlphaKeys: 3
-  duration: 0.5
-  startParticleSize: 0.25
-  startParticleSpeed: 3
-  startLifetime: 0.17
-  maxParticleNumber: 100
-  emissionRate: 100
-  burstParticleNumber: 20
+  duration: 0.1
+  startParticleSize: 0.45
+  startParticleSpeed: 8
+  startLifetime: 0.5
+  maxParticleNumber: 200
+  emissionRate: 50
+  burstParticleNumber: 30
   effectGravity: -0.01
   sprite: {fileID: 21300000, guid: ecf6e010769abce4cb1e7c60e0f3b3d8, type: 3}
-  velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
-  velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
+  velocityOverLifetimeMin: {x: -5, y: -0.03, z: 0}
+  velocityOverLifetimeMax: {x: 5, y: 0.03, z: 0}
   weaponShootEffectPrefab: {fileID: 7255582679228879866, guid: 2df39efde375cc74ca3883ac66b55801, type: 3}

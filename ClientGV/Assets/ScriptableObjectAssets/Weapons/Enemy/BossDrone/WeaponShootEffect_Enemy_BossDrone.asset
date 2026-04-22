@@ -43,11 +43,11 @@ MonoBehaviour:
     m_NumColorKeys: 8
     m_NumAlphaKeys: 3
   duration: 0.1
-  startParticleSize: 0.25
-  startParticleSpeed: 3
+  startParticleSize: 0.05
+  startParticleSpeed: 8
   startLifetime: 0.5
-  maxParticleNumber: 20
-  emissionRate: 0
+  maxParticleNumber: 100
+  emissionRate: 30
   burstParticleNumber: 20
   effectGravity: -0.01
   sprite: {fileID: 21300000, guid: bb7ccf2391a6a544ab96e81e36b6a0ed, type: 3}

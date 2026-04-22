@@ -14,24 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 1, g: 0.9772448, b: 0, a: 0}
+    key0: {r: 0, g: 0.26693276, b: 0.61006284, a: 1}
+    key1: {r: 0.51572317, g: 0.053518385, b: 0.4334904, a: 1}
+    key2: {r: 0.83675367, g: 0.08009953, b: 0.9433962, a: 0}
     key3: {r: 1, g: 1, b: 1, a: 0}
-    key4: {r: 0, g: 0.9555726, b: 1, a: 0}
-    key5: {r: 1, g: 1, b: 1, a: 0}
-    key6: {r: 0.5698112, g: 0.5698112, b: 0.5698112, a: 0}
-    key7: {r: 1, g: 1, b: 1, a: 0}
-    ctime0: 0
-    ctime1: 3473
-    ctime2: 6160
-    ctime3: 11796
-    ctime4: 17957
-    ctime5: 33161
-    ctime6: 43974
-    ctime7: 65535
+    key4: {r: 1, g: 1, b: 1, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 386
+    ctime1: 16191
+    ctime2: 26471
+    ctime3: 40349
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
     atime0: 0
-    atime1: 45285
+    atime1: 46903
     atime2: 65535
     atime3: 0
     atime4: 0
@@ -40,12 +40,12 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 8
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 3
-  duration: 0.5
-  startParticleSize: 0.2
-  startParticleSpeed: 0.4
-  startLifetime: 1.1
+  duration: 0.1
+  startParticleSize: 0.05
+  startParticleSpeed: 8
+  startLifetime: 0.5
   maxParticleNumber: 100
   emissionRate: 100
   burstParticleNumber: 30

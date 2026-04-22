@@ -14,24 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 1, g: 0.9772448, b: 0, a: 0}
-    key3: {r: 1, g: 1, b: 1, a: 0}
-    key4: {r: 0, g: 0.9555726, b: 1, a: 0}
-    key5: {r: 1, g: 1, b: 1, a: 0}
-    key6: {r: 0.5698112, g: 0.5698112, b: 0.5698112, a: 0}
-    key7: {r: 1, g: 1, b: 1, a: 0}
-    ctime0: 0
-    ctime1: 3473
-    ctime2: 6160
-    ctime3: 11796
-    ctime4: 17957
-    ctime5: 33161
-    ctime6: 43974
-    ctime7: 65535
+    key0: {r: 0.408805, g: 0.044994216, b: 0.044994216, a: 1}
+    key1: {r: 0.61006284, g: 0.27912214, b: 0.105513915, a: 1}
+    key2: {r: 0.8301887, g: 0.70815766, b: 0.30022532, a: 0}
+    key3: {r: 0.91194963, g: 0.9013422, b: 0.2896443, a: 0}
+    key4: {r: 1, g: 0.9971174, b: 0.75786155, a: 0}
+    key5: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0}
+    key6: {r: 1, g: 1, b: 1, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 4241
+    ctime1: 14649
+    ctime2: 25058
+    ctime3: 31740
+    ctime4: 40606
+    ctime5: 50244
+    ctime6: 65535
+    ctime7: 0
     atime0: 0
-    atime1: 45285
+    atime1: 49087
     atime2: 65535
     atime3: 0
     atime4: 0
@@ -40,17 +40,17 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 8
+    m_NumColorKeys: 7
     m_NumAlphaKeys: 3
-  duration: 0.5
-  startParticleSize: 0.2
-  startParticleSpeed: 0.4
-  startLifetime: 1.1
+  duration: 0.1
+  startParticleSize: 0.05
+  startParticleSpeed: 8
+  startLifetime: 0.5
   maxParticleNumber: 100
   emissionRate: 100
-  burstParticleNumber: 30
-  effectGravity: -0.03
-  sprite: {fileID: 21300000, guid: ecf6e010769abce4cb1e7c60e0f3b3d8, type: 3}
-  velocityOverLifetimeMin: {x: 0, y: 0, z: 0}
-  velocityOverLifetimeMax: {x: 0, y: 0, z: 0}
-  weaponShootEffectPrefab: {fileID: 7255582679228879866, guid: 2df39efde375cc74ca3883ac66b55801, type: 3}
+  burstParticleNumber: 5
+  effectGravity: -0.05
+  sprite: {fileID: 21300000, guid: 039072cb3ad382f4ca7c64a29375b4da, type: 3}
+  velocityOverLifetimeMin: {x: -5, y: -0.03, z: 0}
+  velocityOverLifetimeMax: {x: 5, y: 0.03, z: 0}
+  weaponShootEffectPrefab: {fileID: 7853615770937549561, guid: e11115106f63ecf4da58c4fcc2e3fe0f, type: 3}

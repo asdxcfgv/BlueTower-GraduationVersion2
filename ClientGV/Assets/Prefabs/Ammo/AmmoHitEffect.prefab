@@ -256,7 +256,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -896,7 +896,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 3
+      mode: 0
       spread: 0.01
       speed:
         serializedVersion: 2
@@ -957,7 +957,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1067,7 +1067,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 10
+        scalar: 20
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1117,7 +1117,7 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 1
+      cycleCount: 0
       repeatInterval: 0.01
       probability: 1
   SizeModule:
@@ -1632,7 +1632,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: bb7ccf2391a6a544ab96e81e36b6a0ed, type: 3}
+    - sprite: {fileID: 21300000, guid: 039072cb3ad382f4ca7c64a29375b4da, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -1640,8 +1640,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
-      minScalar: 1
+      scalar: -5
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1693,8 +1693,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
-      minScalar: 1
+      scalar: -5
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2185,13 +2185,13 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.23445596
-          value: 0.22102971
-          inSlope: 0
-          outSlope: 0
+          time: 1
+          value: 0.21385774
+          inSlope: -1.8418908
+          outSlope: -1.8418908
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.105763435
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -2728,22 +2728,22 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.8529415
-          inSlope: -1.5706536
-          outSlope: -1.5706536
+          value: 1
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.032735262
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
-          time: 0.9061195
-          value: 0.28759766
-          inSlope: -0.0640667
-          outSlope: -0.0640667
+          time: 0.9901622
+          value: 0.8281567
+          inSlope: -0.016070165
+          outSlope: -0.016070165
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.07226907
-          outWeight: 0.33333334
+          inWeight: 0.25768453
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -2775,11 +2775,11 @@ ParticleSystem:
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0.8
+    dampen: 0.2
     drag:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2834,7 +2834,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 2.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2991,7 +2991,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 2.3
+    frequency: 0.6
     damping: 0
     octaves: 2
     octaveMultiplier: 0.5
