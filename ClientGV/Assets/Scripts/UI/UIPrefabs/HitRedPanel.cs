@@ -1,15 +1,10 @@
+using System;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
 
-namespace QFramework.Example
-{
-	public class HitRedPanelData : UIPanelData
-	{
-		
-	}
-	public partial class HitRedPanel : UIPanel
+	public class HitRedPanel : MonoBehaviour
 	{
 		[Header("受击红色遮罩设置")]
 		[Tooltip("最高透明度")]
@@ -27,14 +22,13 @@ namespace QFramework.Example
 		private float _effectTimer;
 		private Image hitRedImage;
 		private bool onOpen = false;
-		protected override void OnInit(IUIData uiData = null)
+
+		private void Awake()
 		{
-			mData = uiData as HitRedPanelData ?? new HitRedPanelData();
 			hitRedImage= this.GetComponentInChildren<Image>();
-			// please add init code here
 		}
-		
-		protected override void OnOpen(IUIData uiData = null)
+
+		private void OnEnable()
 		{
 			hitRedImage.color = new Color(1, 0, 0, 0);
 			_effectTimer = 0f;
@@ -46,18 +40,6 @@ namespace QFramework.Example
 			}
 		}
 		
-		protected override void OnShow()
-		{
-			
-		}
-		
-		protected override void OnHide()
-		{
-		}
-		
-		protected override void OnClose()
-		{
-		}
 		
 		void Update()
 		{
@@ -85,8 +67,7 @@ namespace QFramework.Example
 			else
 			{
 				hitRedImage.color = new Color(1, 0, 0, 0);
-				UIKit.ClosePanel<HitRedPanel>();
+				this.gameObject.Hide();
 			}
 		}
 	}
-}

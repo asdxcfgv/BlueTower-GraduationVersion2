@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using QFramework;
-using QFramework.Example;
 using UnityEngine;
 using UnityEngine.Rendering;
 using static GlobalEnums;
@@ -127,11 +126,7 @@ public class Player : MonoBehaviour
         Debug.Log(healthEventArgs.healthAmount);
         if (healthEventArgs.damageAmount > 0)
         {
-            if (UIKit.GetPanel("HitRedPanel") == null)
-            {
-                UIKit.OpenPanel("HitRedPanel",UILevel.Common);
-            }
-            
+            GameManager.Instance.GetHit();
         }
         // If player has died
         if (healthEventArgs.healthAmount <= 0f)

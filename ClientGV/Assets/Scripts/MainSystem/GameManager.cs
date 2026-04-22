@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using QFramework;
-using QFramework.Example;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -42,6 +41,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentDungeonLevelListIndex = 0;
 
     [SerializeField] private GameObject pauseMenu;
+
+    [SerializeField] private GameObject hitRedPanel;
     
     
     private Room currentRoom;
@@ -697,5 +698,13 @@ public class GameManager : MonoBehaviour
     public void ChangeState(GameState newState)
     {
         m_gameStateFSM.ChangeState(newState);
+    }
+
+    public void GetHit()
+    {
+        if (!hitRedPanel.activeSelf)
+        {
+            hitRedPanel.Show();
+        }
     }
 }
